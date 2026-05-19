@@ -1,0 +1,555 @@
+:root {
+    /* ============================================================
+     * CAPA 1 — PRIMITIVES (DINTEL regular set)
+     * Escalas absolutas. No deben usarse directamente en componentes;
+     * los semantic tokens los referencian.
+     * ============================================================ */
+
+    /* Grises */
+    --regular-primitives-grey-000: #FFFFFF;
+    --regular-primitives-grey-100: #F7F7F8;
+    --regular-primitives-grey-200: #EEEFF0;
+    --regular-primitives-grey-300: #DCDFE3;
+    --regular-primitives-grey-400: #B5B8BE;
+    --regular-primitives-grey-500: #696E75;
+    --regular-primitives-grey-600: #363D47;
+    --regular-primitives-grey-700: #0A0E14;
+
+    /* Primario */
+    --regular-primitives-primary-000: #FBFCFE;
+    --regular-primitives-primary-100: #EAF0FA;
+    --regular-primitives-primary-200: #E8EFFA;
+    --regular-primitives-primary-300: #D7E2F5;
+    --regular-primitives-primary-400: #9CB9E5;
+    --regular-primitives-primary-500: #114DA6;
+    --regular-primitives-primary-600: #093473;
+    --regular-primitives-primary-700: #04214D;
+
+    /* Secundario */
+    --regular-primitives-secondary-000: #FFD2C2;
+    --regular-primitives-secondary-100: #FFAD8F;
+    --regular-primitives-secondary-200: #FF875C;
+    --regular-primitives-secondary-300: #FF6229;
+    --regular-primitives-secondary-400: #F54100;
+    --regular-primitives-secondary-500: #C33400;
+    --regular-primitives-secondary-600: #802200;
+    --regular-primitives-secondary-700: #521600;
+
+    /* Estados — Success */
+    --regular-primitives-status-success-100: #F3F9F6;
+    --regular-primitives-status-success-200: #E5F5EC;
+    --regular-primitives-status-success-300: #4DB277;
+    --regular-primitives-status-success-400: #198044;
+    --regular-primitives-status-success-500: #015223;
+    --regular-primitives-status-success-600: #0A2B18;
+
+    /* Estados — Error */
+    --regular-primitives-status-error-100: #FCF6F5;
+    --regular-primitives-status-error-200: #F5E1DC;
+    --regular-primitives-status-error-300: #E8886F;
+    --regular-primitives-status-error-400: #C44727;
+    --regular-primitives-status-error-500: #5E1503;
+    --regular-primitives-status-error-600: #330C02;
+
+    /* Estados — Warning */
+    --regular-primitives-status-warning-100: #FFFAF2;
+    --regular-primitives-status-warning-200: #FCF0DC;
+    --regular-primitives-status-warning-300: #DBB251;
+    --regular-primitives-status-warning-400: #AD8821;
+    --regular-primitives-status-warning-500: #594100;
+    --regular-primitives-status-warning-600: #332302;
+
+    /* Estados — Info */
+    --regular-primitives-status-info-100: #F2F2FC;
+    --regular-primitives-status-info-200: #E9E7F6;
+    --regular-primitives-status-info-300: #928FC2;
+    --regular-primitives-status-info-400: #605AAD;
+    --regular-primitives-status-info-500: #1E1655;
+    --regular-primitives-status-info-600: #030121;
+
+    /* Focus */
+    --regular-primitives-focus-primary: #C33400;
+    --regular-primitives-focus-secondary: #E59100;
+
+    /* ============================================================
+     * CAPA 2 — SEMANTIC TOKENS
+     * Referencian primitives. Los componentes SOLO deben usar éstos.
+     * Sobre-escribibles desde style books (modo claro/oscuro).
+     * ============================================================ */
+
+    /* --- Backgrounds (static — superficies) --- */
+    --color-bg-primary: var(--regular-primitives-grey-000);
+    --color-bg-secondary: var(--regular-primitives-grey-100);
+    --color-bg-tertiary: var(--regular-primitives-grey-200);
+    --color-bg-inverse: var(--regular-primitives-grey-700);
+    --color-bg-brand: var(--regular-primitives-primary-500);
+    --color-bg-brand-soft: var(--regular-primitives-primary-100);
+    --color-bg-brand-hard: var(--regular-primitives-primary-700);
+    --color-bg-overlay: rgba(54, 61, 71, 0.6);
+
+    /* --- Backgrounds (interactive — elementos clicables) --- */
+    --color-bg-interactive-primary: var(--regular-primitives-primary-500);
+    --color-bg-interactive-primary-hover: var(--regular-primitives-primary-600);
+    --color-bg-interactive-primary-pressed: var(--regular-primitives-primary-700);
+    --color-bg-interactive-primary-disabled: var(--regular-primitives-grey-300);
+
+    --color-bg-interactive-secondary: var(--regular-primitives-primary-000);
+    --color-bg-interactive-secondary-hover: var(--regular-primitives-primary-100);
+    --color-bg-interactive-secondary-pressed: var(--regular-primitives-primary-200);
+    --color-bg-interactive-secondary-disabled: var(--regular-primitives-grey-200);
+
+    --color-bg-interactive-card: var(--regular-primitives-grey-000);
+    --color-bg-interactive-item-hover: var(--regular-primitives-primary-100);
+    --color-bg-interactive-item-selected: var(--regular-primitives-primary-200);
+
+    /* --- Backgrounds (accent — variante naranja/secundaria DINTEL) --- */
+    --color-bg-interactive-accent: var(--regular-primitives-secondary-500);
+    --color-bg-interactive-accent-hover: var(--regular-primitives-secondary-600);
+    --color-bg-interactive-accent-pressed: var(--regular-primitives-secondary-700);
+
+    /* --- Backgrounds (feedback) --- */
+    --color-bg-feedback-success: var(--regular-primitives-status-success-200);
+    --color-bg-feedback-error: var(--regular-primitives-status-error-200);
+    --color-bg-feedback-warning: var(--regular-primitives-status-warning-200);
+    --color-bg-feedback-info: var(--regular-primitives-status-info-200);
+
+    /* --- Text (static) --- */
+    --color-text-primary: var(--regular-primitives-grey-700);
+    --color-text-secondary: var(--regular-primitives-grey-600);
+    --color-text-tertiary: var(--regular-primitives-grey-500);
+    --color-text-disabled: var(--regular-primitives-grey-400);
+    --color-text-inverse: var(--regular-primitives-grey-000);
+    --color-text-brand: var(--regular-primitives-primary-500);
+
+    /* --- Text (interactive — links) --- */
+    --color-text-interactive: var(--regular-primitives-primary-500);
+    --color-text-interactive-hover: var(--regular-primitives-primary-600);
+    --color-text-interactive-pressed: var(--regular-primitives-primary-700);
+    --color-text-interactive-visited: var(--regular-primitives-primary-600);
+
+    /* --- Text (feedback) --- */
+    --color-text-feedback-success: var(--regular-primitives-status-success-400);
+    --color-text-feedback-error: var(--regular-primitives-status-error-400);
+    --color-text-feedback-warning: var(--regular-primitives-status-warning-400);
+    --color-text-feedback-info: var(--regular-primitives-status-info-400);
+
+    /* --- Borders (static) --- */
+    --color-border-soft: var(--regular-primitives-grey-300);
+    --color-border-hard: var(--regular-primitives-grey-400);
+    --color-border-strong: var(--regular-primitives-grey-600);
+    --color-border-brand: var(--regular-primitives-primary-500);
+    --color-border-inverse: var(--regular-primitives-grey-000);
+
+    /* --- Text (accent — variante secundaria) --- */
+    --color-text-interactive-accent: var(--regular-primitives-secondary-500);
+    --color-text-interactive-accent-hover: var(--regular-primitives-secondary-600);
+
+    /* --- Borders (accent — variante secundaria) --- */
+    --color-border-interactive-accent: var(--regular-primitives-secondary-500);
+    --color-border-interactive-accent-hover: var(--regular-primitives-secondary-600);
+
+    /* --- Borders (interactive) --- */
+    --color-border-interactive: var(--regular-primitives-grey-300);
+    --color-border-interactive-hover: var(--regular-primitives-primary-500);
+    --color-border-interactive-focus: var(--regular-primitives-focus-primary);
+    --color-border-interactive-disabled: var(--regular-primitives-grey-200);
+
+    /* --- Borders (feedback) --- */
+    --color-border-feedback-success: var(--regular-primitives-status-success-400);
+    --color-border-feedback-error: var(--regular-primitives-status-error-400);
+    --color-border-feedback-warning: var(--regular-primitives-status-warning-400);
+    --color-border-feedback-info: var(--regular-primitives-status-info-400);
+
+    /* --- Icons (static) --- */
+    --color-icon-primary: var(--regular-primitives-grey-700);
+    --color-icon-secondary: var(--regular-primitives-grey-500);
+    --color-icon-disabled: var(--regular-primitives-grey-400);
+    --color-icon-inverse: var(--regular-primitives-grey-000);
+    --color-icon-brand: var(--regular-primitives-primary-500);
+
+    /* --- Icons (interactive) --- */
+    --color-icon-interactive: var(--regular-primitives-primary-500);
+    --color-icon-interactive-hover: var(--regular-primitives-primary-600);
+
+    /* --- Icons (feedback) --- */
+    --color-icon-feedback-success: var(--regular-primitives-status-success-400);
+    --color-icon-feedback-error: var(--regular-primitives-status-error-400);
+    --color-icon-feedback-warning: var(--regular-primitives-status-warning-400);
+    --color-icon-feedback-info: var(--regular-primitives-status-info-400);
+
+    /* ============================================================
+     * BODY tokens (los que Liferay/Clay esperan globalmente)
+     * Alias hacia los semantic tokens.
+     * ============================================================ */
+    --body-bg: var(--color-bg-primary);
+    --body-color: var(--color-text-primary);
+
+    /* ============================================================
+     * TIPOGRAFÍA
+     * ============================================================ */
+    --font-family-base: 'Nunito Sans', system-ui, -apple-system, sans-serif;
+    --font-family-serif: 'Merriweather', Georgia, serif;
+    --font-family-monospace: 'Nunito Sans', monospace;
+
+    /* Sizes */
+    --text-display-xl: 2.5rem;   /* h1 — 40px */
+    --text-display-lg: 2rem;     /* h2 — 32px */
+    --text-display-md: 1.75rem;  /* h3 — 28px */
+    --text-display-sm: 1.5rem;   /* h4 — 24px */
+    --text-heading-lg: 1.25rem;  /* h5 — 20px */
+    --text-heading-md: 1.125rem; /* h6 — 18px */
+    --text-body-lg: 1rem;        /* 16px */
+    --text-body-md: 0.875rem;    /* 14px */
+    --text-body-sm: 0.75rem;     /* 12px */
+
+    /* Aliases que Clay/Liferay esperan */
+    --font-size-xs: var(--text-body-sm);
+    --font-size-sm: var(--text-body-md);
+    --font-size-base: var(--text-body-lg);
+    --font-size-lg: 1.125rem;
+    --h1-font-size: var(--text-display-xl);
+    --h2-font-size: var(--text-display-lg);
+    --h3-font-size: var(--text-display-md);
+    --h4-font-size: var(--text-display-sm);
+    --h5-font-size: var(--text-heading-lg);
+    --h6-font-size: var(--text-heading-md);
+
+    /* Weights */
+    --font-weight-light: 300;
+    --font-weight-regular: 400;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+    /* Alias Bootstrap-style */
+    --font-weight-normal: var(--font-weight-regular);
+    --font-weight-semi-bold: var(--font-weight-semibold);
+
+    /* Line heights */
+    --line-height-tight: 1.25;
+    --line-height-base: 1.5;
+    --line-height-loose: 1.75;
+    /* Aliases */
+    --line-height-sm: var(--line-height-tight);
+    --line-height-lg: var(--line-height-loose);
+
+    /* ============================================================
+     * ESPACIADO (escala DINTEL — multiplicador en pasos de 4px)
+     * ============================================================ */
+    --space-010: 0.125rem;  /* 2px  */
+    --space-025: 0.25rem;   /* 4px  */
+    --space-050: 0.5rem;    /* 8px  */
+    --space-075: 0.75rem;   /* 12px */
+    --space-100: 1rem;      /* 16px */
+    --space-125: 1.25rem;   /* 20px */
+    --space-150: 1.5rem;    /* 24px */
+    --space-200: 2rem;      /* 32px */
+    --space-300: 3rem;      /* 48px */
+    --space-400: 4rem;      /* 64px */
+    --space-500: 5rem;      /* 80px */
+    --space-600: 6rem;      /* 96px */
+    --space-700: 8rem;      /* 128px */
+    --space-800: 10rem;     /* 160px */
+    --space-900: 12rem;     /* 192px */
+
+    /* Aliases Bootstrap-style para compatibilidad */
+    --spacer-1: var(--space-025);
+    --spacer-2: var(--space-050);
+    --spacer-3: var(--space-100);
+    --spacer-4: var(--space-150);
+    --spacer-5: var(--space-200);
+    --spacer-6: var(--space-300);
+    --spacer-7: var(--space-400);
+    --spacer-8: var(--space-600);
+
+    /* ============================================================
+     * BORDES
+     * ============================================================ */
+    --radius-none: 0;
+    --radius-sm: 0.25rem;     /* 4px */
+    --radius-md: 0.375rem;    /* 6px */
+    --radius-lg: 0.5rem;      /* 8px */
+    --radius-xl: 0.75rem;     /* 12px */
+    --radius-pill: 50rem;
+    --radius-circle: 50%;
+
+    /* Aliases */
+    --border-radius-sm: var(--radius-sm);
+    --border-radius: var(--radius-md);
+    --border-radius-lg: var(--radius-lg);
+    --border-radius-pill: var(--radius-pill);
+
+    --border-width-sm: 1px;
+    --border-width-md: 2px;
+    --border-width-lg: 4px;
+    --border-width: var(--border-width-sm);
+
+    /* ============================================================
+     * ELEVACIONES (sombras)
+     * ============================================================ */
+    --elevation-100: 0 1px 2px 0 rgba(10, 14, 20, 0.05);
+    --elevation-200: 0 1px 3px 0 rgba(10, 14, 20, 0.1), 0 1px 2px -1px rgba(10, 14, 20, 0.1);
+    --elevation-300: 0 4px 6px -1px rgba(10, 14, 20, 0.1), 0 2px 4px -2px rgba(10, 14, 20, 0.1);
+    --elevation-400: 0 10px 15px -3px rgba(10, 14, 20, 0.1), 0 4px 6px -4px rgba(10, 14, 20, 0.1);
+    --elevation-500: 0 20px 25px -5px rgba(10, 14, 20, 0.1), 0 8px 10px -6px rgba(10, 14, 20, 0.1);
+
+    /* Aliases */
+    --box-shadow-sm: var(--elevation-100);
+    --box-shadow: var(--elevation-200);
+    --box-shadow-md: var(--elevation-300);
+    --box-shadow-lg: var(--elevation-400);
+}
+
+/* ============================================================
+ * LAYOUT: contenedor de página DINTEL
+ * Limita el ancho máximo del contenido y añade aire en los laterales
+ * ============================================================ */
+.container,
+.container-fluid,
+.container-sm,
+.container-md,
+.container-lg,
+.container-xl,
+.container-xxl {
+    padding-left: var(--space-200, 2rem);
+    padding-right: var(--space-200, 2rem);
+}
+
+@media (min-width: 992px) {
+    .container,
+    .container-md,
+    .container-lg {
+        max-width: 960px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container,
+    .container-md,
+    .container-lg,
+    .container-xl {
+        max-width: 1140px;
+    }
+}
+
+@media (min-width: 1400px) {
+    .container,
+    .container-md,
+    .container-lg,
+    .container-xl,
+    .container-xxl {
+        max-width: 1200px;
+    }
+}
+/* ============================================================
+ * LAYOUT: Utility classes para espaciado vertical entre secciones
+ * Aplicar via cssClasses en page-definition.json sobre cada Section.
+ * Ej: "cssClasses": ["dintel-section--py-lg"]
+ *
+ * NOTA: Liferay 7.4.13 NO aplica `fragmentViewports.paddingTop`/`paddingBottom`
+ * ni el `styles.paddingTop` clásico en la mayoría de Sections. La forma
+ * fiable es definir CSS utility en el theme y referenciarlo en cssClasses.
+ * ============================================================ */
+.dintel-section--py-xs {
+    padding-top: var(--space-050, 0.5rem) !important;
+    padding-bottom: var(--space-050, 0.5rem) !important;
+    padding-left: var(--space-100, 1rem) !important;
+    padding-right: var(--space-100, 1rem) !important;
+}
+.dintel-section--py-sm {
+    padding-top: var(--space-150, 1.5rem) !important;
+    padding-bottom: var(--space-150, 1.5rem) !important;
+    padding-left: var(--space-100, 1rem) !important;
+    padding-right: var(--space-100, 1rem) !important;
+}
+.dintel-section--py-md {
+    padding-top: var(--space-200, 2rem) !important;
+    padding-bottom: var(--space-200, 2rem) !important;
+    padding-left: var(--space-100, 1rem) !important;
+    padding-right: var(--space-100, 1rem) !important;
+}
+.dintel-section--py-lg {
+    padding-top: var(--space-500, 5rem) !important;
+    padding-bottom: var(--space-500, 5rem) !important;
+    padding-left: var(--space-100, 1rem) !important;
+    padding-right: var(--space-100, 1rem) !important;
+}
+.dintel-section--py-xl {
+    padding-top: var(--space-600, 6rem) !important;
+    padding-bottom: var(--space-600, 6rem) !important;
+    padding-left: var(--space-100, 1rem) !important;
+    padding-right: var(--space-100, 1rem) !important;
+}
+
+/* Variantes asimétricas (más espacio arriba o abajo) */
+.dintel-section--pt-sm { padding-top: var(--space-150, 1.5rem) !important; }
+.dintel-section--pt-md { padding-top: var(--space-300, 3rem) !important; }
+.dintel-section--pt-lg { padding-top: var(--space-500, 5rem) !important; }
+.dintel-section--pb-sm { padding-bottom: var(--space-150, 1.5rem) !important; }
+.dintel-section--pb-md { padding-bottom: var(--space-300, 3rem) !important; }
+.dintel-section--pb-lg { padding-bottom: var(--space-500, 5rem) !important; }
+
+/* ============================================================
+ * DINTEL Icon Font (dnt-icon)
+ * 136 iconos como font glyphs. Uso: <i class="dnt-icon dnt-icon-XXX"></i>
+ * Coloreables con la propiedad `color`.
+ * ============================================================ */
+@font-face {
+    font-family: "dnt-icon";
+    src: url("fonts/icons/dnt-icon.woff2") format("woff2"),
+         url("fonts/icons/dnt-icon.woff") format("woff"),
+         url("fonts/icons/dnt-icon.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+.dnt-icon,
+[class^="dnt-icon-"],
+[class*=" dnt-icon-"] {
+    font-family: "dnt-icon" !important;
+    speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    display: inline-block;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.dnt-icon-arroba::before { content: "\ea01"; }
+.dnt-icon-arrow-bottom::before { content: "\ea02"; }
+.dnt-icon-arrow-left::before { content: "\ea03"; }
+.dnt-icon-arrow-right::before { content: "\ea04"; }
+.dnt-icon-arrow-top::before { content: "\ea05"; }
+.dnt-icon-attachment::before { content: "\ea06"; }
+.dnt-icon-audio::before { content: "\ea07"; }
+.dnt-icon-back-message::before { content: "\ea08"; }
+.dnt-icon-bill::before { content: "\ea09"; }
+.dnt-icon-bluesky::before { content: "\ea0a"; }
+.dnt-icon-building::before { content: "\ea0b"; }
+.dnt-icon-buildings::before { content: "\ea0c"; }
+.dnt-icon-burger-menu::before { content: "\ea0d"; }
+.dnt-icon-calculator::before { content: "\ea0e"; }
+.dnt-icon-calendar-check::before { content: "\ea0f"; }
+.dnt-icon-calendar::before { content: "\ea10"; }
+.dnt-icon-chevron-bottom::before { content: "\ea11"; }
+.dnt-icon-chevron-double-bottom::before { content: "\ea12"; }
+.dnt-icon-chevron-double-left::before { content: "\ea13"; }
+.dnt-icon-chevron-double-right::before { content: "\ea14"; }
+.dnt-icon-chevron-double-top::before { content: "\ea15"; }
+.dnt-icon-chevron-left::before { content: "\ea16"; }
+.dnt-icon-chevron-right::before { content: "\ea17"; }
+.dnt-icon-chevron-top::before { content: "\ea18"; }
+.dnt-icon-clock::before { content: "\ea19"; }
+.dnt-icon-close::before { content: "\ea1a"; }
+.dnt-icon-copy::before { content: "\ea1b"; }
+.dnt-icon-doc-excel::before { content: "\ea1c"; }
+.dnt-icon-doc-pdf::before { content: "\ea1d"; }
+.dnt-icon-doc-word::before { content: "\ea1e"; }
+.dnt-icon-dollar::before { content: "\ea1f"; }
+.dnt-icon-dot::before { content: "\ea20"; }
+.dnt-icon-download::before { content: "\ea21"; }
+.dnt-icon-dropdown-menu::before { content: "\ea22"; }
+.dnt-icon-ear-audio-off::before { content: "\ea23"; }
+.dnt-icon-ear-audio::before { content: "\ea24"; }
+.dnt-icon-edit::before { content: "\ea25"; }
+.dnt-icon-envelope::before { content: "\ea26"; }
+.dnt-icon-equal::before { content: "\ea27"; }
+.dnt-icon-eur::before { content: "\ea28"; }
+.dnt-icon-event-accepted-large::before { content: "\ea29"; }
+.dnt-icon-event-accepted-medium::before { content: "\ea2a"; }
+.dnt-icon-event-declined-large::before { content: "\ea2b"; }
+.dnt-icon-event-declined-medium::before { content: "\ea2c"; }
+.dnt-icon-event-programmed-large::before { content: "\ea2d"; }
+.dnt-icon-event-programmed-medium::before { content: "\ea2e"; }
+.dnt-icon-event-requested-large::before { content: "\ea2f"; }
+.dnt-icon-event-requested-medium::before { content: "\ea30"; }
+.dnt-icon-event-online::before { content: "\ea31"; }
+.dnt-icon-event-onsite::before { content: "\ea32"; }
+.dnt-icon-external-link::before { content: "\ea33"; }
+.dnt-icon-eye-hide::before { content: "\ea34"; }
+.dnt-icon-eye-show::before { content: "\ea35"; }
+.dnt-icon-file-import::before { content: "\ea36"; }
+.dnt-icon-file-new::before { content: "\ea37"; }
+.dnt-icon-file-store::before { content: "\ea38"; }
+.dnt-icon-file-validate::before { content: "\ea39"; }
+.dnt-icon-file-view::before { content: "\ea3a"; }
+.dnt-icon-file::before { content: "\ea3b"; }
+.dnt-icon-filter::before { content: "\ea3c"; }
+.dnt-icon-flag-off::before { content: "\ea3d"; }
+.dnt-icon-flag-on::before { content: "\ea3e"; }
+.dnt-icon-folder-import::before { content: "\ea3f"; }
+.dnt-icon-folder-new::before { content: "\ea40"; }
+.dnt-icon-folder-store::before { content: "\ea41"; }
+.dnt-icon-folder-validate::before { content: "\ea42"; }
+.dnt-icon-folder::before { content: "\ea43"; }
+.dnt-icon-help::before { content: "\ea44"; }
+.dnt-icon-hourglass::before { content: "\ea45"; }
+.dnt-icon-id-file::before { content: "\ea46"; }
+.dnt-icon-languages::before { content: "\ea47"; }
+.dnt-icon-large-thumbnail-stroke::before { content: "\ea48"; }
+.dnt-icon-large-thumbnail::before { content: "\ea49"; }
+.dnt-icon-like-dark::before { content: "\ea4a"; }
+.dnt-icon-like-light::before { content: "\ea4b"; }
+.dnt-icon-list-view-stroke::before { content: "\ea4c"; }
+.dnt-icon-list-view::before { content: "\ea4d"; }
+.dnt-icon-location::before { content: "\ea4e"; }
+.dnt-icon-lock::before { content: "\ea4f"; }
+.dnt-icon-login::before { content: "\ea50"; }
+.dnt-icon-logout::before { content: "\ea51"; }
+.dnt-icon-message::before { content: "\ea52"; }
+.dnt-icon-minus::before { content: "\ea53"; }
+.dnt-icon-notification::before { content: "\ea54"; }
+.dnt-icon-office::before { content: "\ea55"; }
+.dnt-icon-order-down::before { content: "\ea56"; }
+.dnt-icon-order-up::before { content: "\ea57"; }
+.dnt-icon-order::before { content: "\ea58"; }
+.dnt-icon-phone::before { content: "\ea59"; }
+.dnt-icon-plus::before { content: "\ea5a"; }
+.dnt-icon-print::before { content: "\ea5b"; }
+.dnt-icon-priority-message::before { content: "\ea5c"; }
+.dnt-icon-rrss-facebook::before { content: "\ea5d"; }
+.dnt-icon-rrss-instagram::before { content: "\ea5e"; }
+.dnt-icon-rrss-linkedin::before { content: "\ea5f"; }
+.dnt-icon-rrss-tiktok::before { content: "\ea60"; }
+.dnt-icon-rrss-twitter::before { content: "\ea61"; }
+.dnt-icon-rrss-x::before { content: "\ea62"; }
+.dnt-icon-restore::before { content: "\ea63"; }
+.dnt-icon-routine-message::before { content: "\ea64"; }
+.dnt-icon-save-timer::before { content: "\ea65"; }
+.dnt-icon-save::before { content: "\ea66"; }
+.dnt-icon-scanner::before { content: "\ea67"; }
+.dnt-icon-search::before { content: "\ea68"; }
+.dnt-icon-settings::before { content: "\ea69"; }
+.dnt-icon-share::before { content: "\ea6a"; }
+.dnt-icon-signed::before { content: "\ea6b"; }
+.dnt-icon-small-thumbnail::before { content: "\ea6c"; }
+.dnt-icon-sort-bottom-scroll::before { content: "\ea6d"; }
+.dnt-icon-sort-bottom::before { content: "\ea6e"; }
+.dnt-icon-sort-double::before { content: "\ea6f"; }
+.dnt-icon-sort-left::before { content: "\ea70"; }
+.dnt-icon-sort-top::before { content: "\ea71"; }
+.dnt-icon-status-error::before { content: "\ea72"; }
+.dnt-icon-status-info::before { content: "\ea73"; }
+.dnt-icon-status-success::before { content: "\ea74"; }
+.dnt-icon-status-warning::before { content: "\ea75"; }
+.dnt-icon-table-columns::before { content: "\ea76"; }
+.dnt-icon-tag::before { content: "\ea77"; }
+.dnt-icon-task-activate::before { content: "\ea78"; }
+.dnt-icon-task-pause::before { content: "\ea79"; }
+.dnt-icon-task-play::before { content: "\ea7a"; }
+.dnt-icon-thumb-tack::before { content: "\ea7b"; }
+.dnt-icon-tick::before { content: "\ea7c"; }
+.dnt-icon-top-bottom-scroll::before { content: "\ea7d"; }
+.dnt-icon-trash::before { content: "\ea7e"; }
+.dnt-icon-unsigned::before { content: "\ea7f"; }
+.dnt-icon-upload::before { content: "\ea80"; }
+.dnt-icon-urgent-message::before { content: "\ea81"; }
+.dnt-icon-user::before { content: "\ea82"; }
+.dnt-icon-users::before { content: "\ea83"; }
+.dnt-icon-vertical-menu::before { content: "\ea84"; }
+.dnt-icon-volume-off::before { content: "\ea85"; }
+.dnt-icon-volume::before { content: "\ea86"; }
+.dnt-icon-zoom-in::before { content: "\ea87"; }
+.dnt-icon-zoom-out::before { content: "\ea88"; }

@@ -1,0 +1,51 @@
+<div class="dintel-modal-wrapper">
+  <button
+    class="dintel-modal__opener"
+    type="button"
+    aria-haspopup="dialog"
+    aria-controls="dintel-modal-${fragmentEntryLinkNamespace}"
+    data-modal-open
+  >
+    <span data-lfr-editable-id="modal-opener-text" data-lfr-editable-type="text">Abrir diálogo</span>
+  </button>
+
+  <div
+    class="dintel-modal dintel-modal--${configuration.size!'md'}"
+    id="dintel-modal-${fragmentEntryLinkNamespace}"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="dintel-modal-title-${fragmentEntryLinkNamespace}"
+    aria-describedby="dintel-modal-body-${fragmentEntryLinkNamespace}"
+    [#if !configuration.openByDefault]hidden[/#if]
+  >
+    <div class="dintel-modal__backdrop" data-modal-close></div>
+
+    <div class="dintel-modal__panel" role="document">
+      <header class="dintel-modal__header">
+        <h2 class="dintel-modal__title" id="dintel-modal-title-${fragmentEntryLinkNamespace}" data-lfr-editable-id="modal-title" data-lfr-editable-type="text">
+          Título del diálogo
+        </h2>
+        [#if configuration.showCloseButton]
+          <button class="dintel-modal__close" type="button" aria-label="Cerrar diálogo" data-modal-close>
+            <span class="dnt-icon dnt-icon-close" aria-hidden="true"></span>
+          </button>
+        [/#if]
+      </header>
+
+      <div class="dintel-modal__body" id="dintel-modal-body-${fragmentEntryLinkNamespace}" data-lfr-editable-id="modal-body" data-lfr-editable-type="rich-text">
+        <p>Contenido del cuadro de diálogo. Aquí puede incluir texto, formularios u otros elementos.</p>
+      </div>
+
+      <footer class="dintel-modal__footer">
+        [#if configuration.showSecondary]
+          <button class="dintel-modal__btn dintel-modal__btn--secondary" type="button" data-modal-close>
+            <span data-lfr-editable-id="modal-secondary-text" data-lfr-editable-type="text">Cancelar</span>
+          </button>
+        [/#if]
+        <button class="dintel-modal__btn dintel-modal__btn--${configuration.primaryVariant!'primary'}" type="button" data-modal-confirm>
+          <span data-lfr-editable-id="modal-primary-text" data-lfr-editable-type="text">Confirmar</span>
+        </button>
+      </footer>
+    </div>
+  </div>
+</div>

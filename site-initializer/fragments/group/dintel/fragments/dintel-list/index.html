@@ -1,0 +1,27 @@
+[#assign tag = (configuration.type == 'numbered')?then('ol', 'ul')/]
+<${tag} class="dintel-list dintel-list--${configuration.type!'bulleted'} dintel-list--${configuration.size!'md'}" role="list">
+  <li class="dintel-list__item">
+    [#if configuration.type == 'icon']
+      <span class="dnt-icon dnt-icon-${configuration.icon!'check'} dintel-list__icon" aria-hidden="true"></span>
+    [/#if]
+    <span class="dintel-list__text" data-lfr-editable-id="list-item-1" data-lfr-editable-type="rich-text">
+      Elemento de lista número uno.
+    </span>
+  </li>
+  <li class="dintel-list__item">
+    [#if configuration.type == 'icon']
+      <span class="dnt-icon dnt-icon-${configuration.icon!'check'} dintel-list__icon" aria-hidden="true"></span>
+    [/#if]
+    <span class="dintel-list__text" data-lfr-editable-id="list-item-2" data-lfr-editable-type="rich-text">
+      Elemento de lista número dos.
+    </span>
+  </li>
+  <li class="dintel-list__item">
+    [#if configuration.type == 'icon']
+      <span class="dnt-icon dnt-icon-${configuration.icon!'check'} dintel-list__icon" aria-hidden="true"></span>
+    [/#if]
+    <span class="dintel-list__text" data-lfr-editable-id="list-item-3" data-lfr-editable-type="rich-text">
+      Elemento de lista número tres.
+    </span>
+  </li>
+</${tag}>

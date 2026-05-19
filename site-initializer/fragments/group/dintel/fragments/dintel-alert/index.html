@@ -1,0 +1,41 @@
+<div
+  class="dintel-alert dintel-alert--${configuration.type!'info'} ${configuration.dismissible?then('dintel-alert--dismissible', '')}"
+  role="[#if configuration.type == 'danger' || configuration.type == 'warning']alert[#else]status[/#if]"
+  tabindex="0"
+>
+  <div class="dintel-alert__icon" aria-hidden="true">
+    [#if configuration.type == 'info']
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+    [/#if]
+    [#if configuration.type == 'success']
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+    [/#if]
+    [#if configuration.type == 'warning']
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z"/></svg>
+    [/#if]
+    [#if configuration.type == 'danger']
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg>
+    [/#if]
+  </div>
+  <div class="dintel-alert__content">
+    [#if configuration.showTitle]
+      <p class="dintel-alert__title" data-lfr-editable-id="alert-title" data-lfr-editable-type="text">
+        Título de la alerta
+      </p>
+    [/#if]
+    <p class="dintel-alert__body" data-lfr-editable-id="alert-body" data-lfr-editable-type="rich-text">
+      Mensaje descriptivo de la alerta con información relevante para el usuario.
+    </p>
+    [#if configuration.showLink]
+      <a class="dintel-alert__link" data-lfr-editable-id="alert-link" data-lfr-editable-type="link" href="#">
+        <span data-lfr-editable-id="alert-link-text" data-lfr-editable-type="text">Más información</span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
+      </a>
+    [/#if]
+  </div>
+  [#if configuration.dismissible]
+    <button class="dintel-alert__close" type="button" aria-label="Cerrar alerta" role="button">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+    </button>
+  [/#if]
+</div>

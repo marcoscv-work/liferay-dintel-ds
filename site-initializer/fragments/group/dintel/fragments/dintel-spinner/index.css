@@ -1,0 +1,112 @@
+@keyframes dintel-spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes dintel-dash {
+  0% { stroke-dasharray: 1, 150; stroke-dashoffset: 0; }
+  50% { stroke-dasharray: 90, 150; stroke-dashoffset: -35; }
+  100% { stroke-dasharray: 90, 150; stroke-dashoffset: -124; }
+}
+
+/* --- Wrapper modes --- */
+.dintel-spinner-wrapper--inline {
+  display: inline-flex;
+}
+
+.dintel-spinner-wrapper--centered {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  padding: var(--spacer-4, 1.5rem);
+  width: 100%;
+}
+
+.dintel-spinner-wrapper--overlay {
+  align-items: center;
+  background-color: var(--color-bg-overlay, rgba(54, 61, 71, 0.6));
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 50;
+}
+
+.dintel-spinner-wrapper--lock-screen {
+  align-items: center;
+  background-color: var(--color-bg-overlay, rgba(54, 61, 71, 0.6));
+  display: flex;
+  inset: 0;
+  justify-content: center;
+  position: fixed;
+  z-index: 9999;
+}
+
+.dintel-spinner-wrapper--overlay .dintel-spinner__label,
+.dintel-spinner-wrapper--lock-screen .dintel-spinner__label {
+  color: var(--color-text-inverse, #FFFFFF);
+}
+
+.dintel-spinner-wrapper--overlay .dintel-spinner__track,
+.dintel-spinner-wrapper--lock-screen .dintel-spinner__track {
+  stroke: rgba(255, 255, 255, 0.25);
+}
+
+.dintel-spinner-wrapper--overlay .dintel-spinner__path,
+.dintel-spinner-wrapper--lock-screen .dintel-spinner__path {
+  stroke: var(--color-icon-inverse, #FFFFFF);
+}
+
+/* --- Spinner --- */
+.dintel-spinner {
+  align-items: center;
+  display: inline-flex;
+  flex-direction: column;
+  gap: var(--spacer-2, 0.5rem);
+}
+
+.dintel-spinner__svg {
+  animation: dintel-spin 2s linear infinite;
+  display: block;
+  height: 40px;
+  width: 40px;
+}
+
+.dintel-spinner--sm .dintel-spinner__svg {
+  height: 24px;
+  width: 24px;
+}
+
+.dintel-spinner--lg .dintel-spinner__svg {
+  height: 64px;
+  width: 64px;
+}
+
+.dintel-spinner__track {
+  stroke: var(--color-bg-tertiary, #EEEFF0);
+}
+
+.dintel-spinner__path {
+  animation: dintel-dash 1.5s ease-in-out infinite;
+  stroke: var(--color-icon-interactive, #114DA6);
+}
+
+.dintel-spinner__label {
+  color: var(--color-text-tertiary, #696E75);
+  font-size: var(--font-size-sm, 0.875rem);
+}
+
+.visually-hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}

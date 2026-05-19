@@ -1,0 +1,23 @@
+{
+  "fieldSets": [
+    {
+      "fields": [
+        {
+          "dataType": "string",
+          "defaultValue": "md",
+          "label": "Tamaño",
+          "name": "size",
+          "type": "select",
+          "typeOptions": {
+            "validValues": [
+              {"value": "sm", "label": "Pequeño"},
+              {"value": "md", "label": "Mediano"},
+              {"value": "lg", "label": "Grande"}
+            ]
+          }
+        }
+      ],
+      "label": "Paginación"
+    }
+  ]
+}

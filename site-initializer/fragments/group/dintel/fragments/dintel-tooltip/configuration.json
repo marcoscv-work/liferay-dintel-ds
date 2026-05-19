@@ -1,0 +1,38 @@
+{
+  "fieldSets": [
+    {
+      "fields": [
+        {
+          "dataType": "string",
+          "defaultValue": "top",
+          "label": "Posición",
+          "name": "placement",
+          "type": "select",
+          "typeOptions": {
+            "validValues": [
+              {"value": "top",    "label": "Arriba"},
+              {"value": "right",  "label": "Derecha"},
+              {"value": "bottom", "label": "Abajo"},
+              {"value": "left",   "label": "Izquierda"}
+            ]
+          }
+        },
+        {
+          "dataType": "string",
+          "defaultValue": "icon",
+          "label": "Trigger",
+          "name": "trigger",
+          "type": "select",
+          "typeOptions": {
+            "validValues": [
+              {"value": "icon",   "label": "Icono de ayuda"},
+              {"value": "text",   "label": "Texto subrayado"},
+              {"value": "button", "label": "Botón"}
+            ]
+          }
+        }
+      ],
+      "label": "Tooltip"
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "fieldSets": [
+    {
+      "fields": [
+        {
+          "dataType": "string",
+          "defaultValue": "md",
+          "label": "Tamaño",
+          "name": "size",
+          "type": "select",
+          "typeOptions": {
+            "validValues": [
+              {"value": "sm", "label": "Pequeño"},
+              {"value": "md", "label": "Mediano"},
+              {"value": "lg", "label": "Grande"}
+            ]
+          }
+        },
+        {
+          "dataType": "string",
+          "defaultValue": "inline",
+          "label": "Modo",
+          "name": "mode",
+          "type": "select",
+          "typeOptions": {
+            "validValues": [
+              {"value": "inline",      "label": "Inline (en línea)"},
+              {"value": "centered",    "label": "Centrado en bloque"},
+              {"value": "overlay",     "label": "Overlay (cubre contenedor)"},
+              {"value": "lock-screen", "label": "Lock-screen (cubre pantalla)"}
+            ]
+          }
+        },
+        {"defaultValue": "true",  "label": "Mostrar etiqueta", "name": "showLabel",      "type": "checkbox"},
+        {"defaultValue": "false", "label": "Visible (mostrar overlay/lock-screen ahora — solo para diseño)", "name": "demoVisible", "type": "checkbox"}
+      ],
+      "label": "Spinner"
+    }
+  ]
+}

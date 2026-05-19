@@ -1,0 +1,14 @@
+<div class="dintel-btn-wrapper ${configuration.fullWidth?then('dintel-btn-wrapper--full', '')}">
+  <a
+    class="dintel-btn dintel-btn--${configuration.style!'primary'} dintel-btn--${configuration.size!'md'} ${configuration.disabled?then('dintel-btn--disabled', '')}"
+    data-lfr-editable-id="btn-link"
+    data-lfr-editable-type="link"
+    href="#"
+    role="button"
+    [#if configuration.disabled]aria-disabled="true" tabindex="-1"[/#if]
+  >
+    <span data-lfr-editable-id="btn-label" data-lfr-editable-type="text">
+      Texto del Botón
+    </span>
+  </a>
+</div>

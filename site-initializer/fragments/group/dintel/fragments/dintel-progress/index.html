@@ -1,0 +1,25 @@
+<div class="dintel-progress dintel-progress--${configuration.size!'md'} dintel-progress--${configuration.color!'primary'} ${configuration.indeterminate?then('dintel-progress--indeterminate', '')}">
+  [#if configuration.showLabel || configuration.showPercent]
+    <div class="dintel-progress__header">
+      [#if configuration.showLabel]
+        <span class="dintel-progress__label" data-lfr-editable-id="progress-label" data-lfr-editable-type="text">
+          Progreso
+        </span>
+      [/#if]
+      [#if configuration.showPercent && !configuration.indeterminate]
+        <span class="dintel-progress__percent" aria-live="polite">${configuration.value!60}%</span>
+      [/#if]
+    </div>
+  [/#if]
+
+  <div
+    class="dintel-progress__track"
+    role="progressbar"
+    [#if !configuration.indeterminate]aria-valuenow="${configuration.value!60}" aria-valuemin="0" aria-valuemax="100"[/#if]
+  >
+    <div
+      class="dintel-progress__bar"
+      [#if !configuration.indeterminate]style="width: ${configuration.value!60}%"[/#if]
+    ></div>
+  </div>
+</div>

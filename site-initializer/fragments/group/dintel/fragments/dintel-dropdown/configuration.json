@@ -1,0 +1,39 @@
+{
+  "fieldSets": [
+    {
+      "fields": [
+        {
+          "dataType": "string",
+          "defaultValue": "primary",
+          "label": "Variante del trigger",
+          "name": "triggerVariant",
+          "type": "select",
+          "typeOptions": {
+            "validValues": [
+              {"value": "primary",   "label": "Botón primario"},
+              {"value": "secondary", "label": "Botón outline"},
+              {"value": "tertiary",  "label": "Solo texto"},
+              {"value": "neutral",   "label": "Botón gris"}
+            ]
+          }
+        },
+        {
+          "dataType": "string",
+          "defaultValue": "bottom-start",
+          "label": "Alineación del menú",
+          "name": "placement",
+          "type": "select",
+          "typeOptions": {
+            "validValues": [
+              {"value": "bottom-start", "label": "Inferior izquierda"},
+              {"value": "bottom-end",   "label": "Inferior derecha"},
+              {"value": "top-start",    "label": "Superior izquierda"},
+              {"value": "top-end",      "label": "Superior derecha"}
+            ]
+          }
+        }
+      ],
+      "label": "Desplegable"
+    }
+  ]
+}

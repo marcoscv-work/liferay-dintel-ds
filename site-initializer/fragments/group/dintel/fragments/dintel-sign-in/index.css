@@ -1,0 +1,192 @@
+.dintel-sign-in {
+  align-items: center;
+  display: flex;
+  font-family: var(--font-family-base);
+  justify-content: center;
+  padding: var(--space-300, 3rem) var(--space-100, 1rem);
+  width: 100%;
+}
+
+.dintel-sign-in__panel {
+  background-color: var(--color-bg-interactive-card, #FFFFFF);
+  border: 1px solid var(--color-border-soft, #DCDFE3);
+  border-radius: var(--radius-lg, 0.5rem);
+  box-shadow: var(--elevation-200, 0 1px 3px 0 rgba(10, 14, 20, 0.1));
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-100, 1rem);
+  max-width: 100%;
+  padding: var(--space-200, 2rem);
+  width: 420px;
+}
+
+.dintel-sign-in__title {
+  color: var(--color-text-primary, #0A0E14);
+  font-size: var(--text-heading-lg, 1.25rem);
+  font-weight: var(--font-weight-bold, 700);
+  margin: 0;
+  text-align: center;
+}
+
+.dintel-sign-in__intro {
+  color: var(--color-text-secondary, #363D47);
+  font-size: var(--text-body-md, 0.875rem);
+  line-height: var(--line-height-base, 1.5);
+  margin: 0;
+  text-align: center;
+}
+
+.dintel-sign-in__portlet {
+  margin-top: var(--space-050, 0.5rem);
+}
+
+/* Estilizar el portlet de login de Liferay con tokens DINTEL */
+.dintel-sign-in__portlet .form-control,
+.dintel-sign-in__portlet input[type="text"],
+.dintel-sign-in__portlet input[type="email"],
+.dintel-sign-in__portlet input[type="password"] {
+  background-color: var(--color-bg-interactive-card, #FFFFFF);
+  border: 1px solid var(--color-border-interactive, #DCDFE3);
+  border-radius: var(--radius-md, 0.375rem);
+  color: var(--color-text-primary, #0A0E14);
+  font-family: inherit;
+  font-size: var(--text-body-lg, 1rem);
+  padding: var(--space-075, 0.75rem) var(--space-100, 1rem);
+  width: 100%;
+}
+
+.dintel-sign-in__portlet input:focus {
+  border-color: var(--color-text-interactive, #114DA6);
+  box-shadow: 0 0 0 3px rgba(17, 77, 166, 0.2);
+  outline: none;
+}
+
+.dintel-sign-in__portlet label,
+.dintel-sign-in__portlet .control-label {
+  color: var(--color-text-secondary, #363D47);
+  font-size: var(--text-body-md, 0.875rem);
+  font-weight: var(--font-weight-semibold, 600);
+  margin-bottom: var(--space-025, 0.25rem);
+}
+
+.dintel-sign-in__portlet .form-group {
+  margin-bottom: var(--space-100, 1rem);
+}
+
+.dintel-sign-in__portlet .btn,
+.dintel-sign-in__portlet button[type="submit"] {
+  background-color: var(--color-bg-interactive-primary, #114DA6);
+  border: 2px solid var(--color-bg-interactive-primary, #114DA6);
+  border-radius: var(--radius-md, 0.375rem);
+  color: var(--color-text-inverse, #FFFFFF);
+  cursor: pointer;
+  font-family: inherit;
+  font-size: var(--text-body-md, 0.875rem);
+  font-weight: var(--font-weight-semibold, 600);
+  padding: var(--space-075, 0.75rem) var(--space-150, 1.5rem);
+  transition: background-color 0.15s;
+  width: 100%;
+}
+
+.dintel-sign-in__portlet .btn:hover,
+.dintel-sign-in__portlet button[type="submit"]:hover {
+  background-color: var(--color-bg-interactive-primary-hover, #093473);
+  border-color: var(--color-bg-interactive-primary-hover, #093473);
+}
+
+.dintel-sign-in__portlet .btn:focus-visible {
+  outline: 2px solid var(--color-border-interactive-focus, #C33400);
+  outline-offset: 2px;
+}
+
+.dintel-sign-in__portlet a {
+  color: var(--color-text-interactive, #114DA6);
+  font-size: var(--text-body-sm, 0.75rem);
+  text-decoration: underline;
+}
+
+.dintel-sign-in__portlet a:hover {
+  color: var(--color-text-interactive-hover, #093473);
+}
+
+.dintel-sign-in__portlet .alert {
+  background-color: var(--color-bg-feedback-error, #F5E1DC);
+  border-left: 4px solid var(--color-text-feedback-error, #C44727);
+  border-radius: var(--radius-md, 0.375rem);
+  color: var(--regular-primitives-status-error-500, #5E1503);
+  font-size: var(--text-body-md, 0.875rem);
+  margin-bottom: var(--space-100, 1rem);
+  padding: var(--space-075, 0.75rem) var(--space-100, 1rem);
+}
+
+/* Footer con enlace de crear cuenta */
+.dintel-sign-in__footer {
+  border-top: 1px solid var(--color-border-soft, #DCDFE3);
+  margin-top: var(--space-100, 1rem);
+  padding-top: var(--space-100, 1rem);
+  text-align: center;
+}
+
+.dintel-sign-in__footer-text {
+  color: var(--color-text-secondary, #363D47);
+  font-size: var(--text-body-md, 0.875rem);
+}
+
+.dintel-sign-in__footer-link {
+  color: var(--color-text-interactive, #114DA6);
+  font-size: var(--text-body-md, 0.875rem);
+  font-weight: var(--font-weight-semibold, 600);
+  margin-left: var(--space-025, 0.25rem);
+  text-decoration: underline;
+}
+
+.dintel-sign-in__footer-link:hover {
+  color: var(--color-text-interactive-hover, #093473);
+}
+
+.dintel-sign-in__footer-link:focus-visible {
+  border-radius: var(--radius-sm, 0.25rem);
+  outline: 2px solid var(--color-border-interactive-focus, #C33400);
+  outline-offset: 2px;
+}
+
+/* Estado "ya autenticado" */
+.dintel-sign-in__signed {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-100, 1rem);
+  text-align: center;
+}
+
+.dintel-sign-in__user-icon {
+  color: var(--color-icon-brand, #114DA6);
+  font-size: 3rem;
+}
+
+.dintel-sign-in__logout-link,
+.dintel-sign-in__logout-link:visited {
+  background-color: var(--color-bg-interactive-primary, #114DA6);
+  border-radius: var(--radius-md, 0.375rem);
+  color: var(--color-text-inverse, #FFFFFF);
+  display: inline-block;
+  font-size: var(--text-body-md, 0.875rem);
+  font-weight: var(--font-weight-semibold, 600);
+  margin-top: var(--space-100, 1rem);
+  padding: var(--space-075, 0.75rem) var(--space-150, 1.5rem);
+  text-decoration: none;
+  transition: background-color 0.15s;
+}
+
+.dintel-sign-in__logout-link:hover,
+.dintel-sign-in__logout-link:focus,
+.dintel-sign-in__logout-link:active {
+  background-color: var(--color-bg-interactive-primary-hover, #093473);
+  color: var(--color-text-inverse, #FFFFFF);
+  text-decoration: none;
+}
+
+.dintel-sign-in__logout-link:focus-visible {
+  outline: 2px solid var(--color-border-interactive-focus, #C33400);
+  outline-offset: 2px;
+}

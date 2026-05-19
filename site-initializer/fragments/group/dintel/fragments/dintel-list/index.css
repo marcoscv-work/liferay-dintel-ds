@@ -1,0 +1,51 @@
+.dintel-list {
+  color: var(--color-text-primary, #0A0E14);
+  display: flex;
+  flex-direction: column;
+  font-family: var(--font-family-base);
+  gap: var(--space-050, 0.5rem);
+  margin: 0;
+  padding: 0;
+}
+
+.dintel-list--sm { font-size: var(--text-body-sm, 0.75rem); }
+.dintel-list--md { font-size: var(--text-body-md, 0.875rem); }
+.dintel-list--lg { font-size: var(--text-body-lg, 1rem); }
+
+.dintel-list--bulleted {
+  list-style: disc inside;
+  padding-left: var(--space-050, 0.5rem);
+}
+
+.dintel-list--numbered {
+  list-style: decimal inside;
+  padding-left: var(--space-050, 0.5rem);
+}
+
+.dintel-list--icon,
+.dintel-list--unstyled {
+  list-style: none;
+}
+
+.dintel-list__item {
+  line-height: var(--line-height-base, 1.5);
+}
+
+.dintel-list--bulleted .dintel-list__item::marker,
+.dintel-list--numbered .dintel-list__item::marker {
+  color: var(--color-text-brand, #114DA6);
+  font-weight: var(--font-weight-semibold, 600);
+}
+
+.dintel-list--icon .dintel-list__item {
+  align-items: flex-start;
+  display: flex;
+  gap: var(--space-075, 0.75rem);
+}
+
+.dintel-list__icon {
+  color: var(--color-icon-brand, #114DA6);
+  flex-shrink: 0;
+  font-size: 1em;
+  margin-top: 0.25em;
+}

@@ -1,0 +1,52 @@
+{
+  "fieldSets": [
+    {
+      "fields": [
+        {
+          "dataType": "string",
+          "defaultValue": "primary",
+          "label": "Tipo",
+          "name": "style",
+          "type": "select",
+          "typeOptions": {
+            "validValues": [
+              {"value": "primary",   "label": "Primary (relleno)"},
+              {"value": "secondary", "label": "Secondary (outline)"},
+              {"value": "tertiary",  "label": "Tertiary (solo texto)"},
+              {"value": "neutral",   "label": "Neutral (gris)"},
+              {"value": "accent",    "label": "Accent (CTA naranja)"}
+            ]
+          }
+        },
+        {
+          "dataType": "string",
+          "defaultValue": "md",
+          "label": "Tamaño",
+          "name": "size",
+          "type": "select",
+          "typeOptions": {
+            "validValues": [
+              {"value": "sm", "label": "Small (S)"},
+              {"value": "md", "label": "Medium (M)"},
+              {"value": "lg", "label": "Large (L)"},
+              {"value": "xl", "label": "Extra Large (XL)"}
+            ]
+          }
+        },
+        {
+          "defaultValue": "false",
+          "label": "Ancho completo",
+          "name": "fullWidth",
+          "type": "checkbox"
+        },
+        {
+          "defaultValue": "false",
+          "label": "Deshabilitado",
+          "name": "disabled",
+          "type": "checkbox"
+        }
+      ],
+      "label": "Botón"
+    }
+  ]
+}

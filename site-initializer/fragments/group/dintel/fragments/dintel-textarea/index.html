@@ -1,0 +1,31 @@
+<div class="dintel-textarea dintel-textarea--state-${configuration.state!'default'} ${configuration.resizable?then('', 'dintel-textarea--no-resize')} ${configuration.disabled?then('dintel-textarea--disabled', '')}">
+  [#if configuration.showLabel]
+    <label class="dintel-textarea__label" for="dintel-textarea-${fragmentEntryLinkNamespace}">
+      <span data-lfr-editable-id="textarea-label" data-lfr-editable-type="text">Etiqueta</span>
+      [#if configuration.required]<span class="dintel-textarea__required" aria-hidden="true">*</span>[/#if]
+    </label>
+  [/#if]
+  <textarea
+    class="dintel-textarea__field"
+    id="dintel-textarea-${fragmentEntryLinkNamespace}"
+    rows="${configuration.rows!4}"
+    placeholder="Introduce un texto…"
+    maxlength="500"
+    [#if configuration.required]required[/#if]
+    [#if configuration.disabled]disabled aria-disabled="true"[/#if]
+    [#if configuration.state == 'error']aria-invalid="true"[/#if]
+    [#if configuration.showHelp]aria-describedby="dintel-textarea-help-${fragmentEntryLinkNamespace}"[/#if]
+  ></textarea>
+  <div class="dintel-textarea__footer">
+    [#if configuration.showHelp]
+      <p class="dintel-textarea__help" id="dintel-textarea-help-${fragmentEntryLinkNamespace}" data-lfr-editable-id="textarea-help" data-lfr-editable-type="text">
+        Texto de ayuda
+      </p>
+    [/#if]
+    [#if configuration.showCounter]
+      <span class="dintel-textarea__counter" aria-live="polite">
+        <span class="dintel-textarea__counter-current">0</span>/500
+      </span>
+    [/#if]
+  </div>
+</div>

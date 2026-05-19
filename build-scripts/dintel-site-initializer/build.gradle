@@ -1,0 +1,12 @@
+// Site Initializer JAR — manifest defined in ../bnd.bnd
+//
+// El build de gradle falla por un bug del JSTranspilerPlugin del workspace
+// (busca un dir `src/` que este bundle no tiene). El JAR se construye
+// manualmente desde la raíz del workspace:
+//
+//   jar cfm build-scripts/dintel-site-initializer/build/libs/com.dintel.site.initializer-1.0.0.jar \
+//     /tmp/dintel-manifest.mf \
+//     -C . site-initializer -C . META-INF
+//
+// Donde /tmp/dintel-manifest.mf contiene los headers de ../bnd.bnd.
+apply plugin: "java"

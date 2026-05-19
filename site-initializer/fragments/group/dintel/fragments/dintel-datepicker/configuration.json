@@ -1,0 +1,42 @@
+{
+  "fieldSets": [
+    {
+      "fields": [
+        {
+          "dataType": "string",
+          "defaultValue": "md",
+          "label": "Tamaño",
+          "name": "size",
+          "type": "select",
+          "typeOptions": {
+            "validValues": [
+              {"value": "sm", "label": "Small"},
+              {"value": "md", "label": "Medium"},
+              {"value": "lg", "label": "Large"}
+            ]
+          }
+        },
+        {
+          "dataType": "string",
+          "defaultValue": "default",
+          "label": "Estado",
+          "name": "state",
+          "type": "select",
+          "typeOptions": {
+            "validValues": [
+              {"value": "default", "label": "Default"},
+              {"value": "success", "label": "Éxito"},
+              {"value": "error",   "label": "Error"},
+              {"value": "warning", "label": "Advertencia"}
+            ]
+          }
+        },
+        {"defaultValue": "true",  "label": "Mostrar etiqueta", "name": "showLabel", "type": "checkbox"},
+        {"defaultValue": "false", "label": "Mostrar ayuda",     "name": "showHelp",  "type": "checkbox"},
+        {"defaultValue": "false", "label": "Deshabilitado",     "name": "disabled",  "type": "checkbox"},
+        {"defaultValue": "false", "label": "Obligatorio",        "name": "required",  "type": "checkbox"}
+      ],
+      "label": "Selector de fecha"
+    }
+  ]
+}

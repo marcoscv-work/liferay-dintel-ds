@@ -1,0 +1,36 @@
+{
+  "fieldSets": [
+    {
+      "fields": [
+        {
+          "dataType": "string",
+          "defaultValue": "horizontal",
+          "label": "Orientación",
+          "name": "orientation",
+          "type": "select",
+          "typeOptions": {
+            "validValues": [
+              {"value": "horizontal", "label": "Horizontal"},
+              {"value": "vertical", "label": "Vertical"}
+            ]
+          }
+        },
+        {
+          "dataType": "string",
+          "defaultValue": "default",
+          "label": "Estilo",
+          "name": "style",
+          "type": "select",
+          "typeOptions": {
+            "validValues": [
+              {"value": "default", "label": "Normal"},
+              {"value": "dashed", "label": "Discontinuo"},
+              {"value": "thick", "label": "Grueso"}
+            ]
+          }
+        }
+      ],
+      "label": "Divisor"
+    }
+  ]
+}

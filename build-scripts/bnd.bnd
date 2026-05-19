@@ -1,0 +1,6 @@
+Bundle-Name: DINTEL Site Initializer
+Bundle-SymbolicName: com.dintel.site.initializer
+Bundle-Version: 1.0.0
+Liferay-Site-Initializer-Name: DINTEL
+Provide-Capability: liferay.site.initializer
+Web-ContextPath: /site-initializer-dintel

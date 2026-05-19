@@ -1,0 +1,49 @@
+{
+  "fieldSets": [
+    {
+      "fields": [
+        {
+          "dataType": "int",
+          "defaultValue": "60",
+          "label": "Valor (0-100)",
+          "name": "value",
+          "type": "text"
+        },
+        {
+          "dataType": "string",
+          "defaultValue": "md",
+          "label": "Tamaño",
+          "name": "size",
+          "type": "select",
+          "typeOptions": {
+            "validValues": [
+              {"value": "sm", "label": "Small (4px)"},
+              {"value": "md", "label": "Medium (8px)"},
+              {"value": "lg", "label": "Large (16px)"}
+            ]
+          }
+        },
+        {
+          "dataType": "string",
+          "defaultValue": "primary",
+          "label": "Color",
+          "name": "color",
+          "type": "select",
+          "typeOptions": {
+            "validValues": [
+              {"value": "primary", "label": "Primary"},
+              {"value": "accent",  "label": "Accent"},
+              {"value": "success", "label": "Success"},
+              {"value": "warning", "label": "Warning"},
+              {"value": "error",   "label": "Error"}
+            ]
+          }
+        },
+        {"defaultValue": "false", "label": "Indeterminado",      "name": "indeterminate", "type": "checkbox"},
+        {"defaultValue": "true",  "label": "Mostrar etiqueta",   "name": "showLabel",     "type": "checkbox"},
+        {"defaultValue": "true",  "label": "Mostrar porcentaje", "name": "showPercent",   "type": "checkbox"}
+      ],
+      "label": "Barra de Progreso"
+    }
+  ]
+}

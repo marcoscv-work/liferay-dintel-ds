@@ -1,0 +1,42 @@
+{
+  "fieldSets": [
+    {
+      "fields": [
+        {
+          "dataType": "string",
+          "defaultValue": "info",
+          "label": "Tipo",
+          "name": "type",
+          "type": "select",
+          "typeOptions": {
+            "validValues": [
+              {"value": "info",    "label": "Información"},
+              {"value": "success", "label": "Éxito"},
+              {"value": "warning", "label": "Advertencia"},
+              {"value": "danger",  "label": "Error"}
+            ]
+          }
+        },
+        {
+          "defaultValue": "true",
+          "label": "Mostrar título",
+          "name": "showTitle",
+          "type": "checkbox"
+        },
+        {
+          "defaultValue": "false",
+          "label": "Mostrar enlace de acción",
+          "name": "showLink",
+          "type": "checkbox"
+        },
+        {
+          "defaultValue": "false",
+          "label": "Cerrable",
+          "name": "dismissible",
+          "type": "checkbox"
+        }
+      ],
+      "label": "Alerta"
+    }
+  ]
+}

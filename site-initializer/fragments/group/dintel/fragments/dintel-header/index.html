@@ -1,0 +1,66 @@
+<header class="dintel-header" role="banner">
+  <div class="dintel-header__top">
+    <div class="container dintel-header__top-inner">
+      <div class="dintel-header__gov-logo" aria-label="Gobierno de España">
+        <svg xmlns="http://www.w3.org/2000/svg" height="32" viewBox="0 0 120 32" fill="none" aria-hidden="true">
+          <rect width="120" height="32" fill="var(--color-bg-interactive-primary, #114DA6)" rx="2"/>
+          <text x="8" y="21" font-family="Nunito Sans, sans-serif" font-size="12" font-weight="700" fill="white">GOB.ES</text>
+        </svg>
+      </div>
+      <div class="dintel-header__top-actions">
+        [#if configuration.showLang]
+          <nav class="dintel-header__lang" aria-label="Selector de idioma">
+            <a href="#" class="dintel-header__lang-link" hreflang="es" aria-current="true">ES</a>
+            <span aria-hidden="true">|</span>
+            <a href="#" class="dintel-header__lang-link" hreflang="eu">EU</a>
+            <span aria-hidden="true">|</span>
+            <a href="#" class="dintel-header__lang-link" hreflang="ca">CA</a>
+            <span aria-hidden="true">|</span>
+            <a href="#" class="dintel-header__lang-link" hreflang="gl">GL</a>
+          </nav>
+        [/#if]
+      </div>
+    </div>
+  </div>
+  <div class="dintel-header__main">
+    <div class="container dintel-header__main-inner">
+      <a class="dintel-header__brand" data-lfr-editable-id="header-brand-link" data-lfr-editable-type="link" href="/">
+        <span class="dintel-header__brand-name" data-lfr-editable-id="header-brand-name" data-lfr-editable-type="text">
+          DINTEL
+        </span>
+        <span class="dintel-header__brand-desc" data-lfr-editable-id="header-brand-desc" data-lfr-editable-type="text">
+          Sistema de Diseño
+        </span>
+      </a>
+      <div class="dintel-header__actions">
+        [#if configuration.showSearch]
+          <button class="dintel-header__search-btn" type="button" aria-label="Buscar" aria-expanded="false">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+          </button>
+        [/#if]
+        <nav class="dintel-header__nav" aria-label="Menú principal">
+          <ul class="dintel-header__nav-list" role="list">
+            <li class="dintel-header__nav-item">
+              <a class="dintel-header__nav-link" data-lfr-editable-id="nav-link-1" data-lfr-editable-type="link" href="#">
+                <span data-lfr-editable-id="nav-text-1" data-lfr-editable-type="text">Fundamentos</span>
+              </a>
+            </li>
+            <li class="dintel-header__nav-item">
+              <a class="dintel-header__nav-link" data-lfr-editable-id="nav-link-2" data-lfr-editable-type="link" href="#">
+                <span data-lfr-editable-id="nav-text-2" data-lfr-editable-type="text">Componentes</span>
+              </a>
+            </li>
+            <li class="dintel-header__nav-item">
+              <a class="dintel-header__nav-link" data-lfr-editable-id="nav-link-3" data-lfr-editable-type="link" href="#">
+                <span data-lfr-editable-id="nav-text-3" data-lfr-editable-type="text">Plantillas</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <button class="dintel-header__mobile-menu" type="button" aria-label="Abrir menú" aria-expanded="false">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</header>

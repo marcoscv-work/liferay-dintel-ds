@@ -1,0 +1,49 @@
+{
+  "fieldSets": [
+    {
+      "fields": [
+        {
+          "dataType": "string",
+          "defaultValue": "default",
+          "label": "Variante",
+          "name": "variant",
+          "type": "select",
+          "typeOptions": {
+            "validValues": [
+              {"value": "default",  "label": "Default"},
+              {"value": "negative", "label": "Negative (sobre fondo oscuro)"},
+              {"value": "accent",   "label": "Accent (naranja)"}
+            ]
+          }
+        },
+        {
+          "dataType": "string",
+          "defaultValue": "md",
+          "label": "Tamaño",
+          "name": "size",
+          "type": "select",
+          "typeOptions": {
+            "validValues": [
+              {"value": "sm", "label": "Small"},
+              {"value": "md", "label": "Medium"},
+              {"value": "lg", "label": "Large"}
+            ]
+          }
+        },
+        {
+          "defaultValue": "false",
+          "label": "Icono externo (abre en pestaña nueva)",
+          "name": "external",
+          "type": "checkbox"
+        },
+        {
+          "defaultValue": "false",
+          "label": "Mostrar icono delante",
+          "name": "showLeadingIcon",
+          "type": "checkbox"
+        }
+      ],
+      "label": "Enlace"
+    }
+  ]
+}

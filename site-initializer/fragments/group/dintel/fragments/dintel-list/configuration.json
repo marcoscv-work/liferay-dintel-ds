@@ -1,0 +1,53 @@
+{
+  "fieldSets": [
+    {
+      "fields": [
+        {
+          "dataType": "string",
+          "defaultValue": "bulleted",
+          "label": "Tipo",
+          "name": "type",
+          "type": "select",
+          "typeOptions": {
+            "validValues": [
+              {"value": "bulleted",  "label": "Con viñetas"},
+              {"value": "numbered",  "label": "Numerada"},
+              {"value": "icon",      "label": "Con icono"},
+              {"value": "unstyled",  "label": "Sin estilo"}
+            ]
+          }
+        },
+        {
+          "dataType": "string",
+          "defaultValue": "check",
+          "label": "Icono (si tipo = con icono)",
+          "name": "icon",
+          "type": "select",
+          "typeOptions": {
+            "validValues": [
+              {"value": "check",       "label": "Check"},
+              {"value": "arrow-right", "label": "Flecha derecha"},
+              {"value": "dot",         "label": "Punto"},
+              {"value": "chevron-right","label": "Chevron derecha"}
+            ]
+          }
+        },
+        {
+          "dataType": "string",
+          "defaultValue": "md",
+          "label": "Tamaño",
+          "name": "size",
+          "type": "select",
+          "typeOptions": {
+            "validValues": [
+              {"value": "sm", "label": "Small"},
+              {"value": "md", "label": "Medium"},
+              {"value": "lg", "label": "Large"}
+            ]
+          }
+        }
+      ],
+      "label": "Lista"
+    }
+  ]
+}

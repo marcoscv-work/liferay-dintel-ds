@@ -1,0 +1,48 @@
+{
+  "fieldSets": [
+    {
+      "fields": [
+        {
+          "dataType": "string",
+          "defaultValue": "horizontal",
+          "label": "Orientación",
+          "name": "orientation",
+          "type": "select",
+          "typeOptions": {
+            "validValues": [
+              {"value": "horizontal", "label": "Horizontal"},
+              {"value": "vertical",   "label": "Vertical"}
+            ]
+          }
+        },
+        {
+          "dataType": "string",
+          "defaultValue": "start",
+          "label": "Alineación",
+          "name": "alignment",
+          "type": "select",
+          "typeOptions": {
+            "validValues": [
+              {"value": "start",  "label": "Inicio"},
+              {"value": "center", "label": "Centrado"},
+              {"value": "end",    "label": "Final"}
+            ]
+          }
+        },
+        {
+          "defaultValue": "false",
+          "label": "Mostrar iconos en pestañas",
+          "name": "showIcons",
+          "type": "checkbox"
+        },
+        {
+          "defaultValue": "false",
+          "label": "Pestaña 3 deshabilitada",
+          "name": "disableTab3",
+          "type": "checkbox"
+        }
+      ],
+      "label": "Pestañas"
+    }
+  ]
+}

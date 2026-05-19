@@ -1,0 +1,28 @@
+<div class="dintel-datepicker dintel-datepicker--${configuration.size!'md'} dintel-datepicker--state-${configuration.state!'default'} ${configuration.disabled?then('dintel-datepicker--disabled', '')}">
+  [#if configuration.showLabel]
+    <label class="dintel-datepicker__label" for="dintel-datepicker-${fragmentEntryLinkNamespace}">
+      <span data-lfr-editable-id="datepicker-label" data-lfr-editable-type="text">Fecha</span>
+      [#if configuration.required]<span class="dintel-datepicker__required" aria-hidden="true">*</span>[/#if]
+    </label>
+  [/#if]
+
+  <div class="dintel-datepicker__wrapper">
+    <span class="dnt-icon dnt-icon-calendar dintel-datepicker__icon dintel-datepicker__icon--leading" aria-hidden="true"></span>
+    <input
+      class="dintel-datepicker__field"
+      id="dintel-datepicker-${fragmentEntryLinkNamespace}"
+      type="date"
+      placeholder="dd/mm/aaaa"
+      [#if configuration.required]required[/#if]
+      [#if configuration.disabled]disabled aria-disabled="true"[/#if]
+      [#if configuration.state == 'error']aria-invalid="true"[/#if]
+      [#if configuration.showHelp]aria-describedby="dintel-datepicker-help-${fragmentEntryLinkNamespace}"[/#if]
+    />
+  </div>
+
+  [#if configuration.showHelp]
+    <p class="dintel-datepicker__help" id="dintel-datepicker-help-${fragmentEntryLinkNamespace}" data-lfr-editable-id="datepicker-help" data-lfr-editable-type="text">
+      Texto de ayuda
+    </p>
+  [/#if]
+</div>

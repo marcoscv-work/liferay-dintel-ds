@@ -1,0 +1,93 @@
+.dintel-card {
+  background-color: var(--color-bg-interactive-card, #FFFFFF);
+  border: 1px solid var(--color-border-soft, #DCDFE3);
+  border-radius: var(--border-radius-lg, 0.5rem);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+  transition: box-shadow 0.2s ease;
+}
+
+.dintel-card--shadow {
+  box-shadow: var(--elevation-200, 0 1px 3px 0 rgba(10, 14, 20, 0.1));
+}
+
+.dintel-card:hover {
+  box-shadow: var(--elevation-300, 0 4px 6px -1px rgba(10, 14, 20, 0.1));
+}
+
+.dintel-card--horizontal {
+  flex-direction: row;
+}
+
+.dintel-card__media {
+  overflow: hidden;
+}
+
+.dintel-card__img {
+  display: block;
+  height: 200px;
+  object-fit: cover;
+  width: 100%;
+}
+
+.dintel-card--horizontal .dintel-card__img {
+  height: 100%;
+  width: 240px;
+}
+
+.dintel-card__body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: var(--spacer-2, 0.5rem);
+  padding: var(--spacer-4, 1.5rem);
+}
+
+.dintel-card__category {
+  color: var(--color-text-interactive, #114DA6);
+  font-size: var(--font-size-xs, 0.75rem);
+  font-weight: var(--font-weight-semi-bold, 600);
+  letter-spacing: 0.05em;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.dintel-card__title {
+  color: var(--color-text-primary, #0A0E14);
+  font-size: var(--h5-font-size, 1.25rem);
+  font-weight: var(--font-weight-bold, 700);
+  line-height: var(--line-height-sm, 1.25);
+  margin: 0;
+}
+
+.dintel-card__text {
+  color: var(--color-text-secondary, #363D47);
+  flex: 1;
+  font-size: var(--font-size-sm, 0.875rem);
+  line-height: var(--line-height-base, 1.5);
+  margin: 0;
+}
+
+.dintel-card__link {
+  align-items: center;
+  color: var(--color-text-interactive, #114DA6);
+  display: inline-flex;
+  font-size: var(--font-size-sm, 0.875rem);
+  font-weight: var(--font-weight-semi-bold, 600);
+  gap: var(--spacer-1, 0.25rem);
+  margin-top: var(--spacer-2, 0.5rem);
+  text-decoration: none;
+}
+
+.dintel-card__link:hover {
+  color: var(--color-text-interactive-hover, #093473);
+  text-decoration: underline;
+}
+
+.dintel-card__link:focus-visible {
+  outline: 2px solid var(--color-border-interactive-focus, #C33400);
+  outline-offset: 2px;
+  border-radius: var(--border-radius-sm, 0.25rem);
+}

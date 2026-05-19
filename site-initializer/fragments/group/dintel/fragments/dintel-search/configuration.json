@@ -1,0 +1,48 @@
+{
+  "fieldSets": [
+    {
+      "fields": [
+        {
+          "dataType": "string",
+          "defaultValue": "inline",
+          "label": "Modo",
+          "name": "mode",
+          "type": "select",
+          "typeOptions": {
+            "validValues": [
+              {"value": "inline", "label": "Inline (input visible)"},
+              {"value": "modal",  "label": "Modal (botón abre overlay)"}
+            ]
+          }
+        },
+        {
+          "dataType": "string",
+          "defaultValue": "md",
+          "label": "Tamaño",
+          "name": "size",
+          "type": "select",
+          "typeOptions": {
+            "validValues": [
+              {"value": "sm", "label": "Pequeño"},
+              {"value": "md", "label": "Mediano"},
+              {"value": "lg", "label": "Grande"}
+            ]
+          }
+        },
+        {
+          "defaultValue": "false",
+          "label": "Expandido (ancho completo)",
+          "name": "fullWidth",
+          "type": "checkbox"
+        },
+        {
+          "defaultValue": "false",
+          "label": "Mostrar etiqueta visible",
+          "name": "showLabel",
+          "type": "checkbox"
+        }
+      ],
+      "label": "Búsqueda"
+    }
+  ]
+}

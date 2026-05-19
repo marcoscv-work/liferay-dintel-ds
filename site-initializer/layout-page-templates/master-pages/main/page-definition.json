@@ -1,0 +1,37 @@
+{
+    "pageElement": {
+        "pageElements": [
+            {
+                "definition": {
+                    "fragment": {
+                        "key": "dintel-header-dynamic"
+                    },
+                    "fragmentConfig": {},
+                    "fragmentFields": [],
+                    "indexed": true
+                },
+                "type": "Fragment"
+            },
+            {
+                "definition": {
+                    "fragmentSettings": {
+                        "unallowedFragments": []
+                    }
+                },
+                "type": "DropZone"
+            },
+            {
+                "definition": {
+                    "fragment": {
+                        "key": "dintel-footer"
+                    },
+                    "fragmentConfig": {},
+                    "fragmentFields": [],
+                    "indexed": true
+                },
+                "type": "Fragment"
+            }
+        ],
+        "type": "Root"
+    }
+}

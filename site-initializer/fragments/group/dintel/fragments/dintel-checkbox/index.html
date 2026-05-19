@@ -1,0 +1,28 @@
+<div class="dintel-checkbox dintel-checkbox--${configuration.size!'md'} ${configuration.errorState?then('dintel-checkbox--error', '')} ${configuration.disabled?then('dintel-checkbox--disabled', '')}">
+  <label class="dintel-checkbox__label" for="dintel-checkbox-${fragmentEntryLinkNamespace}">
+    <input
+      class="dintel-checkbox__input"
+      id="dintel-checkbox-${fragmentEntryLinkNamespace}"
+      type="checkbox"
+      [#if configuration.checked]checked[/#if]
+      [#if configuration.indeterminate]data-indeterminate="true"[/#if]
+      [#if configuration.required]required aria-required="true"[/#if]
+      [#if configuration.disabled]disabled aria-disabled="true"[/#if]
+      [#if configuration.errorState]aria-invalid="true"[/#if]
+      [#if configuration.showHelp]aria-describedby="dintel-checkbox-help-${fragmentEntryLinkNamespace}"[/#if]
+    />
+    <span class="dintel-checkbox__box" aria-hidden="true">
+      <span class="dnt-icon dnt-icon-tick dintel-checkbox__icon dintel-checkbox__icon--check"></span>
+      <span class="dnt-icon dnt-icon-minus dintel-checkbox__icon dintel-checkbox__icon--indeterminate"></span>
+    </span>
+    <span class="dintel-checkbox__text" data-lfr-editable-id="checkbox-text" data-lfr-editable-type="text">
+      Opción de la casilla
+      [#if configuration.required]<span class="dintel-checkbox__required" aria-hidden="true">*</span>[/#if]
+    </span>
+  </label>
+  [#if configuration.showHelp]
+    <p class="dintel-checkbox__help" id="dintel-checkbox-help-${fragmentEntryLinkNamespace}" data-lfr-editable-id="checkbox-help" data-lfr-editable-type="text">
+      Texto de ayuda
+    </p>
+  [/#if]
+</div>

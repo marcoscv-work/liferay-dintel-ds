@@ -1,0 +1,28 @@
+.DS_Store
+.idea/
+.vscode/
+.gradle/
+.claude/
+
+# Build outputs
+/bundles/
+/build/
+**/build/
+**/dist/
+bin/
+*.zip
+
+# Node
+node_modules/
+node_modules_cache/
+yarn.lock
+package-lock.json
+
+# Logs
+*.log
+
+# Reference workspaces — large external repos kept locally for consultation only
+/references/
+
+# Sibling project — has its own repo
+/W3C-ds/

@@ -1,0 +1,35 @@
+<article class="dintel-card ${configuration.horizontal?then('dintel-card--horizontal', '')} ${configuration.shadow?then('dintel-card--shadow', '')}">
+  [#if configuration.showImage]
+    <div class="dintel-card__media">
+      <img
+        class="dintel-card__img"
+        data-lfr-editable-id="card-image"
+        data-lfr-editable-type="image"
+        src=""
+        alt="Imagen de la tarjeta"
+      />
+    </div>
+  [/#if]
+  <div class="dintel-card__body">
+    <p class="dintel-card__category" data-lfr-editable-id="card-category" data-lfr-editable-type="text">
+      Categoría
+    </p>
+    <h3 class="dintel-card__title" data-lfr-editable-id="card-title" data-lfr-editable-type="text">
+      Título de la tarjeta
+    </h3>
+    <p class="dintel-card__text" data-lfr-editable-id="card-text" data-lfr-editable-type="rich-text">
+      Descripción breve del contenido de la tarjeta con información relevante para el usuario.
+    </p>
+    [#if configuration.showButton]
+      <a
+        class="dintel-card__link"
+        data-lfr-editable-id="card-link"
+        data-lfr-editable-type="link"
+        href="#"
+      >
+        <span data-lfr-editable-id="card-link-text" data-lfr-editable-type="text">Saber más</span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg>
+      </a>
+    [/#if]
+  </div>
+</article>

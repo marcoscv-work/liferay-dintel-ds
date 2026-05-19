@@ -1,0 +1,18 @@
+<a
+  class="dintel-link dintel-link--${configuration.variant!'default'} dintel-link--${configuration.size!'md'}"
+  data-lfr-editable-id="link-anchor"
+  data-lfr-editable-type="link"
+  href="#"
+  [#if configuration.external]target="_blank" rel="noopener"[/#if]
+>
+  [#if configuration.showLeadingIcon]
+    <span class="dnt-icon dnt-icon-arrow-right dintel-link__icon dintel-link__icon--leading" aria-hidden="true"></span>
+  [/#if]
+  <span class="dintel-link__text" data-lfr-editable-id="link-text" data-lfr-editable-type="text">
+    Texto del enlace
+  </span>
+  [#if configuration.external]
+    <span class="dnt-icon dnt-icon-external-link dintel-link__icon dintel-link__icon--trailing" aria-hidden="true"></span>
+    <span class="visually-hidden">, se abre en pestaña nueva</span>
+  [/#if]
+</a>

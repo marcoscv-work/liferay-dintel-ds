@@ -1,0 +1,36 @@
+<nav class="dintel-breadcrumb dintel-breadcrumb--sep-${configuration.separator!'chevron'} ${configuration.mobileBackLink?then('dintel-breadcrumb--mobile-back', '')}" aria-label="Ruta de navegación">
+  [#if configuration.mobileBackLink]
+    <a class="dintel-breadcrumb__back" data-lfr-editable-id="bc-back-link" data-lfr-editable-type="link" href="#" aria-label="Volver atrás">
+      <svg class="dintel-breadcrumb__back-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20z"/></svg>
+      <span data-lfr-editable-id="bc-back-text" data-lfr-editable-type="text">Atrás</span>
+    </a>
+  [/#if]
+  <ol class="dintel-breadcrumb__list" role="list">
+    [#if configuration.showHome]
+      <li class="dintel-breadcrumb__item">
+        <a class="dintel-breadcrumb__link" data-lfr-editable-id="bc-link-1" data-lfr-editable-type="link" href="/" aria-label="Inicio">
+          <svg class="dintel-breadcrumb__home-icon" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+          <span class="dintel-breadcrumb__home-text" data-lfr-editable-id="bc-text-1" data-lfr-editable-type="text">Inicio</span>
+        </a>
+      </li>
+      <li class="dintel-breadcrumb__item dintel-breadcrumb__sep" aria-hidden="true"></li>
+    [/#if]
+    <li class="dintel-breadcrumb__item">
+      <a class="dintel-breadcrumb__link" data-lfr-editable-id="bc-link-2" data-lfr-editable-type="link" href="#">
+        <span data-lfr-editable-id="bc-text-2" data-lfr-editable-type="text">Sección</span>
+      </a>
+    </li>
+    <li class="dintel-breadcrumb__item dintel-breadcrumb__sep" aria-hidden="true"></li>
+    <li class="dintel-breadcrumb__item">
+      <a class="dintel-breadcrumb__link" data-lfr-editable-id="bc-link-3" data-lfr-editable-type="link" href="#">
+        <span data-lfr-editable-id="bc-text-3" data-lfr-editable-type="text">Subsección</span>
+      </a>
+    </li>
+    <li class="dintel-breadcrumb__item dintel-breadcrumb__sep" aria-hidden="true"></li>
+    <li class="dintel-breadcrumb__item">
+      <span class="dintel-breadcrumb__current" aria-current="page" data-lfr-editable-id="bc-text-4" data-lfr-editable-type="text">
+        Página actual
+      </span>
+    </li>
+  </ol>
+</nav>

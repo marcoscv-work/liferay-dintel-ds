@@ -1,0 +1,63 @@
+@keyframes dintel-progress-indeterminate {
+  0% { left: -40%; }
+  100% { left: 100%; }
+}
+
+.dintel-progress {
+  display: flex;
+  flex-direction: column;
+  font-family: var(--font-family-base);
+  gap: var(--space-050, 0.5rem);
+  width: 100%;
+}
+
+.dintel-progress__header {
+  align-items: baseline;
+  display: flex;
+  justify-content: space-between;
+}
+
+.dintel-progress__label {
+  color: var(--color-text-primary, #0A0E14);
+  font-size: var(--text-body-md, 0.875rem);
+  font-weight: var(--font-weight-semibold, 600);
+}
+
+.dintel-progress__percent {
+  color: var(--color-text-secondary, #363D47);
+  font-size: var(--text-body-sm, 0.75rem);
+  font-variant-numeric: tabular-nums;
+  font-weight: var(--font-weight-semibold, 600);
+}
+
+.dintel-progress__track {
+  background-color: var(--color-bg-tertiary, #EEEFF0);
+  border-radius: var(--radius-pill, 50rem);
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.dintel-progress--sm .dintel-progress__track { height: 4px; }
+.dintel-progress--md .dintel-progress__track { height: 8px; }
+.dintel-progress--lg .dintel-progress__track { height: 16px; }
+
+.dintel-progress__bar {
+  background-color: var(--color-bg-interactive-primary, #114DA6);
+  border-radius: inherit;
+  height: 100%;
+  transition: width 0.3s ease;
+}
+
+/* Colores */
+.dintel-progress--accent  .dintel-progress__bar { background-color: var(--color-bg-interactive-accent, #C33400); }
+.dintel-progress--success .dintel-progress__bar { background-color: var(--color-text-feedback-success, #198044); }
+.dintel-progress--warning .dintel-progress__bar { background-color: var(--color-text-feedback-warning, #AD8821); }
+.dintel-progress--error   .dintel-progress__bar { background-color: var(--color-text-feedback-error, #C44727); }
+
+/* Indeterminado */
+.dintel-progress--indeterminate .dintel-progress__bar {
+  animation: dintel-progress-indeterminate 1.5s ease-in-out infinite;
+  position: absolute;
+  width: 40%;
+}

@@ -1,0 +1,73 @@
+{
+    "pageElement": {
+        "pageElements": [
+            {
+                "definition": {
+                    "cssClasses": [
+                        "dintel-section--py-xs"
+                    ],
+                    "indexed": true,
+                    "layout": {
+                        "widthType": "Fixed"
+                    }
+                },
+                "pageElements": [
+                    {
+                        "definition": {
+                            "fragment": {
+                                "key": "dintel-breadcrumb"
+                            },
+                            "fragmentConfig": {},
+                            "fragmentFields": [],
+                            "indexed": true
+                        },
+                        "type": "Fragment"
+                    }
+                ],
+                "type": "Section"
+            },
+            {
+                "definition": {
+                    "cssClasses": [
+                        "dintel-section--py-md"
+                    ],
+                    "indexed": true,
+                    "layout": {
+                        "widthType": "Fixed"
+                    }
+                },
+                "pageElements": [
+                    {
+                        "definition": {
+                            "fragment": {
+                                "key": "dintel-divider"
+                            },
+                            "fragmentConfig": {},
+                            "fragmentFields": [],
+                            "indexed": true
+                        },
+                        "type": "Fragment"
+                    },
+                    {
+                        "definition": {
+                            "fragment": {
+                                "key": "dintel-tabs"
+                            },
+                            "fragmentConfig": {},
+                            "fragmentFields": [],
+                            "indexed": true
+                        },
+                        "type": "Fragment"
+                    }
+                ],
+                "type": "Section"
+            }
+        ],
+        "type": "Root"
+    },
+    "settings": {
+        "masterPage": {
+            "key": "main"
+        }
+    }
+}

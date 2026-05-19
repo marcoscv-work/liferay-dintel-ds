@@ -1,0 +1,192 @@
+.dintel-btn-wrapper {
+  display: inline-flex;
+}
+
+.dintel-btn-wrapper--full {
+  display: flex;
+  width: 100%;
+}
+
+.dintel-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacer-2, 0.5rem);
+  border: 2px solid transparent;
+  border-radius: var(--border-radius, 0.375rem);
+  cursor: pointer;
+  font-family: var(--font-family-base);
+  font-weight: var(--font-weight-semi-bold, 600);
+  line-height: var(--line-height-sm, 1.25);
+  text-decoration: none;
+  transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease, box-shadow 0.15s ease;
+  white-space: nowrap;
+}
+
+.dintel-btn-wrapper--full .dintel-btn {
+  width: 100%;
+}
+
+/* === Tamaños === */
+.dintel-btn--sm {
+  font-size: var(--font-size-sm, 0.875rem);
+  padding: 0.375rem 0.75rem;
+}
+
+.dintel-btn--md {
+  font-size: var(--font-size-base, 1rem);
+  padding: 0.625rem 1.25rem;
+}
+
+.dintel-btn--lg {
+  font-size: var(--font-size-lg, 1.125rem);
+  padding: 0.875rem 1.75rem;
+}
+
+.dintel-btn--xl {
+  font-size: 1.25rem;
+  padding: 1rem 2rem;
+}
+
+/* === Tipo: PRIMARY (relleno azul DINTEL) === */
+.dintel-btn--primary {
+  background-color: var(--color-bg-interactive-primary, #114DA6);
+  border-color: var(--color-bg-interactive-primary, #114DA6);
+  color: var(--color-text-inverse, #FFFFFF);
+}
+
+.dintel-btn--primary:hover {
+  background-color: var(--color-bg-interactive-primary-hover, #093473);
+  border-color: var(--color-bg-interactive-primary-hover, #093473);
+  color: var(--color-text-inverse, #FFFFFF);
+  text-decoration: none;
+}
+
+.dintel-btn--primary:active,
+.dintel-btn--primary.is-pressed {
+  background-color: var(--color-bg-interactive-primary-pressed, #04214D);
+  border-color: var(--color-bg-interactive-primary-pressed, #04214D);
+}
+
+.dintel-btn--primary:focus-visible {
+  outline: 3px solid var(--color-border-interactive-focus, #C33400);
+  outline-offset: 2px;
+}
+
+/* === Tipo: SECONDARY (outline azul) === */
+.dintel-btn--secondary {
+  background-color: transparent;
+  border-color: var(--color-text-interactive, #114DA6);
+  color: var(--color-text-interactive, #114DA6);
+}
+
+.dintel-btn--secondary:hover {
+  background-color: var(--color-bg-interactive-item-hover, #EAF0FA);
+  border-color: var(--color-text-interactive-hover, #093473);
+  color: var(--color-text-interactive-hover, #093473);
+  text-decoration: none;
+}
+
+.dintel-btn--secondary:active,
+.dintel-btn--secondary.is-pressed {
+  background-color: var(--color-bg-interactive-item-selected, #E8EFFA);
+  border-color: var(--color-text-interactive-pressed, #04214D);
+  color: var(--color-text-interactive-pressed, #04214D);
+}
+
+.dintel-btn--secondary:focus-visible {
+  outline: 3px solid var(--color-border-interactive-focus, #C33400);
+  outline-offset: 2px;
+}
+
+/* === Tipo: TERTIARY (solo texto, sin chrome) === */
+.dintel-btn--tertiary {
+  background-color: transparent;
+  border-color: transparent;
+  color: var(--color-text-interactive, #114DA6);
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.dintel-btn--tertiary:hover {
+  background-color: transparent;
+  color: var(--color-text-interactive-hover, #093473);
+  text-decoration: underline;
+}
+
+.dintel-btn--tertiary:active,
+.dintel-btn--tertiary.is-pressed {
+  color: var(--color-text-interactive-pressed, #04214D);
+}
+
+.dintel-btn--tertiary:focus-visible {
+  outline: 3px solid var(--color-border-interactive-focus, #C33400);
+  outline-offset: 2px;
+  border-radius: var(--border-radius-sm, 0.25rem);
+}
+
+/* === Tipo: NEUTRAL (gris, acciones secundarias) === */
+.dintel-btn--neutral {
+  background-color: var(--color-bg-tertiary, #EEEFF0);
+  border-color: var(--color-bg-tertiary, #EEEFF0);
+  color: var(--color-text-primary, #0A0E14);
+}
+
+.dintel-btn--neutral:hover {
+  background-color: var(--color-border-soft, #DCDFE3);
+  border-color: var(--color-border-soft, #DCDFE3);
+  color: var(--color-text-primary, #0A0E14);
+  text-decoration: none;
+}
+
+.dintel-btn--neutral:active,
+.dintel-btn--neutral.is-pressed {
+  background-color: var(--color-border-hard, #B5B8BE);
+  border-color: var(--color-border-hard, #B5B8BE);
+}
+
+.dintel-btn--neutral:focus-visible {
+  outline: 3px solid var(--color-border-interactive-focus, #C33400);
+  outline-offset: 2px;
+}
+
+/* === Tipo: ACCENT (CTA naranja DINTEL) === */
+.dintel-btn--accent {
+  background-color: var(--color-bg-interactive-accent, #C33400);
+  border-color: var(--color-bg-interactive-accent, #C33400);
+  color: var(--color-text-inverse, #FFFFFF);
+}
+
+.dintel-btn--accent:hover {
+  background-color: var(--color-bg-interactive-accent-hover, #802200);
+  border-color: var(--color-bg-interactive-accent-hover, #802200);
+  color: var(--color-text-inverse, #FFFFFF);
+  text-decoration: none;
+}
+
+.dintel-btn--accent:active,
+.dintel-btn--accent.is-pressed {
+  background-color: var(--color-bg-interactive-accent-pressed, #521600);
+  border-color: var(--color-bg-interactive-accent-pressed, #521600);
+}
+
+.dintel-btn--accent:focus-visible {
+  outline: 3px solid var(--color-text-interactive, #114DA6);
+  outline-offset: 2px;
+}
+
+/* === Estado: disabled === */
+.dintel-btn--disabled,
+.dintel-btn[aria-disabled="true"] {
+  background-color: var(--color-bg-interactive-primary-disabled, #DCDFE3);
+  border-color: var(--color-bg-interactive-primary-disabled, #DCDFE3);
+  color: var(--color-text-disabled, #B5B8BE);
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.dintel-btn--tertiary.dintel-btn--disabled {
+  background-color: transparent;
+  border-color: transparent;
+  color: var(--color-text-disabled, #B5B8BE);
+}

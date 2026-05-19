@@ -1,0 +1,54 @@
+{
+  "fieldSets": [
+    {
+      "fields": [
+        {
+          "dataType": "string",
+          "defaultValue": "primary",
+          "label": "Estilo",
+          "name": "style",
+          "type": "select",
+          "typeOptions": {
+            "validValues": [
+              {
+                "value": "primary",
+                "label": "Primario"
+              },
+              {
+                "value": "secondary",
+                "label": "Secundario"
+              },
+              {
+                "value": "success",
+                "label": "Éxito"
+              },
+              {
+                "value": "danger",
+                "label": "Error"
+              },
+              {
+                "value": "warning",
+                "label": "Advertencia"
+              },
+              {
+                "value": "info",
+                "label": "Información"
+              },
+              {
+                "value": "neutral",
+                "label": "Neutro"
+              }
+            ]
+          }
+        },
+        {
+          "defaultValue": "false",
+          "label": "Píldora (redondeado)",
+          "name": "pill",
+          "type": "checkbox"
+        }
+      ],
+      "label": "Etiqueta"
+    }
+  ]
+}

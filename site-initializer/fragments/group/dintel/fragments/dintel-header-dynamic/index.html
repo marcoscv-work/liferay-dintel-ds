@@ -1,0 +1,49 @@
+<header class="dintel-header-d" role="banner">
+  <div class="dintel-header-d__bar">
+    <div class="container dintel-header-d__bar-inner">
+      <div class="dintel-header-d__logos">
+        <span class="dintel-header-d__gov">
+          <img class="dintel-header-d__gov-img" src="[resources:logo-gob-es.png]" alt="Gobierno de España" width="64" height="48"/>
+        </span>
+        <a class="dintel-header-d__brand" href="/" title="DINTEL, Sistema de Diseño">
+          <img class="dintel-header-d__brand-logo" src="[resources:logo-dintel.svg]" alt="DINTEL, Sistema de Diseño" width="105" height="32"/>
+        </a>
+        [#if configuration.showTagline]
+          <span class="dintel-header-d__tagline" data-lfr-editable-id="tagline" data-lfr-editable-type="text">
+            Diseño Normalizado de Trámites Electrónicos
+          </span>
+        [/#if]
+      </div>
+
+      <div class="dintel-header-d__actions">
+        [#if configuration.showSearch]
+          <div class="dintel-header-d__search">
+            <lfr-widget-search-bar></lfr-widget-search-bar>
+          </div>
+        [/#if]
+
+        [#if configuration.showSignIn]
+          <div class="dintel-header-d__auth">
+            [#if themeDisplay.isSignedIn()]
+              <a class="dintel-header-d__auth-link" href="${htmlUtil.escape(themeDisplay.getURLSignOut())}?referer=${themeDisplay.getPathFriendlyURLPublic() + themeDisplay.getSiteGroup().getFriendlyURL()}">
+                <span class="dnt-icon dnt-icon-user" aria-hidden="true"></span>
+                <span>Salir</span>
+              </a>
+            [#else]
+              <a class="dintel-header-d__auth-link" href="${htmlUtil.escape(themeDisplay.getPathFriendlyURLPublic() + themeDisplay.getSiteGroup().getFriendlyURL())}/sign-in">
+                <span class="dnt-icon dnt-icon-user" aria-hidden="true"></span>
+                <span>Entrar</span>
+              </a>
+            [/#if]
+          </div>
+        [/#if]
+      </div>
+    </div>
+  </div>
+
+  <nav class="dintel-header-d__nav" aria-label="Menú principal">
+    <div class="container dintel-header-d__nav-inner">
+      <lfr-widget-nav></lfr-widget-nav>
+    </div>
+  </nav>
+</header>

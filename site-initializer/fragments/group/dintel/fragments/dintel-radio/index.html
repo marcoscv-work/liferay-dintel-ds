@@ -1,0 +1,31 @@
+<fieldset class="dintel-radio dintel-radio--${configuration.size!'md'} dintel-radio--${configuration.orientation!'vertical'} ${configuration.errorState?then('dintel-radio--error', '')} ${configuration.disabled?then('dintel-radio--disabled', '')}" [#if configuration.disabled]disabled[/#if]>
+  [#if configuration.showLegend]
+    <legend class="dintel-radio__legend" data-lfr-editable-id="radio-legend" data-lfr-editable-type="text">
+      Selecciona una opción
+    </legend>
+  [/#if]
+
+  <div class="dintel-radio__list" role="radiogroup">
+    <label class="dintel-radio__option">
+      <input class="dintel-radio__input" type="radio" name="dintel-radio-${fragmentEntryLinkNamespace}" value="1" checked/>
+      <span class="dintel-radio__dot" aria-hidden="true"></span>
+      <span class="dintel-radio__text" data-lfr-editable-id="radio-text-1" data-lfr-editable-type="text">Opción 1</span>
+    </label>
+    <label class="dintel-radio__option">
+      <input class="dintel-radio__input" type="radio" name="dintel-radio-${fragmentEntryLinkNamespace}" value="2"/>
+      <span class="dintel-radio__dot" aria-hidden="true"></span>
+      <span class="dintel-radio__text" data-lfr-editable-id="radio-text-2" data-lfr-editable-type="text">Opción 2</span>
+    </label>
+    <label class="dintel-radio__option">
+      <input class="dintel-radio__input" type="radio" name="dintel-radio-${fragmentEntryLinkNamespace}" value="3"/>
+      <span class="dintel-radio__dot" aria-hidden="true"></span>
+      <span class="dintel-radio__text" data-lfr-editable-id="radio-text-3" data-lfr-editable-type="text">Opción 3</span>
+    </label>
+  </div>
+
+  [#if configuration.showHelp]
+    <p class="dintel-radio__help" data-lfr-editable-id="radio-help" data-lfr-editable-type="text">
+      Texto de ayuda
+    </p>
+  [/#if]
+</fieldset>

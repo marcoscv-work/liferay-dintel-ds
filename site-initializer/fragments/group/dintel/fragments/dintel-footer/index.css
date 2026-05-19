@@ -1,0 +1,135 @@
+.dintel-footer {
+  background-color: var(--color-text-interactive-hover, #093473);
+  color: var(--color-text-inverse, #FFFFFF);
+}
+
+/* === Sección de logos institucionales (parte superior) === */
+.dintel-footer__primary {
+  background-color: var(--color-bg-primary, #FFFFFF);
+  border-bottom: 4px solid var(--color-border-brand, #114DA6);
+  padding: var(--spacer-4, 1.5rem) 0;
+}
+
+.dintel-footer__primary-inner {
+  display: flex;
+  justify-content: center;
+}
+
+.dintel-footer__logos {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacer-6, 3rem);
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.dintel-footer__logo-item {
+  display: inline-flex;
+}
+
+.dintel-footer__logo-link {
+  align-items: center;
+  border-radius: var(--border-radius-sm, 0.25rem);
+  display: inline-flex;
+  transition: opacity 0.15s;
+}
+
+.dintel-footer__logo-link:hover {
+  opacity: 0.8;
+}
+
+.dintel-footer__logo-link:focus-visible {
+  outline: 2px solid var(--color-border-interactive-focus, #C33400);
+  outline-offset: 4px;
+}
+
+.dintel-footer__logo-img {
+  display: block;
+  height: 56px;
+  width: auto;
+}
+
+/* === Cuerpo: descripción + links === */
+.dintel-footer__main {
+  padding: var(--spacer-5, 2rem) 0;
+}
+
+.dintel-footer__main-inner {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacer-4, 1.5rem);
+  justify-content: space-between;
+}
+
+.dintel-footer__description {
+  color: rgba(255, 255, 255, 0.85);
+  flex: 1 1 auto;
+  font-size: var(--font-size-sm, 0.875rem);
+  line-height: var(--line-height-base, 1.5);
+  margin: 0;
+  max-width: 640px;
+}
+
+.dintel-footer__nav-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacer-2, 0.5rem) var(--spacer-4, 1.5rem);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.dintel-footer__nav-link {
+  color: var(--color-text-inverse, #FFFFFF);
+  font-size: var(--font-size-sm, 0.875rem);
+  font-weight: var(--font-weight-semi-bold, 600);
+  text-decoration: none;
+  transition: color 0.15s, text-decoration 0.15s;
+}
+
+.dintel-footer__nav-link:hover {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.dintel-footer__nav-link:focus-visible {
+  outline: 2px solid var(--color-border-interactive-focus, #C33400);
+  outline-offset: 2px;
+  border-radius: var(--border-radius-sm, 0.25rem);
+}
+
+/* === Copyright (parte inferior) === */
+.dintel-footer__bottom {
+  background-color: var(--color-text-primary, #0A0E14);
+  padding: var(--spacer-3, 1rem) 0;
+}
+
+.dintel-footer__bottom-inner {
+  text-align: center;
+}
+
+.dintel-footer__copy {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: var(--font-size-xs, 0.75rem);
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .dintel-footer__main-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--spacer-3, 1rem);
+  }
+
+  .dintel-footer__logos {
+    gap: var(--spacer-3, 1rem);
+  }
+
+  .dintel-footer__logo-img {
+    height: 40px;
+  }
+}

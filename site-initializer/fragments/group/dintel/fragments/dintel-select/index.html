@@ -1,0 +1,31 @@
+<div class="dintel-select dintel-select--${configuration.size!'md'} dintel-select--state-${configuration.state!'default'} ${configuration.fullWidth?then('dintel-select--full', '')} ${configuration.disabled?then('dintel-select--disabled', '')}">
+  [#if configuration.showLabel]
+    <label class="dintel-select__label" for="dintel-select-${fragmentEntryLinkNamespace}">
+      <span data-lfr-editable-id="select-label" data-lfr-editable-type="text">Selecciona una opción</span>
+      [#if configuration.required]<span class="dintel-select__required" aria-hidden="true">*</span>[/#if]
+    </label>
+  [/#if]
+
+  <div class="dintel-select__wrapper">
+    <select
+      class="dintel-select__field"
+      id="dintel-select-${fragmentEntryLinkNamespace}"
+      [#if configuration.required]required[/#if]
+      [#if configuration.disabled]disabled aria-disabled="true"[/#if]
+      [#if configuration.state == 'error']aria-invalid="true"[/#if]
+      [#if configuration.showHelp]aria-describedby="dintel-select-help-${fragmentEntryLinkNamespace}"[/#if]
+    >
+      <option value="" disabled selected hidden>Selecciona…</option>
+      <option value="1">Opción 1</option>
+      <option value="2">Opción 2</option>
+      <option value="3">Opción 3</option>
+    </select>
+    <span class="dnt-icon dnt-icon-chevron-bottom dintel-select__chevron" aria-hidden="true"></span>
+  </div>
+
+  [#if configuration.showHelp]
+    <p class="dintel-select__help" id="dintel-select-help-${fragmentEntryLinkNamespace}" data-lfr-editable-id="select-help" data-lfr-editable-type="text">
+      Texto de ayuda
+    </p>
+  [/#if]
+</div>

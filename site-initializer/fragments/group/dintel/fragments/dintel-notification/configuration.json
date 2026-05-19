@@ -1,0 +1,47 @@
+{
+  "fieldSets": [
+    {
+      "fields": [
+        {
+          "dataType": "string",
+          "defaultValue": "info",
+          "label": "Tipo",
+          "name": "type",
+          "type": "select",
+          "typeOptions": {
+            "validValues": [
+              {"value": "info",    "label": "Información"},
+              {"value": "success", "label": "Éxito"},
+              {"value": "warning", "label": "Advertencia"},
+              {"value": "error",   "label": "Error"}
+            ]
+          }
+        },
+        {
+          "dataType": "string",
+          "defaultValue": "inline",
+          "label": "Posicionamiento",
+          "name": "position",
+          "type": "select",
+          "typeOptions": {
+            "validValues": [
+              {"value": "inline",        "label": "Inline (en el flujo)"},
+              {"value": "top-right",     "label": "Fijo arriba derecha"},
+              {"value": "top-left",      "label": "Fijo arriba izquierda"},
+              {"value": "top-center",    "label": "Fijo arriba centro"},
+              {"value": "bottom-right",  "label": "Fijo abajo derecha"},
+              {"value": "bottom-left",   "label": "Fijo abajo izquierda"},
+              {"value": "bottom-center", "label": "Fijo abajo centro"}
+            ]
+          }
+        },
+        {"defaultValue": "true",  "label": "Mostrar título",                                                "name": "showTitle",   "type": "checkbox"},
+        {"defaultValue": "true",  "label": "Cerrable",                                                       "name": "dismissible", "type": "checkbox"},
+        {"defaultValue": "false", "label": "Mostrar acción",                                                 "name": "showAction",  "type": "checkbox"},
+        {"defaultValue": "false", "label": "Auto-cerrar tras 5s (modos fijos)",                              "name": "autoDismiss", "type": "checkbox"},
+        {"defaultValue": "false", "label": "Visible (mostrar fija ahora — solo para diseño)",               "name": "demoVisible", "type": "checkbox"}
+      ],
+      "label": "Notificación"
+    }
+  ]
+}

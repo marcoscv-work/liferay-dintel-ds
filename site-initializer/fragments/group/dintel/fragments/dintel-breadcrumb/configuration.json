@@ -1,0 +1,35 @@
+{
+  "fieldSets": [
+    {
+      "fields": [
+        {
+          "defaultValue": "true",
+          "label": "Mostrar icono Inicio",
+          "name": "showHome",
+          "type": "checkbox"
+        },
+        {
+          "defaultValue": "true",
+          "label": "Modo móvil: fallback back-link",
+          "name": "mobileBackLink",
+          "type": "checkbox"
+        },
+        {
+          "dataType": "string",
+          "defaultValue": "chevron",
+          "label": "Separador",
+          "name": "separator",
+          "type": "select",
+          "typeOptions": {
+            "validValues": [
+              {"value": "chevron", "label": "Chevron (›)"},
+              {"value": "slash",   "label": "Barra (/)"},
+              {"value": "dot",     "label": "Punto (·)"}
+            ]
+          }
+        }
+      ],
+      "label": "Migas de Pan"
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+<section class="dintel-hero dintel-hero--${configuration.theme!'dark'} ${configuration.hasBackground?then('dintel-hero--bg', '')}">
+  [#if configuration.hasBackground]
+    <div class="dintel-hero__overlay"></div>
+    <div
+      class="dintel-hero__bg"
+      data-lfr-editable-id="hero-background"
+      data-lfr-editable-type="background-image"
+    ></div>
+  [/#if]
+  <div class="dintel-hero__content container">
+    <div class="dintel-hero__text">
+      <p class="dintel-hero__label" data-lfr-editable-id="hero-label" data-lfr-editable-type="text">
+        Etiqueta descriptiva
+      </p>
+      <h1 class="dintel-hero__title" data-lfr-editable-id="hero-title" data-lfr-editable-type="rich-text">
+        Título principal del portal
+      </h1>
+      <p class="dintel-hero__subtitle" data-lfr-editable-id="hero-subtitle" data-lfr-editable-type="rich-text">
+        Descripción breve del propósito y los servicios que ofrece este portal a los ciudadanos.
+      </p>
+      [#if configuration.showCta || configuration.showSecondaryCta]
+        <div class="dintel-hero__actions">
+          [#if configuration.showCta]
+            <a
+              class="dintel-btn dintel-btn--primary dintel-btn--lg"
+              data-lfr-editable-id="hero-cta"
+              data-lfr-editable-type="link"
+              href="#"
+            >
+              <span data-lfr-editable-id="hero-cta-text" data-lfr-editable-type="text">Acceder al servicio</span>
+            </a>
+          [/#if]
+          [#if configuration.showSecondaryCta]
+            <a
+              class="dintel-btn dintel-btn--outline-primary dintel-btn--lg"
+              data-lfr-editable-id="hero-secondary-cta"
+              data-lfr-editable-type="link"
+              href="#"
+            >
+              <span data-lfr-editable-id="hero-secondary-cta-text" data-lfr-editable-type="text">Más información</span>
+            </a>
+          [/#if]
+        </div>
+      [/#if]
+    </div>
+  </div>
+</section>

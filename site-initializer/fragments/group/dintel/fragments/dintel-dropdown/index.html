@@ -1,0 +1,39 @@
+<div class="dintel-dropdown dintel-dropdown--${configuration.placement!'bottom-start'}">
+  <button
+    class="dintel-dropdown__trigger dintel-dropdown__trigger--${configuration.triggerVariant!'primary'}"
+    type="button"
+    aria-haspopup="menu"
+    aria-expanded="false"
+    aria-controls="dintel-dropdown-menu-${fragmentEntryLinkNamespace}"
+  >
+    <span data-lfr-editable-id="dropdown-trigger" data-lfr-editable-type="text">Acciones</span>
+    <span class="dnt-icon dnt-icon-chevron-bottom dintel-dropdown__chevron" aria-hidden="true"></span>
+  </button>
+
+  <ul
+    class="dintel-dropdown__menu"
+    id="dintel-dropdown-menu-${fragmentEntryLinkNamespace}"
+    role="menu"
+    hidden
+  >
+    <li role="none">
+      <a class="dintel-dropdown__item" role="menuitem" data-lfr-editable-id="dropdown-item-1" data-lfr-editable-type="link" href="#">
+        <span class="dnt-icon dnt-icon-edit dintel-dropdown__item-icon" aria-hidden="true"></span>
+        <span data-lfr-editable-id="dropdown-text-1" data-lfr-editable-type="text">Editar</span>
+      </a>
+    </li>
+    <li role="none">
+      <a class="dintel-dropdown__item" role="menuitem" data-lfr-editable-id="dropdown-item-2" data-lfr-editable-type="link" href="#">
+        <span class="dnt-icon dnt-icon-copy dintel-dropdown__item-icon" aria-hidden="true"></span>
+        <span data-lfr-editable-id="dropdown-text-2" data-lfr-editable-type="text">Duplicar</span>
+      </a>
+    </li>
+    <li class="dintel-dropdown__divider" role="separator"></li>
+    <li role="none">
+      <a class="dintel-dropdown__item dintel-dropdown__item--danger" role="menuitem" data-lfr-editable-id="dropdown-item-3" data-lfr-editable-type="link" href="#">
+        <span class="dnt-icon dnt-icon-trash dintel-dropdown__item-icon" aria-hidden="true"></span>
+        <span data-lfr-editable-id="dropdown-text-3" data-lfr-editable-type="text">Eliminar</span>
+      </a>
+    </li>
+  </ul>
+</div>

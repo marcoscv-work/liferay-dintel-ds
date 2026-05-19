@@ -1,0 +1,41 @@
+{
+  "fieldSets": [
+    {
+      "fields": [
+        {
+          "dataType": "string",
+          "defaultValue": "md",
+          "label": "Tamaño",
+          "name": "size",
+          "type": "select",
+          "typeOptions": {
+            "validValues": [
+              {"value": "sm", "label": "Small (400px)"},
+              {"value": "md", "label": "Medium (560px)"},
+              {"value": "lg", "label": "Large (800px)"},
+              {"value": "xl", "label": "Extra Large (1080px)"}
+            ]
+          }
+        },
+        {
+          "dataType": "string",
+          "defaultValue": "primary",
+          "label": "Variante botón principal",
+          "name": "primaryVariant",
+          "type": "select",
+          "typeOptions": {
+            "validValues": [
+              {"value": "primary", "label": "Primary (azul)"},
+              {"value": "accent",  "label": "Accent (naranja)"},
+              {"value": "danger",  "label": "Danger (rojo)"}
+            ]
+          }
+        },
+        {"defaultValue": "true",  "label": "Mostrar botón cerrar (X)",  "name": "showCloseButton", "type": "checkbox"},
+        {"defaultValue": "true",  "label": "Mostrar botón secundario", "name": "showSecondary",   "type": "checkbox"},
+        {"defaultValue": "false", "label": "Abierto por defecto",       "name": "openByDefault",   "type": "checkbox"}
+      ],
+      "label": "Modal"
+    }
+  ]
+}

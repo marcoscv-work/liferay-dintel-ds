@@ -1,0 +1,40 @@
+{
+  "fieldSets": [
+    {
+      "fields": [
+        {
+          "dataType": "string",
+          "defaultValue": "md",
+          "label": "Tamaño",
+          "name": "size",
+          "type": "select",
+          "typeOptions": {
+            "validValues": [
+              {"value": "sm", "label": "Small"},
+              {"value": "md", "label": "Medium"},
+              {"value": "lg", "label": "Large"}
+            ]
+          }
+        },
+        {
+          "dataType": "string",
+          "defaultValue": "vertical",
+          "label": "Orientación",
+          "name": "orientation",
+          "type": "select",
+          "typeOptions": {
+            "validValues": [
+              {"value": "vertical",   "label": "Vertical"},
+              {"value": "horizontal", "label": "Horizontal"}
+            ]
+          }
+        },
+        {"defaultValue": "false", "label": "Mostrar leyenda",     "name": "showLegend",   "type": "checkbox"},
+        {"defaultValue": "false", "label": "Mostrar texto ayuda", "name": "showHelp",     "type": "checkbox"},
+        {"defaultValue": "false", "label": "Estado de error",     "name": "errorState",   "type": "checkbox"},
+        {"defaultValue": "false", "label": "Deshabilitado",       "name": "disabled",     "type": "checkbox"}
+      ],
+      "label": "Radio Group"
+    }
+  ]
+}

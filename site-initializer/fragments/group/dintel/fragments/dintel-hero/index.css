@@ -1,0 +1,124 @@
+.dintel-hero {
+  min-height: 480px;
+  padding: var(--spacer-8, 6rem) 0;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.dintel-hero--dark {
+  background-color: var(--color-text-interactive-hover, #093473);
+  color: var(--color-text-inverse, #FFFFFF);
+}
+
+.dintel-hero--light {
+  background-color: var(--color-bg-interactive-item-hover, #EAF0FA);
+  color: var(--color-text-primary, #0A0E14);
+}
+
+.dintel-hero--primary {
+  background-color: var(--color-text-interactive, #114DA6);
+  color: var(--color-text-inverse, #FFFFFF);
+}
+
+.dintel-hero--bg {
+  background-color: transparent;
+  overflow: hidden;
+}
+
+.dintel-hero__bg {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  inset: 0;
+  position: absolute;
+  z-index: 0;
+}
+
+.dintel-hero__overlay {
+  background: rgba(4, 33, 77, 0.7);
+  inset: 0;
+  position: absolute;
+  z-index: 1;
+}
+
+.dintel-hero__content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+}
+
+.dintel-hero__text {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacer-3, 1rem);
+}
+
+.dintel-hero__label {
+  color: var(--color-bg-brand-soft, #EAF0FA);
+  font-size: var(--font-size-sm, 0.875rem);
+  font-weight: var(--font-weight-semi-bold, 600);
+  letter-spacing: 0.08em;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.dintel-hero--light .dintel-hero__label {
+  color: var(--color-text-interactive, #114DA6);
+}
+
+.dintel-hero__title {
+  font-size: clamp(2rem, 4vw, var(--h1-font-size, 2.5rem));
+  font-weight: var(--font-weight-bold, 700);
+  line-height: var(--line-height-sm, 1.25);
+  margin: 0;
+}
+
+.dintel-hero__subtitle {
+  font-size: var(--font-size-lg, 1.125rem);
+  line-height: var(--line-height-base, 1.5);
+  margin: 0;
+  max-width: 600px;
+  opacity: 0.9;
+}
+
+.dintel-hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacer-3, 1rem);
+  margin-top: var(--spacer-2, 0.5rem);
+}
+
+/* Reutilizar estilos del botón DINTEL */
+.dintel-hero .dintel-btn--primary {
+  background-color: var(--color-text-inverse, #FFFFFF);
+  border-color: var(--color-text-inverse, #FFFFFF);
+  color: var(--color-text-interactive-hover, #093473);
+}
+
+.dintel-hero--light .dintel-btn--primary {
+  background-color: var(--color-text-interactive, #114DA6);
+  border-color: var(--color-text-interactive, #114DA6);
+  color: var(--color-text-inverse, #FFFFFF);
+}
+
+.dintel-hero .dintel-btn--outline-primary {
+  border-color: rgba(255, 255, 255, 0.6);
+  color: var(--color-text-inverse, #FFFFFF);
+}
+
+.dintel-hero--light .dintel-btn--outline-primary {
+  border-color: var(--color-text-interactive, #114DA6);
+  color: var(--color-text-interactive, #114DA6);
+}
+
+@media (max-width: 768px) {
+  .dintel-hero {
+    min-height: 320px;
+    padding: var(--spacer-6, 3rem) 0;
+  }
+
+  .dintel-hero__actions {
+    flex-direction: column;
+  }
+}

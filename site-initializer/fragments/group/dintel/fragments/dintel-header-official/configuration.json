@@ -1,0 +1,27 @@
+{
+  "fieldSets": [
+    {
+      "fields": [
+        {
+          "defaultValue": "true",
+          "label": "Mostrar buscador",
+          "name": "showSearch",
+          "type": "checkbox"
+        },
+        {
+          "defaultValue": "true",
+          "label": "Mostrar selector de idioma",
+          "name": "showLang",
+          "type": "checkbox"
+        },
+        {
+          "defaultValue": "true",
+          "label": "Mostrar tagline (Diseño Normalizado…)",
+          "name": "showTagline",
+          "type": "checkbox"
+        }
+      ],
+      "label": "Cabecera oficial DINTEL"
+    }
+  ]
+}

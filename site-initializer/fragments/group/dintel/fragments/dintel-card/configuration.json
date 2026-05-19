@@ -1,0 +1,33 @@
+{
+  "fieldSets": [
+    {
+      "fields": [
+        {
+          "defaultValue": "true",
+          "label": "Mostrar imagen",
+          "name": "showImage",
+          "type": "checkbox"
+        },
+        {
+          "defaultValue": "true",
+          "label": "Mostrar botón",
+          "name": "showButton",
+          "type": "checkbox"
+        },
+        {
+          "defaultValue": "false",
+          "label": "Tarjeta horizontal",
+          "name": "horizontal",
+          "type": "checkbox"
+        },
+        {
+          "defaultValue": "false",
+          "label": "Con sombra",
+          "name": "shadow",
+          "type": "checkbox"
+        }
+      ],
+      "label": "Tarjeta"
+    }
+  ]
+}

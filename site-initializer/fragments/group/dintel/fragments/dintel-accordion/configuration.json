@@ -1,0 +1,15 @@
+{
+  "fieldSets": [
+    {
+      "fields": [
+        {
+          "defaultValue": "false",
+          "label": "Solo un panel abierto a la vez",
+          "name": "exclusive",
+          "type": "checkbox"
+        }
+      ],
+      "label": "Acordeón"
+    }
+  ]
+}

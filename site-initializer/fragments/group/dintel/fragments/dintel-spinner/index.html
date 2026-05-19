@@ -1,0 +1,23 @@
+<div
+  class="dintel-spinner-wrapper dintel-spinner-wrapper--${configuration.mode!'inline'}"
+  [#if (configuration.mode == 'overlay' || configuration.mode == 'lock-screen') && !configuration.demoVisible]hidden[/#if]
+  data-spinner-mode="${configuration.mode!'inline'}"
+>
+  <div
+    class="dintel-spinner dintel-spinner--${configuration.size!'md'}"
+    role="status"
+    aria-live="polite"
+  >
+    <svg class="dintel-spinner__svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" aria-hidden="true">
+      <circle class="dintel-spinner__track" cx="25" cy="25" r="20" fill="none" stroke-width="4"/>
+      <circle class="dintel-spinner__path" cx="25" cy="25" r="20" fill="none" stroke-width="4" stroke-linecap="round"/>
+    </svg>
+    [#if configuration.showLabel]
+      <span class="dintel-spinner__label" data-lfr-editable-id="spinner-label" data-lfr-editable-type="text">
+        Cargando…
+      </span>
+    [#else]
+      <span class="visually-hidden">Cargando…</span>
+    [/#if]
+  </div>
+</div>

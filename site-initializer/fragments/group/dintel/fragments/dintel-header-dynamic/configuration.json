@@ -1,0 +1,27 @@
+{
+  "fieldSets": [
+    {
+      "fields": [
+        {
+          "defaultValue": "true",
+          "label": "Mostrar buscador integrado de Liferay",
+          "name": "showSearch",
+          "type": "checkbox"
+        },
+        {
+          "defaultValue": "true",
+          "label": "Mostrar tagline (Diseño Normalizado…)",
+          "name": "showTagline",
+          "type": "checkbox"
+        },
+        {
+          "defaultValue": "true",
+          "label": "Mostrar Sign In / Sign Out",
+          "name": "showSignIn",
+          "type": "checkbox"
+        }
+      ],
+      "label": "Cabecera dinámica DINTEL"
+    }
+  ]
+}

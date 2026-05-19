@@ -1,0 +1,40 @@
+[#assign type = configuration.type!'info' /]
+[#assign iconClass = 'dnt-icon-status-info' /]
+[#if type == 'success'][#assign iconClass = 'dnt-icon-tick' /][/#if]
+[#if type == 'warning'][#assign iconClass = 'dnt-icon-status-warning' /][/#if]
+[#if type == 'error'][#assign iconClass = 'dnt-icon-close' /][/#if]
+[#assign roleAttr = 'status' /]
+[#if type == 'error' || type == 'warning'][#assign roleAttr = 'alert' /][/#if]
+[#assign liveAttr = 'polite' /]
+[#if type == 'error'][#assign liveAttr = 'assertive' /][/#if]
+<div
+  class="dintel-notification dintel-notification--${type} dintel-notification--pos-${configuration.position!'inline'}"
+  role="${roleAttr}"
+  aria-live="${liveAttr}"
+  data-auto-dismiss="${configuration.autoDismiss?c}"
+  [#if configuration.position != 'inline' && !configuration.demoVisible]hidden[/#if]
+>
+  <span class="dnt-icon dintel-notification__icon ${iconClass}" aria-hidden="true"></span>
+
+  <div class="dintel-notification__content">
+    [#if configuration.showTitle]
+      <p class="dintel-notification__title" data-lfr-editable-id="notif-title" data-lfr-editable-type="text">
+        Título de la notificación
+      </p>
+    [/#if]
+    <p class="dintel-notification__message" data-lfr-editable-id="notif-message" data-lfr-editable-type="rich-text">
+      Mensaje descriptivo de la notificación.
+    </p>
+    [#if configuration.showAction]
+      <a class="dintel-notification__action" data-lfr-editable-id="notif-action" data-lfr-editable-type="link" href="#">
+        <span data-lfr-editable-id="notif-action-text" data-lfr-editable-type="text">Ver detalles</span>
+      </a>
+    [/#if]
+  </div>
+
+  [#if configuration.dismissible]
+    <button class="dintel-notification__close" type="button" aria-label="Cerrar notificación" data-notif-close>
+      <span class="dnt-icon dnt-icon-close" aria-hidden="true"></span>
+    </button>
+  [/#if]
+</div>

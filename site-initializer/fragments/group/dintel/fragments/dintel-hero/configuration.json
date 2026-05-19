@@ -1,0 +1,50 @@
+{
+  "fieldSets": [
+    {
+      "fields": [
+        {
+          "dataType": "string",
+          "defaultValue": "dark",
+          "label": "Tema",
+          "name": "theme",
+          "type": "select",
+          "typeOptions": {
+            "validValues": [
+              {
+                "value": "dark",
+                "label": "Oscuro (texto blanco)"
+              },
+              {
+                "value": "light",
+                "label": "Claro (texto oscuro)"
+              },
+              {
+                "value": "primary",
+                "label": "Primario"
+              }
+            ]
+          }
+        },
+        {
+          "defaultValue": "true",
+          "label": "Con imagen de fondo",
+          "name": "hasBackground",
+          "type": "checkbox"
+        },
+        {
+          "defaultValue": "true",
+          "label": "Mostrar botón CTA",
+          "name": "showCta",
+          "type": "checkbox"
+        },
+        {
+          "defaultValue": "false",
+          "label": "Mostrar segundo botón",
+          "name": "showSecondaryCta",
+          "type": "checkbox"
+        }
+      ],
+      "label": "Hero"
+    }
+  ]
+}

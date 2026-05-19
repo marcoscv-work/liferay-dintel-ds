@@ -1,0 +1,126 @@
+.dintel-radio {
+  border: none;
+  display: flex;
+  flex-direction: column;
+  font-family: var(--font-family-base);
+  gap: var(--space-075, 0.75rem);
+  margin: 0;
+  padding: 0;
+}
+
+.dintel-radio__legend {
+  color: var(--color-text-primary, #0A0E14);
+  font-size: var(--text-body-md, 0.875rem);
+  font-weight: var(--font-weight-semibold, 600);
+  margin: 0 0 var(--space-050, 0.5rem);
+  padding: 0;
+}
+
+.dintel-radio__list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-075, 0.75rem);
+}
+
+.dintel-radio--horizontal .dintel-radio__list {
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: var(--space-100, 1rem) var(--space-150, 1.5rem);
+}
+
+.dintel-radio__option {
+  align-items: center;
+  cursor: pointer;
+  display: inline-flex;
+  gap: var(--space-075, 0.75rem);
+  position: relative;
+}
+
+.dintel-radio__input {
+  height: 0;
+  opacity: 0;
+  position: absolute;
+  width: 0;
+}
+
+.dintel-radio__dot {
+  background-color: var(--color-bg-interactive-card, #FFFFFF);
+  border: 2px solid var(--color-border-interactive, #DCDFE3);
+  border-radius: 50%;
+  display: inline-block;
+  flex-shrink: 0;
+  height: 1.25rem;
+  position: relative;
+  transition: border-color 0.15s;
+  width: 1.25rem;
+}
+
+.dintel-radio--sm .dintel-radio__dot { height: 1rem;   width: 1rem; }
+.dintel-radio--lg .dintel-radio__dot { height: 1.5rem; width: 1.5rem; }
+
+.dintel-radio__option:hover .dintel-radio__dot {
+  border-color: var(--color-border-interactive-hover, #114DA6);
+}
+
+.dintel-radio__input:focus-visible ~ .dintel-radio__dot {
+  outline: 2px solid var(--color-border-interactive-focus, #C33400);
+  outline-offset: 2px;
+}
+
+.dintel-radio__input:checked ~ .dintel-radio__dot {
+  border-color: var(--color-bg-interactive-primary, #114DA6);
+}
+
+.dintel-radio__input:checked ~ .dintel-radio__dot::after {
+  background-color: var(--color-bg-interactive-primary, #114DA6);
+  border-radius: 50%;
+  content: "";
+  height: 50%;
+  inset: 25%;
+  position: absolute;
+}
+
+.dintel-radio--error .dintel-radio__dot {
+  border-color: var(--color-border-feedback-error, #C44727);
+}
+
+.dintel-radio--error .dintel-radio__input:checked ~ .dintel-radio__dot {
+  border-color: var(--color-border-feedback-error, #C44727);
+}
+
+.dintel-radio--error .dintel-radio__input:checked ~ .dintel-radio__dot::after {
+  background-color: var(--color-bg-feedback-error, #C44727);
+}
+
+.dintel-radio--disabled,
+.dintel-radio__input:disabled {
+  cursor: not-allowed;
+}
+
+.dintel-radio--disabled .dintel-radio__dot {
+  background-color: var(--color-bg-tertiary, #EEEFF0);
+  border-color: var(--color-border-interactive-disabled, #EEEFF0);
+}
+
+.dintel-radio--disabled .dintel-radio__text {
+  color: var(--color-text-disabled, #B5B8BE);
+}
+
+.dintel-radio__text {
+  color: var(--color-text-primary, #0A0E14);
+  font-size: var(--text-body-md, 0.875rem);
+  line-height: var(--line-height-base, 1.5);
+}
+
+.dintel-radio--sm .dintel-radio__text { font-size: var(--text-body-sm, 0.75rem); }
+.dintel-radio--lg .dintel-radio__text { font-size: var(--text-body-lg, 1rem); }
+
+.dintel-radio__help {
+  color: var(--color-text-tertiary, #696E75);
+  font-size: var(--text-body-sm, 0.75rem);
+  margin: 0;
+}
+
+.dintel-radio--error .dintel-radio__help {
+  color: var(--color-text-feedback-error, #C44727);
+}

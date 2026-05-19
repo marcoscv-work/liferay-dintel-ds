@@ -1,0 +1,45 @@
+<section class="dintel-sign-in" aria-labelledby="dintel-sign-in-title-${fragmentEntryLinkNamespace}">
+  <div class="dintel-sign-in__panel">
+    [#if themeDisplay.isSignedIn()]
+      <div class="dintel-sign-in__signed">
+        <span class="dnt-icon dnt-icon-user dintel-sign-in__user-icon" aria-hidden="true"></span>
+        <h2 class="dintel-sign-in__title" data-lfr-editable-id="signed-title" data-lfr-editable-type="text">
+          Sesión iniciada
+        </h2>
+        <p class="dintel-sign-in__intro" data-lfr-editable-id="signed-message" data-lfr-editable-type="rich-text">
+          Bienvenido. Tu sesión está activa.
+        </p>
+        <a class="dintel-sign-in__logout-link" href="${htmlUtil.escape(themeDisplay.getURLSignOut())}?referer=${themeDisplay.getPathFriendlyURLPublic() + themeDisplay.getSiteGroup().getFriendlyURL()}">
+          <span data-lfr-editable-id="logout-text" data-lfr-editable-type="text">Cerrar sesión</span>
+        </a>
+      </div>
+    [#else]
+      [#if configuration.showTitle]
+        <h2 class="dintel-sign-in__title" id="dintel-sign-in-title-${fragmentEntryLinkNamespace}" data-lfr-editable-id="sign-in-title" data-lfr-editable-type="text">
+          Iniciar sesión
+        </h2>
+      [/#if]
+
+      [#if configuration.showIntro]
+        <p class="dintel-sign-in__intro" data-lfr-editable-id="sign-in-intro" data-lfr-editable-type="text">
+          Accede a tu cuenta de la Agencia Estatal de Administración Digital.
+        </p>
+      [/#if]
+
+      <div class="dintel-sign-in__portlet">
+        [@liferay_portlet["runtime"] defaultPreferences="<portlet-preferences><preference><name>portletSetupPortletDecoratorId</name><value>barebone</value></preference></portlet-preferences>" portletName="com_liferay_login_web_portlet_LoginPortlet"/]
+      </div>
+
+      [#if configuration.showCreateAccount]
+        <div class="dintel-sign-in__footer">
+          <span class="dintel-sign-in__footer-text" data-lfr-editable-id="sign-in-create-text" data-lfr-editable-type="text">
+            ¿No tienes cuenta?
+          </span>
+          <a class="dintel-sign-in__footer-link" data-lfr-editable-id="sign-in-create-link" data-lfr-editable-type="link" href="${themeDisplay.getPathFriendlyURLPublic() + themeDisplay.getSiteGroup().getFriendlyURL()}/create-account">
+            <span data-lfr-editable-id="sign-in-create-link-text" data-lfr-editable-type="text">Crear una cuenta</span>
+          </a>
+        </div>
+      [/#if]
+    [/#if]
+  </div>
+</section>

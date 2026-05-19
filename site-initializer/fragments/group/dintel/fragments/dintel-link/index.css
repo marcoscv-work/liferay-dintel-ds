@@ -1,0 +1,71 @@
+.dintel-link {
+  align-items: center;
+  border-radius: var(--radius-sm, 0.25rem);
+  color: var(--color-text-interactive, #114DA6);
+  display: inline-flex;
+  font-family: var(--font-family-base);
+  font-weight: var(--font-weight-semi-bold, 600);
+  gap: var(--space-050, 0.5rem);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color 0.15s ease;
+}
+
+.dintel-link:hover {
+  color: var(--color-text-interactive-hover, #093473);
+  text-decoration: none;
+}
+
+.dintel-link:active {
+  color: var(--color-text-interactive-pressed, #04214D);
+}
+
+.dintel-link:focus-visible {
+  outline: 2px solid var(--color-border-interactive-focus, #C33400);
+  outline-offset: 2px;
+  text-decoration: none;
+}
+
+.dintel-link:visited {
+  color: var(--color-text-interactive-visited, #093473);
+}
+
+/* === Variantes === */
+.dintel-link--negative {
+  color: var(--color-text-inverse, #FFFFFF);
+}
+
+.dintel-link--negative:hover,
+.dintel-link--negative:visited {
+  color: var(--color-text-inverse, #FFFFFF);
+}
+
+.dintel-link--accent {
+  color: var(--color-text-interactive-accent, #C33400);
+}
+
+.dintel-link--accent:hover {
+  color: var(--color-text-interactive-accent-hover, #802200);
+}
+
+/* === Tamaños === */
+.dintel-link--sm { font-size: var(--text-body-sm, 0.75rem); }
+.dintel-link--md { font-size: var(--text-body-md, 0.875rem); }
+.dintel-link--lg { font-size: var(--text-body-lg, 1rem); }
+
+.dintel-link__icon {
+  flex-shrink: 0;
+  font-size: 0.875em;
+}
+
+.visually-hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}

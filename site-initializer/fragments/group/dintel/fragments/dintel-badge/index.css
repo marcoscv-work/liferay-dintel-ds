@@ -1,0 +1,51 @@
+.dintel-badge {
+  border-radius: var(--border-radius-sm, 0.25rem);
+  display: inline-flex;
+  align-items: center;
+  font-size: var(--font-size-xs, 0.75rem);
+  font-weight: var(--font-weight-semi-bold, 600);
+  letter-spacing: 0.025em;
+  line-height: 1;
+  padding: 0.25rem 0.5rem;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.dintel-badge--pill {
+  border-radius: var(--border-radius-pill, 50rem);
+}
+
+.dintel-badge--primary {
+  background-color: var(--color-bg-interactive-item-hover, #EAF0FA);
+  color: var(--color-text-interactive-hover, #093473);
+}
+
+.dintel-badge--secondary {
+  background-color: var(--regular-primitives-secondary-000, #FFD2C2);
+  color: var(--color-text-interactive-accent-hover, #802200);
+}
+
+.dintel-badge--success {
+  background-color: var(--color-bg-feedback-success, #E5F5EC);
+  color: var(--regular-primitives-status-success-500, #015223);
+}
+
+.dintel-badge--danger {
+  background-color: var(--color-bg-feedback-error, #F5E1DC);
+  color: var(--regular-primitives-status-error-500, #5E1503);
+}
+
+.dintel-badge--warning {
+  background-color: var(--color-bg-feedback-warning, #FCF0DC);
+  color: var(--regular-primitives-status-warning-500, #594100);
+}
+
+.dintel-badge--info {
+  background-color: var(--color-bg-feedback-info, #E9E7F6);
+  color: var(--regular-primitives-status-info-500, #1E1655);
+}
+
+.dintel-badge--neutral {
+  background-color: var(--color-bg-tertiary, #EEEFF0);
+  color: var(--color-text-secondary, #363D47);
+}

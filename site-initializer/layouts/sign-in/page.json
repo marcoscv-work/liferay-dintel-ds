@@ -1,0 +1,9 @@
+{
+    "externalReferenceCode": "sign-in",
+    "friendlyURL": "/sign-in",
+    "hidden": true,
+    "name_i18n": {"en_US": "Sign In", "es_ES": "Iniciar sesión"},
+    "private": false,
+    "system": false,
+    "type": "Content"
+}

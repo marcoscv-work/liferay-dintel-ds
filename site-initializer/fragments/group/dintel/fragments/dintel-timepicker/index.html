@@ -1,0 +1,28 @@
+<div class="dintel-timepicker dintel-timepicker--${configuration.size!'md'} dintel-timepicker--state-${configuration.state!'default'} ${configuration.disabled?then('dintel-timepicker--disabled', '')}">
+  [#if configuration.showLabel]
+    <label class="dintel-timepicker__label" for="dintel-timepicker-${fragmentEntryLinkNamespace}">
+      <span data-lfr-editable-id="timepicker-label" data-lfr-editable-type="text">Hora</span>
+      [#if configuration.required]<span class="dintel-timepicker__required" aria-hidden="true">*</span>[/#if]
+    </label>
+  [/#if]
+
+  <div class="dintel-timepicker__wrapper">
+    <span class="dnt-icon dnt-icon-clock dintel-timepicker__icon" aria-hidden="true"></span>
+    <input
+      class="dintel-timepicker__field"
+      id="dintel-timepicker-${fragmentEntryLinkNamespace}"
+      type="time"
+      placeholder="hh:mm"
+      [#if configuration.required]required[/#if]
+      [#if configuration.disabled]disabled aria-disabled="true"[/#if]
+      [#if configuration.state == 'error']aria-invalid="true"[/#if]
+      [#if configuration.showHelp]aria-describedby="dintel-timepicker-help-${fragmentEntryLinkNamespace}"[/#if]
+    />
+  </div>
+
+  [#if configuration.showHelp]
+    <p class="dintel-timepicker__help" id="dintel-timepicker-help-${fragmentEntryLinkNamespace}" data-lfr-editable-id="timepicker-help" data-lfr-editable-type="text">
+      Texto de ayuda
+    </p>
+  [/#if]
+</div>

@@ -1,0 +1,31 @@
+{
+  "fieldSets": [
+    {
+      "fields": [
+        {"dataType": "int", "defaultValue": "0",   "label": "Valor inicial", "name": "value", "type": "text"},
+        {"dataType": "int", "defaultValue": "0",   "label": "Mínimo",        "name": "min",   "type": "text"},
+        {"dataType": "int", "defaultValue": "100", "label": "Máximo",        "name": "max",   "type": "text"},
+        {"dataType": "int", "defaultValue": "1",   "label": "Step",          "name": "step",  "type": "text"},
+        {
+          "dataType": "string",
+          "defaultValue": "md",
+          "label": "Tamaño",
+          "name": "size",
+          "type": "select",
+          "typeOptions": {
+            "validValues": [
+              {"value": "sm", "label": "Small"},
+              {"value": "md", "label": "Medium"},
+              {"value": "lg", "label": "Large"}
+            ]
+          }
+        },
+        {"defaultValue": "true",  "label": "Mostrar etiqueta",  "name": "showLabel", "type": "checkbox"},
+        {"defaultValue": "false", "label": "Mostrar ayuda",      "name": "showHelp",  "type": "checkbox"},
+        {"defaultValue": "false", "label": "Deshabilitado",      "name": "disabled",  "type": "checkbox"},
+        {"defaultValue": "false", "label": "Obligatorio",         "name": "required",  "type": "checkbox"}
+      ],
+      "label": "Campo numérico"
+    }
+  ]
+}

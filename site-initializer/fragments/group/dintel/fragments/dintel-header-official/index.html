@@ -1,0 +1,57 @@
+<header class="dintel-header-of" role="banner">
+  <div class="dintel-header-of__bar">
+    <div class="container dintel-header-of__bar-inner">
+      <div class="dintel-header-of__logos">
+        <span class="dintel-header-of__gov">
+          <img class="dintel-header-of__gov-img" src="[resources:logo-gob-es.png]" alt="Gobierno de España" width="64" height="48"/>
+        </span>
+        <a class="dintel-header-of__brand" data-lfr-editable-id="brand-link" data-lfr-editable-type="link" href="/" title="DINTEL, Sistema de Diseño">
+          <img class="dintel-header-of__brand-logo" src="[resources:logo-dintel.svg]" alt="DINTEL, Sistema de Diseño" width="105" height="32"/>
+        </a>
+        [#if configuration.showTagline]
+          <span class="dintel-header-of__tagline" data-lfr-editable-id="tagline" data-lfr-editable-type="text">
+            Diseño Normalizado de Trámites Electrónicos
+          </span>
+        [/#if]
+      </div>
+
+      <div class="dintel-header-of__actions">
+        [#if configuration.showSearch]
+          <form class="dintel-header-of__search" role="search" action="/buscar" method="get">
+            <label class="dintel-header-of__search-label visually-hidden" for="dintel-header-of-search">Buscar</label>
+            <span class="dintel-header-of__search-icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+            </span>
+            <input class="dintel-header-of__search-input" id="dintel-header-of-search" name="query" type="search" placeholder="Buscar" autocomplete="off"/>
+            <button class="dintel-header-of__search-submit" type="submit">Buscar</button>
+          </form>
+        [/#if]
+        [#if configuration.showLang]
+          <nav class="dintel-header-of__lang" aria-label="Selector de idioma">
+            <a href="#" class="dintel-header-of__lang-link" hreflang="es" aria-current="true">ES</a>
+            <span aria-hidden="true">|</span>
+            <a href="#" class="dintel-header-of__lang-link" hreflang="en">EN</a>
+          </nav>
+        [/#if]
+        <button class="dintel-header-of__mobile-toggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="dintel-header-of-nav">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <nav class="dintel-header-of__nav" id="dintel-header-of-nav" aria-label="Menú principal">
+    <div class="container">
+      <ul class="dintel-header-of__nav-list" role="list">
+        <li><a class="dintel-header-of__nav-link" data-lfr-editable-id="nav-1" data-lfr-editable-type="link" href="/">Inicio</a></li>
+        <li><a class="dintel-header-of__nav-link" data-lfr-editable-id="nav-2" data-lfr-editable-type="link" href="/primeros-pasos">Primeros pasos</a></li>
+        <li><a class="dintel-header-of__nav-link" data-lfr-editable-id="nav-3" data-lfr-editable-type="link" href="/fundamentos">Fundamentos</a></li>
+        <li><a class="dintel-header-of__nav-link" data-lfr-editable-id="nav-4" data-lfr-editable-type="link" href="/componentes">Componentes</a></li>
+        <li><a class="dintel-header-of__nav-link" data-lfr-editable-id="nav-5" data-lfr-editable-type="link" href="/modulos" aria-current="page">Módulos</a></li>
+        <li><a class="dintel-header-of__nav-link" data-lfr-editable-id="nav-6" data-lfr-editable-type="link" href="/plantillas">Plantillas</a></li>
+        <li><a class="dintel-header-of__nav-link" data-lfr-editable-id="nav-7" data-lfr-editable-type="link" href="/tokens">Tokens</a></li>
+        <li><a class="dintel-header-of__nav-link" data-lfr-editable-id="nav-8" data-lfr-editable-type="link" href="/soporte">Soporte</a></li>
+      </ul>
+    </div>
+  </nav>
+</header>

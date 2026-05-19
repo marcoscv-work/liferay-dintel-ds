@@ -1,0 +1,37 @@
+{
+  "fieldSets": [
+    {
+      "fields": [
+        {
+          "dataType": "string",
+          "defaultValue": "default",
+          "label": "Estado",
+          "name": "state",
+          "type": "select",
+          "typeOptions": {
+            "validValues": [
+              {"value": "default", "label": "Default"},
+              {"value": "success", "label": "Éxito"},
+              {"value": "error",   "label": "Error"},
+              {"value": "warning", "label": "Advertencia"}
+            ]
+          }
+        },
+        {
+          "dataType": "int",
+          "defaultValue": "4",
+          "label": "Filas",
+          "name": "rows",
+          "type": "text"
+        },
+        {"defaultValue": "true",  "label": "Mostrar etiqueta",      "name": "showLabel",     "type": "checkbox"},
+        {"defaultValue": "false", "label": "Mostrar texto de ayuda", "name": "showHelp",      "type": "checkbox"},
+        {"defaultValue": "false", "label": "Mostrar contador",       "name": "showCounter",   "type": "checkbox"},
+        {"defaultValue": "false", "label": "Campo obligatorio",      "name": "required",      "type": "checkbox"},
+        {"defaultValue": "false", "label": "Deshabilitado",          "name": "disabled",      "type": "checkbox"},
+        {"defaultValue": "true",  "label": "Permitir redimensionar", "name": "resizable",     "type": "checkbox"}
+      ],
+      "label": "Textarea"
+    }
+  ]
+}

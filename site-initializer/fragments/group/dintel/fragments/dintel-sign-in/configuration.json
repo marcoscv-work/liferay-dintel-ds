@@ -1,0 +1,12 @@
+{
+  "fieldSets": [
+    {
+      "fields": [
+        {"defaultValue": "true",  "label": "Mostrar título",                       "name": "showTitle",         "type": "checkbox"},
+        {"defaultValue": "true",  "label": "Mostrar texto introductorio",          "name": "showIntro",         "type": "checkbox"},
+        {"defaultValue": "false", "label": "Mostrar enlace de crear cuenta",       "name": "showCreateAccount", "type": "checkbox"}
+      ],
+      "label": "Iniciar sesión"
+    }
+  ]
+}

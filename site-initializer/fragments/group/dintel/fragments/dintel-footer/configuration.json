@@ -1,0 +1,21 @@
+{
+  "fieldSets": [
+    {
+      "fields": [
+        {
+          "defaultValue": "true",
+          "label": "Mostrar logos institucionales (UE, Plan Recuperación, España Digital)",
+          "name": "showPrimaryLogos",
+          "type": "checkbox"
+        },
+        {
+          "defaultValue": "true",
+          "label": "Mostrar texto descriptivo",
+          "name": "showDescription",
+          "type": "checkbox"
+        }
+      ],
+      "label": "Pie de Página"
+    }
+  ]
+}

@@ -1,0 +1,1 @@
+// Comportamiento nativo del <input>.

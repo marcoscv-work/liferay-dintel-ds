@@ -1,0 +1,98 @@
+.dintel-breadcrumb {
+  padding: var(--spacer-2, 0.5rem) 0;
+}
+
+.dintel-breadcrumb__list {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.dintel-breadcrumb__item {
+  align-items: center;
+  display: flex;
+}
+
+.dintel-breadcrumb__link {
+  align-items: center;
+  border-radius: var(--border-radius-sm, 0.25rem);
+  color: var(--color-text-interactive, #114DA6);
+  display: inline-flex;
+  font-size: var(--font-size-sm, 0.875rem);
+  gap: var(--spacer-1, 0.25rem);
+  padding: 0.125rem 0.25rem;
+  text-decoration: none;
+  transition: color 0.15s, background-color 0.15s;
+}
+
+.dintel-breadcrumb__link:hover {
+  color: var(--color-text-interactive-hover, #093473);
+  text-decoration: underline;
+}
+
+.dintel-breadcrumb__link:active {
+  color: var(--color-text-interactive-pressed, #04214D);
+}
+
+.dintel-breadcrumb__link:focus-visible {
+  outline: 2px solid var(--color-border-interactive-focus, #C33400);
+  outline-offset: 2px;
+  text-decoration: none;
+}
+
+/* Separadores como ::before del item posterior, según `--sep-*` */
+.dintel-breadcrumb__sep {
+  color: var(--color-text-disabled, #B5B8BE);
+  flex-shrink: 0;
+  font-size: var(--font-size-sm, 0.875rem);
+  padding: 0 var(--spacer-1, 0.25rem);
+  user-select: none;
+}
+
+.dintel-breadcrumb--sep-chevron .dintel-breadcrumb__sep::before { content: "›"; }
+.dintel-breadcrumb--sep-slash   .dintel-breadcrumb__sep::before { content: "/"; }
+.dintel-breadcrumb--sep-dot     .dintel-breadcrumb__sep::before { content: "·"; }
+
+.dintel-breadcrumb__current {
+  color: var(--color-text-tertiary, #696E75);
+  font-size: var(--font-size-sm, 0.875rem);
+  font-weight: var(--font-weight-semi-bold, 600);
+}
+
+.dintel-breadcrumb__home-icon {
+  flex-shrink: 0;
+}
+
+/* Back-link (fallback móvil) */
+.dintel-breadcrumb__back {
+  align-items: center;
+  color: var(--color-text-interactive, #114DA6);
+  display: none;
+  font-size: var(--font-size-sm, 0.875rem);
+  font-weight: var(--font-weight-semi-bold, 600);
+  gap: var(--spacer-1, 0.25rem);
+  text-decoration: none;
+}
+
+.dintel-breadcrumb__back:hover {
+  color: var(--color-text-interactive-hover, #093473);
+  text-decoration: underline;
+}
+
+.dintel-breadcrumb__back-icon {
+  flex-shrink: 0;
+}
+
+@media (max-width: 576px) {
+  .dintel-breadcrumb--mobile-back .dintel-breadcrumb__list {
+    display: none;
+  }
+
+  .dintel-breadcrumb--mobile-back .dintel-breadcrumb__back {
+    display: inline-flex;
+  }
+}

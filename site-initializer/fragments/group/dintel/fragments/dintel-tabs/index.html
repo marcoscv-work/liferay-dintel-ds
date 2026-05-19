@@ -1,0 +1,39 @@
+<div class="dintel-tabs dintel-tabs--${configuration.orientation!'horizontal'} dintel-tabs--align-${configuration.alignment!'start'} ${configuration.showIcons?then('dintel-tabs--with-icons', '')}">
+  <div class="dintel-tabs__list" role="tablist" aria-label="Pestañas de contenido">
+    <button class="dintel-tabs__tab dintel-tabs__tab--active" type="button" role="tab" aria-selected="true" aria-controls="tab-panel-1" id="tab-btn-1">
+      [#if configuration.showIcons]
+        <svg class="dintel-tabs__icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 13h8V3H3zm0 8h8v-6H3zm10 0h8V11h-8zm0-18v6h8V3z"/></svg>
+      [/#if]
+      <span data-lfr-editable-id="tab-label-1" data-lfr-editable-type="text">Pestaña 1</span>
+    </button>
+    <button class="dintel-tabs__tab" type="button" role="tab" aria-selected="false" aria-controls="tab-panel-2" id="tab-btn-2" tabindex="-1">
+      [#if configuration.showIcons]
+        <svg class="dintel-tabs__icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2 4 5v6.09c0 5.05 3.41 9.76 8 10.91 4.59-1.15 8-5.86 8-10.91V5z"/></svg>
+      [/#if]
+      <span data-lfr-editable-id="tab-label-2" data-lfr-editable-type="text">Pestaña 2</span>
+    </button>
+    <button class="dintel-tabs__tab ${configuration.disableTab3?then('dintel-tabs__tab--disabled', '')}" type="button" role="tab" aria-selected="false" aria-controls="tab-panel-3" id="tab-btn-3" tabindex="-1" [#if configuration.disableTab3]aria-disabled="true" disabled[/#if]>
+      [#if configuration.showIcons]
+        <svg class="dintel-tabs__icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8z"/></svg>
+      [/#if]
+      <span data-lfr-editable-id="tab-label-3" data-lfr-editable-type="text">Pestaña 3</span>
+    </button>
+  </div>
+  <div class="dintel-tabs__panels">
+    <div class="dintel-tabs__panel" id="tab-panel-1" role="tabpanel" aria-labelledby="tab-btn-1">
+      <div data-lfr-editable-id="tab-content-1" data-lfr-editable-type="rich-text">
+        Contenido de la primera pestaña. Aquí puede incluir cualquier información relevante.
+      </div>
+    </div>
+    <div class="dintel-tabs__panel" id="tab-panel-2" role="tabpanel" aria-labelledby="tab-btn-2" hidden>
+      <div data-lfr-editable-id="tab-content-2" data-lfr-editable-type="rich-text">
+        Contenido de la segunda pestaña con información adicional.
+      </div>
+    </div>
+    <div class="dintel-tabs__panel" id="tab-panel-3" role="tabpanel" aria-labelledby="tab-btn-3" hidden>
+      <div data-lfr-editable-id="tab-content-3" data-lfr-editable-type="rich-text">
+        Contenido de la tercera pestaña.
+      </div>
+    </div>
+  </div>
+</div>

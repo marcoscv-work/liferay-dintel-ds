@@ -1,0 +1,21 @@
+{
+  "fieldSets": [
+    {
+      "fields": [
+        {
+          "defaultValue": "true",
+          "label": "Mostrar buscador",
+          "name": "showSearch",
+          "type": "checkbox"
+        },
+        {
+          "defaultValue": "true",
+          "label": "Mostrar selector de idioma",
+          "name": "showLang",
+          "type": "checkbox"
+        }
+      ],
+      "label": "Cabecera"
+    }
+  ]
+}

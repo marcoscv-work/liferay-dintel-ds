@@ -1,0 +1,186 @@
+{
+    "pageElement": {
+        "pageElements": [
+            {
+                "definition": {
+                    "fragment": {"key": "dintel-hero"},
+                    "fragmentConfig": {},
+                    "fragmentFields": [],
+                    "indexed": true
+                },
+                "type": "Fragment"
+            },
+            {
+                "definition": {
+                    "cssClasses": ["dintel-section--py-xs"],
+                    "indexed": true,
+                    "layout": {"widthType": "Fixed"}
+                },
+                "pageElements": [
+                    {
+                        "definition": {
+                            "fragment": {"key": "dintel-breadcrumb"},
+                            "fragmentConfig": {"showHome": true},
+                            "fragmentFields": [],
+                            "indexed": true
+                        },
+                        "type": "Fragment"
+                    }
+                ],
+                "type": "Section"
+            },
+            {
+                "definition": {
+                    "cssClasses": ["dintel-section--py-md"],
+                    "indexed": true,
+                    "layout": {"widthType": "Fixed"}
+                },
+                "pageElements": [
+                    {
+                        "definition": {"gutters": true, "numberOfColumns": 3},
+                        "pageElements": [
+                            {
+                                "definition": {"size": 4},
+                                "pageElements": [
+                                    {"definition": {"fragment": {"key": "dintel-card"}, "fragmentConfig": {"showImage": true, "showButton": true, "shadow": true}, "fragmentFields": [], "indexed": true}, "type": "Fragment"}
+                                ],
+                                "type": "Column"
+                            },
+                            {
+                                "definition": {"size": 4},
+                                "pageElements": [
+                                    {"definition": {"fragment": {"key": "dintel-card"}, "fragmentConfig": {"showImage": true, "showButton": true, "shadow": true}, "fragmentFields": [], "indexed": true}, "type": "Fragment"}
+                                ],
+                                "type": "Column"
+                            },
+                            {
+                                "definition": {"size": 4},
+                                "pageElements": [
+                                    {"definition": {"fragment": {"key": "dintel-card"}, "fragmentConfig": {"showImage": true, "showButton": true, "shadow": true}, "fragmentFields": [], "indexed": true}, "type": "Fragment"}
+                                ],
+                                "type": "Column"
+                            }
+                        ],
+                        "type": "Row"
+                    }
+                ],
+                "type": "Section"
+            },
+            {
+                "definition": {
+                    "cssClasses": ["dintel-section--py-md"],
+                    "indexed": true,
+                    "layout": {"widthType": "Fixed"}
+                },
+                "pageElements": [
+                    {"definition": {"fragment": {"key": "dintel-card"}, "fragmentConfig": {"showImage": true, "showButton": true, "horizontal": true, "shadow": true}, "fragmentFields": [], "indexed": true}, "type": "Fragment"}
+                ],
+                "type": "Section"
+            },
+            {
+                "definition": {
+                    "cssClasses": ["dintel-section--py-md"],
+                    "indexed": true,
+                    "layout": {"widthType": "Fixed"}
+                },
+                "pageElements": [
+                    {"definition": {"fragment": {"key": "dintel-tabs"}, "fragmentConfig": {"showIcons": true}, "fragmentFields": [], "indexed": true}, "type": "Fragment"}
+                ],
+                "type": "Section"
+            },
+            {
+                "definition": {
+                    "cssClasses": ["dintel-section--py-md"],
+                    "indexed": true,
+                    "layout": {"widthType": "Fixed"}
+                },
+                "pageElements": [
+                    {
+                        "definition": {"gutters": true, "numberOfColumns": 3},
+                        "pageElements": [
+                            {
+                                "definition": {"size": 4},
+                                "pageElements": [
+                                    {"definition": {"fragment": {"key": "dintel-list"}, "fragmentConfig": {"type": "icon", "icon": "check"}, "fragmentFields": [], "indexed": true}, "type": "Fragment"}
+                                ],
+                                "type": "Column"
+                            },
+                            {
+                                "definition": {"size": 4},
+                                "pageElements": [
+                                    {"definition": {"fragment": {"key": "dintel-list"}, "fragmentConfig": {"type": "icon", "icon": "arrow-right"}, "fragmentFields": [], "indexed": true}, "type": "Fragment"}
+                                ],
+                                "type": "Column"
+                            },
+                            {
+                                "definition": {"size": 4},
+                                "pageElements": [
+                                    {"definition": {"fragment": {"key": "dintel-list"}, "fragmentConfig": {"type": "numbered"}, "fragmentFields": [], "indexed": true}, "type": "Fragment"}
+                                ],
+                                "type": "Column"
+                            }
+                        ],
+                        "type": "Row"
+                    }
+                ],
+                "type": "Section"
+            },
+            {
+                "definition": {
+                    "cssClasses": ["dintel-section--py-md"],
+                    "indexed": true,
+                    "layout": {"widthType": "Fixed"}
+                },
+                "pageElements": [
+                    {"definition": {"fragment": {"key": "dintel-alert"}, "fragmentConfig": {"type": "info", "showTitle": true, "showLink": true}, "fragmentFields": [], "indexed": true}, "type": "Fragment"}
+                ],
+                "type": "Section"
+            },
+            {
+                "definition": {
+                    "cssClasses": ["dintel-section--py-md"],
+                    "indexed": true,
+                    "layout": {"widthType": "Fixed"}
+                },
+                "pageElements": [
+                    {"definition": {"fragment": {"key": "dintel-accordion"}, "fragmentConfig": {}, "fragmentFields": [], "indexed": true}, "type": "Fragment"}
+                ],
+                "type": "Section"
+            },
+            {
+                "definition": {
+                    "cssClasses": ["dintel-section--py-md"],
+                    "indexed": true,
+                    "layout": {"widthType": "Fixed"}
+                },
+                "pageElements": [
+                    {
+                        "definition": {"gutters": true, "numberOfColumns": 2},
+                        "pageElements": [
+                            {
+                                "definition": {"size": 6},
+                                "pageElements": [
+                                    {"definition": {"fragment": {"key": "dintel-button"}, "fragmentConfig": {"style": "primary", "size": "lg"}, "fragmentFields": [], "indexed": true}, "type": "Fragment"}
+                                ],
+                                "type": "Column"
+                            },
+                            {
+                                "definition": {"size": 6},
+                                "pageElements": [
+                                    {"definition": {"fragment": {"key": "dintel-button"}, "fragmentConfig": {"style": "secondary", "size": "lg"}, "fragmentFields": [], "indexed": true}, "type": "Fragment"}
+                                ],
+                                "type": "Column"
+                            }
+                        ],
+                        "type": "Row"
+                    }
+                ],
+                "type": "Section"
+            }
+        ],
+        "type": "Root"
+    },
+    "settings": {
+        "masterPage": {"key": "main"}
+    }
+}

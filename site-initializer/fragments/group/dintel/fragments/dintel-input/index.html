@@ -1,0 +1,35 @@
+<div class="dintel-input dintel-input--${configuration.size!'md'} dintel-input--state-${configuration.state!'default'} ${configuration.fullWidth?then('dintel-input--full', '')} ${configuration.disabled?then('dintel-input--disabled', '')}">
+  [#if configuration.showLabel]
+    <label class="dintel-input__label" for="dintel-input-${fragmentEntryLinkNamespace}">
+      <span data-lfr-editable-id="input-label" data-lfr-editable-type="text">Etiqueta del campo</span>
+      [#if configuration.required]<span class="dintel-input__required" aria-hidden="true">*</span>[/#if]
+    </label>
+  [/#if]
+  <div class="dintel-input__wrapper">
+    <input
+      class="dintel-input__field"
+      id="dintel-input-${fragmentEntryLinkNamespace}"
+      type="${configuration.type!'text'}"
+      placeholder="Introduce un valor…"
+      autocomplete="off"
+      [#if configuration.required]required[/#if]
+      [#if configuration.disabled]disabled aria-disabled="true"[/#if]
+      [#if configuration.state == 'error']aria-invalid="true"[/#if]
+      [#if configuration.showHelp]aria-describedby="dintel-input-help-${fragmentEntryLinkNamespace}"[/#if]
+    />
+    [#if configuration.state == 'success']
+      <span class="dnt-icon dnt-icon-tick dintel-input__state-icon" aria-hidden="true"></span>
+    [/#if]
+    [#if configuration.state == 'error']
+      <span class="dnt-icon dnt-icon-close dintel-input__state-icon" aria-hidden="true"></span>
+    [/#if]
+    [#if configuration.state == 'warning']
+      <span class="dnt-icon dnt-icon-status-warning dintel-input__state-icon" aria-hidden="true"></span>
+    [/#if]
+  </div>
+  [#if configuration.showHelp]
+    <p class="dintel-input__help" id="dintel-input-help-${fragmentEntryLinkNamespace}" data-lfr-editable-id="input-help" data-lfr-editable-type="text">
+      Texto de ayuda para el usuario.
+    </p>
+  [/#if]
+</div>

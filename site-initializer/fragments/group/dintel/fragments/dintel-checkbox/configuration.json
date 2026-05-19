@@ -1,0 +1,29 @@
+{
+  "fieldSets": [
+    {
+      "fields": [
+        {
+          "dataType": "string",
+          "defaultValue": "md",
+          "label": "Tamaño",
+          "name": "size",
+          "type": "select",
+          "typeOptions": {
+            "validValues": [
+              {"value": "sm", "label": "Small"},
+              {"value": "md", "label": "Medium"},
+              {"value": "lg", "label": "Large"}
+            ]
+          }
+        },
+        {"defaultValue": "false", "label": "Marcado por defecto",      "name": "checked",       "type": "checkbox"},
+        {"defaultValue": "false", "label": "Estado indeterminado",     "name": "indeterminate", "type": "checkbox"},
+        {"defaultValue": "false", "label": "Mostrar texto de ayuda",   "name": "showHelp",      "type": "checkbox"},
+        {"defaultValue": "false", "label": "Estado de error",          "name": "errorState",    "type": "checkbox"},
+        {"defaultValue": "false", "label": "Deshabilitado",            "name": "disabled",      "type": "checkbox"},
+        {"defaultValue": "false", "label": "Obligatorio",              "name": "required",      "type": "checkbox"}
+      ],
+      "label": "Casilla de verificación"
+    }
+  ]
+}

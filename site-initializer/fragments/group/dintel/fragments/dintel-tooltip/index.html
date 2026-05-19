@@ -1,0 +1,45 @@
+[#assign trigger = configuration.trigger!'icon' /]
+<span class="dintel-tooltip dintel-tooltip--${configuration.placement!'top'}">
+  [#if trigger == 'text']
+    <span
+      class="dintel-tooltip__trigger dintel-tooltip__trigger--text"
+      role="button"
+      tabindex="0"
+      aria-describedby="dintel-tooltip-${fragmentEntryLinkNamespace}"
+      data-lfr-editable-id="tooltip-trigger"
+      data-lfr-editable-type="text"
+    >
+      Pasa el ratón
+    </span>
+  [/#if]
+  [#if trigger == 'button']
+    <button
+      class="dintel-tooltip__trigger dintel-tooltip__trigger--button"
+      type="button"
+      aria-describedby="dintel-tooltip-${fragmentEntryLinkNamespace}"
+    >
+      <span data-lfr-editable-id="tooltip-trigger" data-lfr-editable-type="text">Más info</span>
+    </button>
+  [/#if]
+  [#if trigger == 'icon']
+    <button
+      class="dintel-tooltip__trigger dintel-tooltip__trigger--icon"
+      type="button"
+      aria-label="Más información"
+      aria-describedby="dintel-tooltip-${fragmentEntryLinkNamespace}"
+    >
+      <span class="dnt-icon dnt-icon-status-info" aria-hidden="true"></span>
+    </button>
+  [/#if]
+
+  <span
+    class="dintel-tooltip__content"
+    id="dintel-tooltip-${fragmentEntryLinkNamespace}"
+    role="tooltip"
+  >
+    <span data-lfr-editable-id="tooltip-content" data-lfr-editable-type="text">
+      Texto explicativo del tooltip.
+    </span>
+    <span class="dintel-tooltip__arrow" aria-hidden="true"></span>
+  </span>
+</span>

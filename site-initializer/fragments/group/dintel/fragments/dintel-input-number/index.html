@@ -1,0 +1,48 @@
+<div class="dintel-input-number dintel-input-number--${configuration.size!'md'} ${configuration.disabled?then('dintel-input-number--disabled', '')}">
+  [#if configuration.showLabel]
+    <label class="dintel-input-number__label" for="dintel-input-number-${fragmentEntryLinkNamespace}">
+      <span data-lfr-editable-id="number-label" data-lfr-editable-type="text">Cantidad</span>
+      [#if configuration.required]<span class="dintel-input-number__required" aria-hidden="true">*</span>[/#if]
+    </label>
+  [/#if]
+
+  <div class="dintel-input-number__wrapper">
+    <button
+      class="dintel-input-number__btn dintel-input-number__btn--minus"
+      type="button"
+      aria-label="Decrementar"
+      data-action="decrement"
+      [#if configuration.disabled]disabled[/#if]
+    >
+      <span class="dnt-icon dnt-icon-minus" aria-hidden="true"></span>
+    </button>
+    <input
+      class="dintel-input-number__field"
+      id="dintel-input-number-${fragmentEntryLinkNamespace}"
+      type="number"
+      inputmode="numeric"
+      value="${configuration.value!0}"
+      min="${configuration.min!0}"
+      max="${configuration.max!100}"
+      step="${configuration.step!1}"
+      [#if configuration.required]required[/#if]
+      [#if configuration.disabled]disabled aria-disabled="true"[/#if]
+      [#if configuration.showHelp]aria-describedby="dintel-input-number-help-${fragmentEntryLinkNamespace}"[/#if]
+    />
+    <button
+      class="dintel-input-number__btn dintel-input-number__btn--plus"
+      type="button"
+      aria-label="Incrementar"
+      data-action="increment"
+      [#if configuration.disabled]disabled[/#if]
+    >
+      <span class="dnt-icon dnt-icon-plus" aria-hidden="true"></span>
+    </button>
+  </div>
+
+  [#if configuration.showHelp]
+    <p class="dintel-input-number__help" id="dintel-input-number-help-${fragmentEntryLinkNamespace}" data-lfr-editable-id="number-help" data-lfr-editable-type="text">
+      Texto de ayuda
+    </p>
+  [/#if]
+</div>
