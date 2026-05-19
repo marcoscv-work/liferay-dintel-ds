@@ -23,6 +23,3 @@ package-lock.json
 
 # Reference workspaces — large external repos kept locally for consultation only
 /references/
-
-# Sibling project — has its own repo
-/W3C-ds/
