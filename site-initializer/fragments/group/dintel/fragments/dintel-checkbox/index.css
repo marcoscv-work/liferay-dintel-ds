@@ -23,7 +23,7 @@
 .dintel-checkbox__box {
   background-color: var(--color-bg-interactive-card, #FFFFFF);
   border: 2px solid var(--color-border-interactive, #DCDFE3);
-  border-radius: var(--radius-sm, 0.25rem);
+  border-radius: var(--radius-200, 0.125rem);
   color: transparent;
   display: inline-flex;
   align-items: center;

@@ -1,0 +1,14 @@
+{
+  "fieldSets": [
+    {
+      "fields": [
+        {"defaultValue": "true", "label": "Mostrar colores",      "name": "showColors",     "type": "checkbox"},
+        {"defaultValue": "true", "label": "Mostrar tipografía",   "name": "showTypography", "type": "checkbox"},
+        {"defaultValue": "true", "label": "Mostrar espaciado",    "name": "showSpacing",    "type": "checkbox"},
+        {"defaultValue": "true", "label": "Mostrar radios",       "name": "showRadii",      "type": "checkbox"},
+        {"defaultValue": "true", "label": "Mostrar elevaciones",  "name": "showElevations", "type": "checkbox"}
+      ],
+      "label": "Tokens DINTEL"
+    }
+  ]
+}

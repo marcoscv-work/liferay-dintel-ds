@@ -1,5 +1,5 @@
 .dintel-badge {
-  border-radius: var(--border-radius-sm, 0.25rem);
+  border-radius: var(--radius-200, 0.125rem);
   display: inline-flex;
   align-items: center;
   font-size: var(--font-size-xs, 0.75rem);

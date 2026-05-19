@@ -7,7 +7,7 @@
 .dintel-dropdown__trigger {
   align-items: center;
   border: 2px solid transparent;
-  border-radius: var(--radius-md, 0.375rem);
+  border-radius: var(--radius-300, 0.25rem);
   cursor: pointer;
   display: inline-flex;
   font-family: inherit;
@@ -76,7 +76,7 @@
 .dintel-dropdown__menu {
   background-color: var(--color-bg-interactive-card, #FFFFFF);
   border: 1px solid var(--color-border-soft, #DCDFE3);
-  border-radius: var(--radius-md, 0.375rem);
+  border-radius: var(--radius-300, 0.25rem);
   box-shadow: var(--elevation-300, 0 4px 6px -1px rgba(10, 14, 20, 0.1));
   list-style: none;
   margin: var(--space-050, 0.5rem) 0 0;

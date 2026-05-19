@@ -1,0 +1,35 @@
+[#assign theme = configuration.theme!'negative' /]
+[#assign imagePosition = configuration.imagePosition!'right' /]
+<section class="dintel-hero-dnt dintel-hero-dnt--${theme} dintel-hero-dnt--img-${imagePosition}">
+  <div class="dintel-hero-dnt__inner container">
+    <div class="dintel-hero-dnt__text">
+      <h1 class="dintel-hero-dnt__title" data-lfr-editable-id="hero-title" data-lfr-editable-type="rich-text">
+        Sistema de Diseño DINTEL
+      </h1>
+      <p class="dintel-hero-dnt__description" data-lfr-editable-id="hero-description" data-lfr-editable-type="rich-text">
+        Un lenguaje para facilitar la experiencia de las personas usuarias.
+      </p>
+      [#if configuration.showExtended]
+        <div class="dintel-hero-dnt__extended">
+          <p class="dintel-hero-dnt__body" data-lfr-editable-id="hero-body" data-lfr-editable-type="rich-text">
+            DINTEL es el Sistema de Diseño de la Agencia Estatal de Administración Digital (AEAD). Su objetivo es ayudar a quienes diseñan y desarrollan servicios electrónicos, promoviendo un lenguaje común y colaborativo.
+          </p>
+          <div class="dintel-hero-dnt__actions">
+            <lfr-drop-zone></lfr-drop-zone>
+          </div>
+        </div>
+      [/#if]
+    </div>
+    [#if imagePosition != 'none']
+      <div class="dintel-hero-dnt__media">
+        <img
+          class="dintel-hero-dnt__img"
+          data-lfr-editable-id="hero-image"
+          data-lfr-editable-type="image"
+          src=""
+          alt=""
+        />
+      </div>
+    [/#if]
+  </div>
+</section>

@@ -24,13 +24,13 @@
           "type": "checkbox"
         },
         {
-          "defaultValue": "false",
+          "defaultValue": "true",
           "label": "Mostrar enlace de acción",
           "name": "showLink",
           "type": "checkbox"
         },
         {
-          "defaultValue": "false",
+          "defaultValue": "true",
           "label": "Cerrable",
           "name": "dismissible",
           "type": "checkbox"

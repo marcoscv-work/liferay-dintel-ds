@@ -10,7 +10,7 @@
 .dintel-sign-in__panel {
   background-color: var(--color-bg-interactive-card, #FFFFFF);
   border: 1px solid var(--color-border-soft, #DCDFE3);
-  border-radius: var(--radius-lg, 0.5rem);
+  border-radius: var(--radius-100, 0);
   box-shadow: var(--elevation-200, 0 1px 3px 0 rgba(10, 14, 20, 0.1));
   display: flex;
   flex-direction: column;
@@ -47,7 +47,7 @@
 .dintel-sign-in__portlet input[type="password"] {
   background-color: var(--color-bg-interactive-card, #FFFFFF);
   border: 1px solid var(--color-border-interactive, #DCDFE3);
-  border-radius: var(--radius-md, 0.375rem);
+  border-radius: var(--radius-300, 0.25rem);
   color: var(--color-text-primary, #0A0E14);
   font-family: inherit;
   font-size: var(--text-body-lg, 1rem);
@@ -77,7 +77,7 @@
 .dintel-sign-in__portlet button[type="submit"] {
   background-color: var(--color-bg-interactive-primary, #114DA6);
   border: 2px solid var(--color-bg-interactive-primary, #114DA6);
-  border-radius: var(--radius-md, 0.375rem);
+  border-radius: var(--radius-300, 0.25rem);
   color: var(--color-text-inverse, #FFFFFF);
   cursor: pointer;
   font-family: inherit;
@@ -112,7 +112,7 @@
 .dintel-sign-in__portlet .alert {
   background-color: var(--color-bg-feedback-error, #F5E1DC);
   border-left: 4px solid var(--color-text-feedback-error, #C44727);
-  border-radius: var(--radius-md, 0.375rem);
+  border-radius: var(--radius-300, 0.25rem);
   color: var(--regular-primitives-status-error-500, #5E1503);
   font-size: var(--text-body-md, 0.875rem);
   margin-bottom: var(--space-100, 1rem);
@@ -145,7 +145,7 @@
 }
 
 .dintel-sign-in__footer-link:focus-visible {
-  border-radius: var(--radius-sm, 0.25rem);
+  border-radius: var(--radius-200, 0.125rem);
   outline: 2px solid var(--color-border-interactive-focus, #C33400);
   outline-offset: 2px;
 }
@@ -167,7 +167,7 @@
 .dintel-sign-in__logout-link,
 .dintel-sign-in__logout-link:visited {
   background-color: var(--color-bg-interactive-primary, #114DA6);
-  border-radius: var(--radius-md, 0.375rem);
+  border-radius: var(--radius-300, 0.25rem);
   color: var(--color-text-inverse, #FFFFFF);
   display: inline-block;
   font-size: var(--text-body-md, 0.875rem);

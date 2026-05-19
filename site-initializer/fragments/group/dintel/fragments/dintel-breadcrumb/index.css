@@ -19,7 +19,7 @@
 
 .dintel-breadcrumb__link {
   align-items: center;
-  border-radius: var(--border-radius-sm, 0.25rem);
+  border-radius: var(--radius-200, 0.125rem);
   color: var(--color-text-interactive, #114DA6);
   display: inline-flex;
   font-size: var(--font-size-sm, 0.875rem);

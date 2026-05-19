@@ -75,7 +75,7 @@
 .dintel-header-d__search input[type="text"] {
   background-color: var(--color-bg-interactive-card, #FFFFFF);
   border: 1px solid var(--color-border-interactive, #DCDFE3);
-  border-radius: var(--radius-md, 0.375rem);
+  border-radius: var(--radius-300, 0.25rem);
   color: var(--color-text-primary, #0A0E14);
   font-family: var(--font-family-base);
   font-size: var(--text-body-md, 0.875rem);
@@ -91,7 +91,7 @@
 
 .dintel-header-d__auth-link {
   align-items: center;
-  border-radius: var(--radius-md, 0.375rem);
+  border-radius: var(--radius-300, 0.25rem);
   color: var(--color-text-secondary, #363D47);
   display: inline-flex;
   font-family: var(--font-family-base);

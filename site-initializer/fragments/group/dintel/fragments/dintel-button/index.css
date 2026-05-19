@@ -13,7 +13,7 @@
   justify-content: center;
   gap: var(--spacer-2, 0.5rem);
   border: 2px solid transparent;
-  border-radius: var(--border-radius, 0.375rem);
+  border-radius: var(--radius-300, 0.25rem);
   cursor: pointer;
   font-family: var(--font-family-base);
   font-weight: var(--font-weight-semi-bold, 600);
@@ -122,7 +122,7 @@
 .dintel-btn--tertiary:focus-visible {
   outline: 3px solid var(--color-border-interactive-focus, #C33400);
   outline-offset: 2px;
-  border-radius: var(--border-radius-sm, 0.25rem);
+  border-radius: var(--radius-200, 0.125rem);
 }
 
 /* === Tipo: NEUTRAL (gris, acciones secundarias) === */

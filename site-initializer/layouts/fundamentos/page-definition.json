@@ -1,73 +1,54 @@
 {
-    "pageElement": {
+  "pageElement": {
+    "pageElements": [
+      {
+        "definition": {
+          "cssClasses": ["dintel-section--py-xs"],
+          "indexed": true,
+          "layout": {"widthType": "Fixed"}
+        },
         "pageElements": [
-            {
-                "definition": {
-                    "cssClasses": [
-                        "dintel-section--py-xs"
-                    ],
-                    "indexed": true,
-                    "layout": {
-                        "widthType": "Fixed"
-                    }
-                },
-                "pageElements": [
-                    {
-                        "definition": {
-                            "fragment": {
-                                "key": "dintel-breadcrumb"
-                            },
-                            "fragmentConfig": {},
-                            "fragmentFields": [],
-                            "indexed": true
-                        },
-                        "type": "Fragment"
-                    }
-                ],
-                "type": "Section"
+          {
+            "definition": {
+              "fragment": {"key": "dintel-breadcrumb"},
+              "fragmentConfig": {"showHome": true, "separator": "chevron"},
+              "fragmentFields": [],
+              "indexed": true
             },
-            {
-                "definition": {
-                    "cssClasses": [
-                        "dintel-section--py-md"
-                    ],
-                    "indexed": true,
-                    "layout": {
-                        "widthType": "Fixed"
-                    }
-                },
-                "pageElements": [
-                    {
-                        "definition": {
-                            "fragment": {
-                                "key": "dintel-divider"
-                            },
-                            "fragmentConfig": {},
-                            "fragmentFields": [],
-                            "indexed": true
-                        },
-                        "type": "Fragment"
-                    },
-                    {
-                        "definition": {
-                            "fragment": {
-                                "key": "dintel-tabs"
-                            },
-                            "fragmentConfig": {},
-                            "fragmentFields": [],
-                            "indexed": true
-                        },
-                        "type": "Fragment"
-                    }
-                ],
-                "type": "Section"
-            }
+            "type": "Fragment"
+          }
         ],
-        "type": "Root"
-    },
-    "settings": {
-        "masterPage": {
-            "key": "main"
-        }
-    }
+        "type": "Section"
+      },
+      {
+        "definition": {
+          "cssClasses": ["dintel-section--py-md"],
+          "indexed": true,
+          "layout": {"widthType": "Fixed"}
+        },
+        "pageElements": [
+          {
+            "definition": {
+              "fragment": {"key": "dintel-tokens-showcase"},
+              "fragmentConfig": {
+                "showColors": true,
+                "showTypography": true,
+                "showSpacing": true,
+                "showRadii": true,
+                "showElevations": true
+              },
+              "fragmentFields": [],
+              "indexed": true
+            },
+            "type": "Fragment"
+          }
+        ],
+        "type": "Section"
+      }
+    ],
+    "type": "Root"
+  },
+  "settings": {
+    "masterPage": {"key": "main"}
+  }
 }

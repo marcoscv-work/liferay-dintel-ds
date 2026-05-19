@@ -20,7 +20,7 @@
   align-items: stretch;
   background-color: var(--color-bg-interactive-card, #FFFFFF);
   border: 1px solid var(--color-border-interactive, #DCDFE3);
-  border-radius: var(--radius-md, 0.375rem);
+  border-radius: var(--radius-300, 0.25rem);
   display: inline-flex;
   overflow: hidden;
   transition: border-color 0.15s, box-shadow 0.15s;

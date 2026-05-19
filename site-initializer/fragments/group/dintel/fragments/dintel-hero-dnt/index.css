@@ -1,0 +1,174 @@
+.dintel-hero-dnt {
+  padding: var(--spacer-8, 4rem) 0;
+  position: relative;
+}
+
+.dintel-hero-dnt--negative {
+  background-color: var(--color-bg-brand-hard, #04214D);
+  color: var(--color-text-inverse, #FFFFFF);
+}
+
+.dintel-hero-dnt--soft {
+  background-color: var(--color-bg-brand-soft, #EAF0FA);
+  color: var(--color-text-primary, #0A0E14);
+}
+
+.dintel-hero-dnt--light {
+  background-color: var(--color-bg-primary, #FFFFFF);
+  color: var(--color-text-primary, #0A0E14);
+}
+
+.dintel-hero-dnt__inner {
+  align-items: center;
+  display: grid;
+  gap: var(--spacer-6, 3rem);
+  grid-template-columns: 1fr 1fr;
+}
+
+.dintel-hero-dnt--img-none .dintel-hero-dnt__inner {
+  grid-template-columns: 1fr;
+  max-width: 800px;
+}
+
+.dintel-hero-dnt--img-left .dintel-hero-dnt__text {
+  order: 2;
+}
+
+.dintel-hero-dnt--img-left .dintel-hero-dnt__media {
+  order: 1;
+}
+
+.dintel-hero-dnt__text {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacer-3, 1rem);
+}
+
+.dintel-hero-dnt__title {
+  font-size: clamp(2.25rem, 4.5vw, 3.5rem);
+  font-weight: var(--font-weight-bold, 700);
+  letter-spacing: -0.01em;
+  line-height: 1.1;
+  margin: 0;
+}
+
+.dintel-hero-dnt__description {
+  font-size: clamp(1.125rem, 2vw, 1.5rem);
+  font-weight: var(--font-weight-regular, 400);
+  line-height: var(--line-height-base, 1.5);
+  margin: 0;
+  max-width: 38rem;
+  opacity: 0.95;
+}
+
+.dintel-hero-dnt__extended {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacer-4, 1.5rem);
+  margin-top: var(--spacer-3, 1rem);
+}
+
+.dintel-hero-dnt__body {
+  font-size: var(--font-size-base, 1rem);
+  line-height: var(--line-height-base, 1.5);
+  margin: 0;
+  max-width: 36rem;
+  opacity: 0.9;
+}
+
+/* Acciones — drop zone para botones, links, badges. Permite varios items en fila. */
+.dintel-hero-dnt__actions {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacer-3, 1rem);
+  margin-top: var(--spacer-2, 0.5rem);
+}
+
+/* Asegura que cualquier botón/link arrastrado al drop zone se sitúe a la izquierda */
+.dintel-hero-dnt__actions > * {
+  margin: 0 !important;
+}
+
+/* Inversión de botón PRIMARY cuando el hero es negative (fondo azul oscuro) */
+.dintel-hero-dnt--negative .dintel-btn--primary,
+.dintel-hero-dnt--negative .dintel-btn--primary:visited {
+  background-color: var(--color-text-inverse, #FFFFFF);
+  border-color: var(--color-text-inverse, #FFFFFF);
+  color: var(--color-text-interactive-hover, #093473);
+}
+
+.dintel-hero-dnt--negative .dintel-btn--primary:hover,
+.dintel-hero-dnt--negative .dintel-btn--primary:focus,
+.dintel-hero-dnt--negative .dintel-btn--primary:active {
+  background-color: var(--color-bg-brand-soft, #EAF0FA);
+  border-color: var(--color-bg-brand-soft, #EAF0FA);
+  color: var(--color-text-interactive-hover, #093473);
+}
+
+/* Botón secondary (outline) — borde claro sobre fondo oscuro */
+.dintel-hero-dnt--negative .dintel-btn--secondary,
+.dintel-hero-dnt--negative .dintel-btn--secondary:visited {
+  background-color: transparent;
+  border-color: var(--color-text-inverse, #FFFFFF);
+  color: var(--color-text-inverse, #FFFFFF);
+}
+
+.dintel-hero-dnt--negative .dintel-btn--secondary:hover,
+.dintel-hero-dnt--negative .dintel-btn--secondary:focus,
+.dintel-hero-dnt--negative .dintel-btn--secondary:active {
+  background-color: rgba(255, 255, 255, 0.12);
+  border-color: var(--color-text-inverse, #FFFFFF);
+  color: var(--color-text-inverse, #FFFFFF);
+}
+
+.dintel-hero-dnt__media {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.dintel-hero-dnt__img {
+  border-radius: var(--radius-100, 0);
+  display: block;
+  height: auto;
+  max-height: 480px;
+  max-width: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+
+@media (max-width: 992px) {
+  .dintel-hero-dnt {
+    padding: var(--spacer-6, 3rem) 0;
+  }
+
+  .dintel-hero-dnt__inner {
+    gap: var(--spacer-5, 2rem);
+    grid-template-columns: 1fr;
+  }
+
+  .dintel-hero-dnt--img-left .dintel-hero-dnt__text,
+  .dintel-hero-dnt--img-left .dintel-hero-dnt__media {
+    order: initial;
+  }
+
+  .dintel-hero-dnt__media {
+    order: -1;
+  }
+
+  .dintel-hero-dnt__img {
+    max-height: 320px;
+  }
+}
+
+@media (max-width: 576px) {
+  .dintel-hero-dnt__actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .dintel-hero-dnt__actions > * {
+    width: 100%;
+  }
+}

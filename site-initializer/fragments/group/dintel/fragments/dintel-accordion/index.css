@@ -1,6 +1,6 @@
 .dintel-accordion {
   border: 1px solid var(--color-border-soft, #DCDFE3);
-  border-radius: var(--border-radius-lg, 0.5rem);
+  border-radius: var(--radius-100, 0);
   overflow: hidden;
 }
 

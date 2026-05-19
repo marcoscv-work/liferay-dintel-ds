@@ -1,0 +1,61 @@
+{
+  "fieldSets": [
+    {
+      "fields": [
+        {
+          "dataType": "string",
+          "defaultValue": "negative",
+          "label": "Tema",
+          "name": "theme",
+          "type": "select",
+          "typeOptions": {
+            "validValues": [
+              {
+                "value": "negative",
+                "label": "Negativo (fondo azul oscuro, texto blanco)"
+              },
+              {
+                "value": "soft",
+                "label": "Suave (fondo azul claro)"
+              },
+              {
+                "value": "light",
+                "label": "Claro (fondo blanco)"
+              }
+            ]
+          }
+        },
+        {
+          "dataType": "string",
+          "defaultValue": "right",
+          "label": "Posición de la imagen",
+          "name": "imagePosition",
+          "type": "select",
+          "typeOptions": {
+            "validValues": [
+              {
+                "value": "right",
+                "label": "Derecha"
+              },
+              {
+                "value": "left",
+                "label": "Izquierda"
+              },
+              {
+                "value": "none",
+                "label": "Sin imagen"
+              }
+            ]
+          }
+        },
+        {
+          "defaultValue": "true",
+          "label": "Mostrar contenido extendido (párrafo + acciones)",
+          "name": "showExtended",
+          "type": "checkbox"
+        }
+      ],
+      "label": "Hero DNT"
+    }
+  ]
+}

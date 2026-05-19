@@ -1,41 +1,103 @@
+/* ============================================================
+ * dintel-card — Tarjeta DINTEL
+ * Alineada con la especificación oficial: https://dintel.redsara.es/componentes/card
+ * - Borde envolvente (border="all")
+ * - Imagen con o sin padding interno (image-padding="true|false")
+ * - Imagen en ratio 16:9, object-fit cover/contain
+ * - Variante interactiva (título enlazado con flecha derecha) o informativa
+ * - Vertical u horizontal
+ * ============================================================ */
+
 .dintel-card {
   background-color: var(--color-bg-interactive-card, #FFFFFF);
   border: 1px solid var(--color-border-soft, #DCDFE3);
-  border-radius: var(--border-radius-lg, 0.5rem);
+  border-radius: var(--radius-100, 0);
   display: flex;
   flex-direction: column;
   height: 100%;
   overflow: hidden;
-  transition: box-shadow 0.2s ease;
+  position: relative;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
 }
 
-.dintel-card--shadow {
-  box-shadow: var(--elevation-200, 0 1px 3px 0 rgba(10, 14, 20, 0.1));
-}
-
-.dintel-card:hover {
-  box-shadow: var(--elevation-300, 0 4px 6px -1px rgba(10, 14, 20, 0.1));
-}
-
+/* === Orientación horizontal === */
 .dintel-card--horizontal {
   flex-direction: row;
 }
 
+/* === Interactiva — hover sobre la tarjeta completa === */
+.dintel-card--interactive {
+  cursor: pointer;
+}
+
+.dintel-card--interactive:hover {
+  border-color: var(--color-border-interactive-hover, #093473);
+  box-shadow: var(--elevation-300, 0 4px 6px -1px rgba(10, 14, 20, 0.1));
+}
+
+.dintel-card--interactive:focus-within {
+  border-color: var(--color-border-interactive-focus, #C33400);
+  box-shadow: 0 0 0 2px var(--color-border-interactive-focus, #C33400);
+}
+
+/* ============================================================
+ * Imagen
+ * ============================================================ */
+
 .dintel-card__media {
+  flex-shrink: 0;
+}
+
+.dintel-card--vertical .dintel-card__media {
+  width: 100%;
+}
+
+.dintel-card--horizontal .dintel-card__media {
+  width: 40%;
+  max-width: 280px;
+}
+
+/* image-padding=true → margen interno alrededor de la imagen
+   image-padding=false → imagen a sangre (bleed) */
+.dintel-card--img-padded .dintel-card__media {
+  padding: var(--spacer-3, 1rem);
+}
+
+.dintel-card__media-frame {
+  aspect-ratio: 16 / 9;
+  background-color: var(--color-bg-secondary, #F7F7F8);
+  border-radius: var(--radius-100, 0);
   overflow: hidden;
+  width: 100%;
+}
+
+.dintel-card--horizontal .dintel-card__media-frame {
+  aspect-ratio: auto;
+  height: 100%;
+  min-height: 100%;
+}
+
+.dintel-card--img-bleed .dintel-card__media-frame {
+  border-radius: 0;
 }
 
 .dintel-card__img {
   display: block;
-  height: 200px;
-  object-fit: cover;
+  height: 100%;
   width: 100%;
 }
 
-.dintel-card--horizontal .dintel-card__img {
-  height: 100%;
-  width: 240px;
+.dintel-card--fit-cover .dintel-card__img {
+  object-fit: cover;
 }
+
+.dintel-card--fit-contain .dintel-card__img {
+  object-fit: contain;
+}
+
+/* ============================================================
+ * Cuerpo (título + texto)
+ * ============================================================ */
 
 .dintel-card__body {
   display: flex;
@@ -43,6 +105,10 @@
   flex-direction: column;
   gap: var(--spacer-2, 0.5rem);
   padding: var(--spacer-4, 1.5rem);
+}
+
+.dintel-card--horizontal .dintel-card__body {
+  justify-content: center;
 }
 
 .dintel-card__category {
@@ -54,12 +120,63 @@
   text-transform: uppercase;
 }
 
+/* Título (informativo: solo h3) */
 .dintel-card__title {
   color: var(--color-text-primary, #0A0E14);
   font-size: var(--h5-font-size, 1.25rem);
   font-weight: var(--font-weight-bold, 700);
   line-height: var(--line-height-sm, 1.25);
   margin: 0;
+}
+
+/* Título enlazado (interactivo: link con flecha derecha) */
+.dintel-card__title-link {
+  align-items: center;
+  color: var(--color-text-interactive, #114DA6);
+  display: flex;
+  gap: var(--spacer-2, 0.5rem);
+  justify-content: space-between;
+  text-decoration: none;
+}
+
+.dintel-card__title-link .dintel-card__title {
+  color: inherit;
+}
+
+.dintel-card__title-link:hover {
+  color: var(--color-text-interactive-hover, #093473);
+  text-decoration: none;
+}
+
+.dintel-card__title-link:hover .dintel-card__title {
+  text-decoration: underline;
+}
+
+.dintel-card__title-link:focus-visible {
+  outline: 2px solid var(--color-border-interactive-focus, #C33400);
+  outline-offset: 2px;
+  border-radius: var(--radius-200, 0.125rem);
+}
+
+/* Stretched-link: el enlace del título cubre toda la card */
+.dintel-card--interactive .dintel-card__title-link::before {
+  content: "";
+  inset: 0;
+  position: absolute;
+  z-index: 1;
+}
+
+.dintel-card__title-icon {
+  align-items: center;
+  color: var(--color-text-interactive, #114DA6);
+  display: inline-flex;
+  flex-shrink: 0;
+  transition: transform 0.2s ease;
+}
+
+.dintel-card--interactive:hover .dintel-card__title-icon {
+  color: var(--color-text-interactive-hover, #093473);
+  transform: translateX(2px);
 }
 
 .dintel-card__text {
@@ -70,24 +187,31 @@
   margin: 0;
 }
 
-.dintel-card__link {
-  align-items: center;
-  color: var(--color-text-interactive, #114DA6);
-  display: inline-flex;
-  font-size: var(--font-size-sm, 0.875rem);
-  font-weight: var(--font-weight-semi-bold, 600);
-  gap: var(--spacer-1, 0.25rem);
-  margin-top: var(--spacer-2, 0.5rem);
-  text-decoration: none;
+/* ============================================================
+ * Solo texto (mediaType = none)
+ * ============================================================ */
+
+.dintel-card--media-none .dintel-card__body {
+  padding: var(--spacer-5, 2rem) var(--spacer-4, 1.5rem);
 }
 
-.dintel-card__link:hover {
-  color: var(--color-text-interactive-hover, #093473);
-  text-decoration: underline;
-}
+/* ============================================================
+ * Responsive
+ * ============================================================ */
 
-.dintel-card__link:focus-visible {
-  outline: 2px solid var(--color-border-interactive-focus, #C33400);
-  outline-offset: 2px;
-  border-radius: var(--border-radius-sm, 0.25rem);
+@media (max-width: 768px) {
+  .dintel-card--horizontal {
+    flex-direction: column;
+  }
+
+  .dintel-card--horizontal .dintel-card__media {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .dintel-card--horizontal .dintel-card__media-frame {
+    aspect-ratio: 16 / 9;
+    height: auto;
+    min-height: 0;
+  }
 }

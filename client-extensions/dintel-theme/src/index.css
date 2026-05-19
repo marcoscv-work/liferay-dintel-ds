@@ -261,17 +261,29 @@
     --spacer-8: var(--space-600);
 
     /* ============================================================
-     * BORDES
+     * BORDES — escala DINTEL oficial (radius-100..400)
+     * Ref: https://dintel.redsara.es/tokens/radio-y-borde
+     *
+     * DINTEL es un sistema institucional plano: las superficies grandes
+     * (cards, alertas, modales, hero) van sin radio. Sólo los campos
+     * de formulario y los botones llevan radio sutil.
      * ============================================================ */
-    --radius-none: 0;
-    --radius-sm: 0.25rem;     /* 4px */
-    --radius-md: 0.375rem;    /* 6px */
-    --radius-lg: 0.5rem;      /* 8px */
-    --radius-xl: 0.75rem;     /* 12px */
+    --radius-100: 0;          /* sharp — superficies, cards, alertas, modales, hero */
+    --radius-200: 0.125rem;   /* 2px — focus rings, badges sm, esquinas pequeñas */
+    --radius-300: 0.25rem;    /* 4px — inputs, botones, dropdowns, badges */
+    --radius-400: 0.25rem;    /* 4px — mismo que 300 (uso excepcional, max) */
+
+    /* Aliases internos (legibles) */
+    --radius-none: var(--radius-100);
+    --radius-xs: var(--radius-200);   /* 2px */
+    --radius-sm: var(--radius-300);   /* 4px */
+    --radius-md: var(--radius-300);   /* 4px — botones / inputs */
+    --radius-lg: var(--radius-300);   /* 4px (no hay tier mayor en DINTEL) */
+    --radius-xl: var(--radius-300);
     --radius-pill: 50rem;
     --radius-circle: 50%;
 
-    /* Aliases */
+    /* Aliases Bootstrap-style (compatibilidad Clay/Liferay) */
     --border-radius-sm: var(--radius-sm);
     --border-radius: var(--radius-md);
     --border-radius-lg: var(--radius-lg);

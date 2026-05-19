@@ -3,27 +3,101 @@
     {
       "fields": [
         {
-          "defaultValue": "true",
-          "label": "Mostrar imagen",
-          "name": "showImage",
-          "type": "checkbox"
+          "dataType": "string",
+          "defaultValue": "vertical",
+          "label": "Orientación",
+          "name": "layout",
+          "type": "select",
+          "typeOptions": {
+            "validValues": [
+              {
+                "value": "vertical",
+                "label": "Vertical"
+              },
+              {
+                "value": "horizontal",
+                "label": "Horizontal"
+              }
+            ]
+          }
+        },
+        {
+          "dataType": "string",
+          "defaultValue": "interactive",
+          "label": "Tipo",
+          "name": "variant",
+          "type": "select",
+          "typeOptions": {
+            "validValues": [
+              {
+                "value": "interactive",
+                "label": "Interactiva (título enlazado)"
+              },
+              {
+                "value": "informative",
+                "label": "Informativa (sin acción)"
+              }
+            ]
+          }
+        },
+        {
+          "dataType": "string",
+          "defaultValue": "image",
+          "label": "Contenido visual",
+          "name": "mediaType",
+          "type": "select",
+          "typeOptions": {
+            "validValues": [
+              {
+                "value": "image",
+                "label": "Imagen"
+              },
+              {
+                "value": "illustration",
+                "label": "Ilustración"
+              },
+              {
+                "value": "none",
+                "label": "Solo texto"
+              }
+            ]
+          }
         },
         {
           "defaultValue": "true",
-          "label": "Mostrar botón",
-          "name": "showButton",
+          "label": "Margen interno alrededor de la imagen (image-padding)",
+          "name": "imagePadding",
           "type": "checkbox"
         },
         {
-          "defaultValue": "false",
-          "label": "Tarjeta horizontal",
-          "name": "horizontal",
-          "type": "checkbox"
+          "dataType": "string",
+          "defaultValue": "cover",
+          "label": "Ajuste de imagen",
+          "name": "imageFit",
+          "type": "select",
+          "typeOptions": {
+            "validValues": [
+              {
+                "value": "cover",
+                "label": "Cover (recorta)"
+              },
+              {
+                "value": "contain",
+                "label": "Contain (encaja completa)"
+              }
+            ]
+          }
         },
         {
           "defaultValue": "false",
-          "label": "Con sombra",
-          "name": "shadow",
+          "label": "Mostrar categoría/etiqueta",
+          "name": "showCategory",
+          "type": "checkbox"
+        },
+        {
+          "defaultValue": "true",
+          "label": "Mostrar texto descriptivo",
+          "name": "showText",
           "type": "checkbox"
         }
       ],

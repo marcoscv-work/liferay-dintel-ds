@@ -30,7 +30,7 @@
   appearance: none;
   background-color: var(--color-bg-interactive-card, #FFFFFF);
   border: 1px solid var(--color-border-interactive, #DCDFE3);
-  border-radius: var(--radius-md, 0.375rem);
+  border-radius: var(--radius-300, 0.25rem);
   color: var(--color-text-primary, #0A0E14);
   cursor: pointer;
   font-family: inherit;
