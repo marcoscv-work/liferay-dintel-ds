@@ -4,11 +4,12 @@
     <section class="dintel-tokens__section" aria-labelledby="dintel-tokens-colors">
       <h2 id="dintel-tokens-colors" class="dintel-tokens__heading">Color</h2>
       <p class="dintel-tokens__lead">La paleta DINTEL se organiza en dos capas: <strong>primitives</strong> (escalas absolutas) y <strong>semantic tokens</strong> (uso en componentes). Los fragmentos consumen solo semantics.</p>
+      <p class="dintel-tokens__note">Los swatches marcados con <span class="dintel-tokens__ext-tag">repo</span> son <strong>extensiones de este repositorio</strong>: tonos que <a href="https://dintel.redsara.es/DINTEL/fundamentos/color.html">la paleta oficial DINTEL</a> no publica (primary 000–100 y secondary 000–400). Se han extrapolado para cubrir superficies del tema claro (por defecto) y un accent legible en el modo oscuro (style book opcional <em>dintel-dark</em>, el único override); quedan sujetos a revisión si DINTEL publica tonos equivalentes. El resto coincide 1:1 con la fuente oficial.</p>
 
       <h3 class="dintel-tokens__subheading">Primary — azul institucional</h3>
       <ul class="dintel-tokens__swatches" role="list">
-        <li class="dintel-tokens__swatch"><span class="dintel-tokens__chip" style="background:#FBFCFE"></span><span class="dintel-tokens__name">primary-000</span><code>#FBFCFE</code></li>
-        <li class="dintel-tokens__swatch"><span class="dintel-tokens__chip" style="background:#EAF0FA"></span><span class="dintel-tokens__name">primary-100</span><code>#EAF0FA</code></li>
+        <li class="dintel-tokens__swatch dintel-tokens__swatch--ext"><span class="dintel-tokens__chip" style="background:#FBFCFE"></span><span class="dintel-tokens__name">primary-000 <span class="dintel-tokens__ext-tag">repo</span></span><code>#FBFCFE</code></li>
+        <li class="dintel-tokens__swatch dintel-tokens__swatch--ext"><span class="dintel-tokens__chip" style="background:#EAF0FA"></span><span class="dintel-tokens__name">primary-100 <span class="dintel-tokens__ext-tag">repo</span></span><code>#EAF0FA</code></li>
         <li class="dintel-tokens__swatch"><span class="dintel-tokens__chip" style="background:#E8EFFA"></span><span class="dintel-tokens__name">primary-200</span><code>#E8EFFA</code></li>
         <li class="dintel-tokens__swatch"><span class="dintel-tokens__chip" style="background:#D7E2F5"></span><span class="dintel-tokens__name">primary-300</span><code>#D7E2F5</code></li>
         <li class="dintel-tokens__swatch"><span class="dintel-tokens__chip" style="background:#9CB9E5"></span><span class="dintel-tokens__name">primary-400</span><code>#9CB9E5</code></li>
@@ -19,11 +20,11 @@
 
       <h3 class="dintel-tokens__subheading">Secondary — naranja accent</h3>
       <ul class="dintel-tokens__swatches" role="list">
-        <li class="dintel-tokens__swatch"><span class="dintel-tokens__chip" style="background:#FFD2C2"></span><span class="dintel-tokens__name">secondary-000</span><code>#FFD2C2</code></li>
-        <li class="dintel-tokens__swatch"><span class="dintel-tokens__chip" style="background:#FFAD8F"></span><span class="dintel-tokens__name">secondary-100</span><code>#FFAD8F</code></li>
-        <li class="dintel-tokens__swatch"><span class="dintel-tokens__chip" style="background:#FF875C"></span><span class="dintel-tokens__name">secondary-200</span><code>#FF875C</code></li>
-        <li class="dintel-tokens__swatch"><span class="dintel-tokens__chip" style="background:#FF6229"></span><span class="dintel-tokens__name">secondary-300</span><code>#FF6229</code></li>
-        <li class="dintel-tokens__swatch"><span class="dintel-tokens__chip" style="background:#F54100"></span><span class="dintel-tokens__name">secondary-400</span><code>#F54100</code></li>
+        <li class="dintel-tokens__swatch dintel-tokens__swatch--ext"><span class="dintel-tokens__chip" style="background:#FFD2C2"></span><span class="dintel-tokens__name">secondary-000 <span class="dintel-tokens__ext-tag">repo</span></span><code>#FFD2C2</code></li>
+        <li class="dintel-tokens__swatch dintel-tokens__swatch--ext"><span class="dintel-tokens__chip" style="background:#FFAD8F"></span><span class="dintel-tokens__name">secondary-100 <span class="dintel-tokens__ext-tag">repo</span></span><code>#FFAD8F</code></li>
+        <li class="dintel-tokens__swatch dintel-tokens__swatch--ext"><span class="dintel-tokens__chip" style="background:#FF875C"></span><span class="dintel-tokens__name">secondary-200 <span class="dintel-tokens__ext-tag">repo</span></span><code>#FF875C</code></li>
+        <li class="dintel-tokens__swatch dintel-tokens__swatch--ext"><span class="dintel-tokens__chip" style="background:#FF6229"></span><span class="dintel-tokens__name">secondary-300 <span class="dintel-tokens__ext-tag">repo</span></span><code>#FF6229</code></li>
+        <li class="dintel-tokens__swatch dintel-tokens__swatch--ext"><span class="dintel-tokens__chip" style="background:#F54100"></span><span class="dintel-tokens__name">secondary-400 <span class="dintel-tokens__ext-tag">repo</span></span><code>#F54100</code></li>
         <li class="dintel-tokens__swatch"><span class="dintel-tokens__chip" style="background:#C33400"></span><span class="dintel-tokens__name">secondary-500</span><code>#C33400</code></li>
         <li class="dintel-tokens__swatch"><span class="dintel-tokens__chip" style="background:#802200"></span><span class="dintel-tokens__name">secondary-600</span><code>#802200</code></li>
         <li class="dintel-tokens__swatch"><span class="dintel-tokens__chip" style="background:#521600"></span><span class="dintel-tokens__name">secondary-700</span><code>#521600</code></li>
@@ -41,12 +42,181 @@
         <li class="dintel-tokens__swatch"><span class="dintel-tokens__chip" style="background:#0A0E14"></span><span class="dintel-tokens__name">grey-700</span><code>#0A0E14</code></li>
       </ul>
 
-      <h3 class="dintel-tokens__subheading">Feedback — estados</h3>
+      <h3 class="dintel-tokens__subheading">Success — escala de estado</h3>
       <ul class="dintel-tokens__swatches" role="list">
-        <li class="dintel-tokens__swatch"><span class="dintel-tokens__chip" style="background:#198044"></span><span class="dintel-tokens__name">success</span><code>#198044</code></li>
-        <li class="dintel-tokens__swatch"><span class="dintel-tokens__chip" style="background:#C44727"></span><span class="dintel-tokens__name">error</span><code>#C44727</code></li>
-        <li class="dintel-tokens__swatch"><span class="dintel-tokens__chip" style="background:#AD8821"></span><span class="dintel-tokens__name">warning</span><code>#AD8821</code></li>
-        <li class="dintel-tokens__swatch"><span class="dintel-tokens__chip" style="background:#605AAD"></span><span class="dintel-tokens__name">info</span><code>#605AAD</code></li>
+        <li class="dintel-tokens__swatch"><span class="dintel-tokens__chip dintel-tokens__chip--border" style="background:#F3F9F6"></span><span class="dintel-tokens__name">success-100</span><code>#F3F9F6</code></li>
+        <li class="dintel-tokens__swatch"><span class="dintel-tokens__chip dintel-tokens__chip--border" style="background:#E5F5EC"></span><span class="dintel-tokens__name">success-200</span><code>#E5F5EC</code></li>
+        <li class="dintel-tokens__swatch"><span class="dintel-tokens__chip" style="background:#4DB277"></span><span class="dintel-tokens__name">success-300</span><code>#4DB277</code></li>
+        <li class="dintel-tokens__swatch"><span class="dintel-tokens__chip" style="background:#198044"></span><span class="dintel-tokens__name">success-400</span><code>#198044</code></li>
+        <li class="dintel-tokens__swatch"><span class="dintel-tokens__chip" style="background:#015223"></span><span class="dintel-tokens__name">success-500</span><code>#015223</code></li>
+        <li class="dintel-tokens__swatch"><span class="dintel-tokens__chip" style="background:#0A2B18"></span><span class="dintel-tokens__name">success-600</span><code>#0A2B18</code></li>
+      </ul>
+
+      <h3 class="dintel-tokens__subheading">Error — escala de estado</h3>
+      <ul class="dintel-tokens__swatches" role="list">
+        <li class="dintel-tokens__swatch"><span class="dintel-tokens__chip dintel-tokens__chip--border" style="background:#FCF6F5"></span><span class="dintel-tokens__name">error-100</span><code>#FCF6F5</code></li>
+        <li class="dintel-tokens__swatch"><span class="dintel-tokens__chip dintel-tokens__chip--border" style="background:#F5E1DC"></span><span class="dintel-tokens__name">error-200</span><code>#F5E1DC</code></li>
+        <li class="dintel-tokens__swatch"><span class="dintel-tokens__chip" style="background:#E8886F"></span><span class="dintel-tokens__name">error-300</span><code>#E8886F</code></li>
+        <li class="dintel-tokens__swatch"><span class="dintel-tokens__chip" style="background:#C44727"></span><span class="dintel-tokens__name">error-400</span><code>#C44727</code></li>
+        <li class="dintel-tokens__swatch"><span class="dintel-tokens__chip" style="background:#5E1503"></span><span class="dintel-tokens__name">error-500</span><code>#5E1503</code></li>
+        <li class="dintel-tokens__swatch"><span class="dintel-tokens__chip" style="background:#330C02"></span><span class="dintel-tokens__name">error-600</span><code>#330C02</code></li>
+      </ul>
+
+      <h3 class="dintel-tokens__subheading">Warning — escala de estado</h3>
+      <ul class="dintel-tokens__swatches" role="list">
+        <li class="dintel-tokens__swatch"><span class="dintel-tokens__chip dintel-tokens__chip--border" style="background:#FFFAF2"></span><span class="dintel-tokens__name">warning-100</span><code>#FFFAF2</code></li>
+        <li class="dintel-tokens__swatch"><span class="dintel-tokens__chip dintel-tokens__chip--border" style="background:#FCF0DC"></span><span class="dintel-tokens__name">warning-200</span><code>#FCF0DC</code></li>
+        <li class="dintel-tokens__swatch"><span class="dintel-tokens__chip" style="background:#DBB251"></span><span class="dintel-tokens__name">warning-300</span><code>#DBB251</code></li>
+        <li class="dintel-tokens__swatch"><span class="dintel-tokens__chip" style="background:#AD8821"></span><span class="dintel-tokens__name">warning-400</span><code>#AD8821</code></li>
+        <li class="dintel-tokens__swatch"><span class="dintel-tokens__chip" style="background:#594100"></span><span class="dintel-tokens__name">warning-500</span><code>#594100</code></li>
+        <li class="dintel-tokens__swatch"><span class="dintel-tokens__chip" style="background:#332302"></span><span class="dintel-tokens__name">warning-600</span><code>#332302</code></li>
+      </ul>
+
+      <h3 class="dintel-tokens__subheading">Info — escala de estado</h3>
+      <ul class="dintel-tokens__swatches" role="list">
+        <li class="dintel-tokens__swatch"><span class="dintel-tokens__chip dintel-tokens__chip--border" style="background:#F2F2FC"></span><span class="dintel-tokens__name">info-100</span><code>#F2F2FC</code></li>
+        <li class="dintel-tokens__swatch"><span class="dintel-tokens__chip dintel-tokens__chip--border" style="background:#E9E7F6"></span><span class="dintel-tokens__name">info-200</span><code>#E9E7F6</code></li>
+        <li class="dintel-tokens__swatch"><span class="dintel-tokens__chip" style="background:#928FC2"></span><span class="dintel-tokens__name">info-300</span><code>#928FC2</code></li>
+        <li class="dintel-tokens__swatch"><span class="dintel-tokens__chip" style="background:#605AAD"></span><span class="dintel-tokens__name">info-400</span><code>#605AAD</code></li>
+        <li class="dintel-tokens__swatch"><span class="dintel-tokens__chip" style="background:#1E1655"></span><span class="dintel-tokens__name">info-500</span><code>#1E1655</code></li>
+        <li class="dintel-tokens__swatch"><span class="dintel-tokens__chip" style="background:#030121"></span><span class="dintel-tokens__name">info-600</span><code>#030121</code></li>
+      </ul>
+
+      <h3 class="dintel-tokens__subheading">Focus — anillos de foco</h3>
+      <ul class="dintel-tokens__swatches" role="list">
+        <li class="dintel-tokens__swatch"><span class="dintel-tokens__chip" style="background:#C33400"></span><span class="dintel-tokens__name">focus-primary</span><code>#C33400</code></li>
+        <li class="dintel-tokens__swatch"><span class="dintel-tokens__chip" style="background:#E59100"></span><span class="dintel-tokens__name">focus-secondary</span><code>#E59100</code></li>
+      </ul>
+
+      <h3 class="dintel-tokens__subheading">Semantic tokens — uso en componentes</h3>
+      <p class="dintel-tokens__lead">Capa 2: los componentes consumen <strong>solo</strong> estos. Las muestras usan <code>var(--color-*)</code>, por lo que reflejan el <strong>tema activo</strong> (claro por defecto; oscuro al aplicar el style book <em>DINTEL Dark</em>).</p>
+
+      <h4 class="dintel-tokens__subheading">Backgrounds · superficies</h4>
+      <ul class="dintel-tokens__swatches" role="list">
+        <li class="dintel-tokens__swatch"><span class="dintel-tokens__chip dintel-tokens__chip--border" style="background:var(--color-bg-primary)"></span><span class="dintel-tokens__name">bg-primary</span><code>--color-bg-primary</code></li>
+        <li class="dintel-tokens__swatch"><span class="dintel-tokens__chip dintel-tokens__chip--border" style="background:var(--color-bg-secondary)"></span><span class="dintel-tokens__name">bg-secondary</span><code>--color-bg-secondary</code></li>
+        <li class="dintel-tokens__swatch"><span class="dintel-tokens__chip dintel-tokens__chip--border" style="background:var(--color-bg-tertiary)"></span><span class="dintel-tokens__name">bg-tertiary</span><code>--color-bg-tertiary</code></li>
+        <li class="dintel-tokens__swatch"><span class="dintel-tokens__chip dintel-tokens__chip--border" style="background:var(--color-bg-inverse)"></span><span class="dintel-tokens__name">bg-inverse</span><code>--color-bg-inverse</code></li>
+        <li class="dintel-tokens__swatch"><span class="dintel-tokens__chip dintel-tokens__chip--border" style="background:var(--color-bg-brand)"></span><span class="dintel-tokens__name">bg-brand</span><code>--color-bg-brand</code></li>
+        <li class="dintel-tokens__swatch"><span class="dintel-tokens__chip dintel-tokens__chip--border" style="background:var(--color-bg-brand-soft)"></span><span class="dintel-tokens__name">bg-brand-soft</span><code>--color-bg-brand-soft</code></li>
+        <li class="dintel-tokens__swatch"><span class="dintel-tokens__chip dintel-tokens__chip--border" style="background:var(--color-bg-brand-hard)"></span><span class="dintel-tokens__name">bg-brand-hard</span><code>--color-bg-brand-hard</code></li>
+        <li class="dintel-tokens__swatch"><span class="dintel-tokens__chip dintel-tokens__chip--border" style="background:var(--color-bg-overlay)"></span><span class="dintel-tokens__name">bg-overlay</span><code>--color-bg-overlay</code></li>
+      </ul>
+
+      <h4 class="dintel-tokens__subheading">Backgrounds · interactivos</h4>
+      <ul class="dintel-tokens__swatches" role="list">
+        <li class="dintel-tokens__swatch"><span class="dintel-tokens__chip dintel-tokens__chip--border" style="background:var(--color-bg-interactive-primary)"></span><span class="dintel-tokens__name">bg-interactive-primary</span><code>--color-bg-interactive-primary</code></li>
+        <li class="dintel-tokens__swatch"><span class="dintel-tokens__chip dintel-tokens__chip--border" style="background:var(--color-bg-interactive-primary-hover)"></span><span class="dintel-tokens__name">bg-interactive-primary-hover</span><code>--color-bg-interactive-primary-hover</code></li>
+        <li class="dintel-tokens__swatch"><span class="dintel-tokens__chip dintel-tokens__chip--border" style="background:var(--color-bg-interactive-primary-pressed)"></span><span class="dintel-tokens__name">bg-interactive-primary-pressed</span><code>--color-bg-interactive-primary-pressed</code></li>
+        <li class="dintel-tokens__swatch"><span class="dintel-tokens__chip dintel-tokens__chip--border" style="background:var(--color-bg-interactive-primary-disabled)"></span><span class="dintel-tokens__name">bg-interactive-primary-disabled</span><code>--color-bg-interactive-primary-disabled</code></li>
+        <li class="dintel-tokens__swatch"><span class="dintel-tokens__chip dintel-tokens__chip--border" style="background:var(--color-bg-interactive-secondary)"></span><span class="dintel-tokens__name">bg-interactive-secondary</span><code>--color-bg-interactive-secondary</code></li>
+        <li class="dintel-tokens__swatch"><span class="dintel-tokens__chip dintel-tokens__chip--border" style="background:var(--color-bg-interactive-secondary-hover)"></span><span class="dintel-tokens__name">bg-interactive-secondary-hover</span><code>--color-bg-interactive-secondary-hover</code></li>
+        <li class="dintel-tokens__swatch"><span class="dintel-tokens__chip dintel-tokens__chip--border" style="background:var(--color-bg-interactive-secondary-pressed)"></span><span class="dintel-tokens__name">bg-interactive-secondary-pressed</span><code>--color-bg-interactive-secondary-pressed</code></li>
+        <li class="dintel-tokens__swatch"><span class="dintel-tokens__chip dintel-tokens__chip--border" style="background:var(--color-bg-interactive-secondary-disabled)"></span><span class="dintel-tokens__name">bg-interactive-secondary-disabled</span><code>--color-bg-interactive-secondary-disabled</code></li>
+        <li class="dintel-tokens__swatch"><span class="dintel-tokens__chip dintel-tokens__chip--border" style="background:var(--color-bg-interactive-card)"></span><span class="dintel-tokens__name">bg-interactive-card</span><code>--color-bg-interactive-card</code></li>
+        <li class="dintel-tokens__swatch"><span class="dintel-tokens__chip dintel-tokens__chip--border" style="background:var(--color-bg-interactive-item-hover)"></span><span class="dintel-tokens__name">bg-interactive-item-hover</span><code>--color-bg-interactive-item-hover</code></li>
+        <li class="dintel-tokens__swatch"><span class="dintel-tokens__chip dintel-tokens__chip--border" style="background:var(--color-bg-interactive-item-selected)"></span><span class="dintel-tokens__name">bg-interactive-item-selected</span><code>--color-bg-interactive-item-selected</code></li>
+      </ul>
+
+      <h4 class="dintel-tokens__subheading">Backgrounds · accent</h4>
+      <ul class="dintel-tokens__swatches" role="list">
+        <li class="dintel-tokens__swatch"><span class="dintel-tokens__chip dintel-tokens__chip--border" style="background:var(--color-bg-interactive-accent)"></span><span class="dintel-tokens__name">bg-interactive-accent</span><code>--color-bg-interactive-accent</code></li>
+        <li class="dintel-tokens__swatch"><span class="dintel-tokens__chip dintel-tokens__chip--border" style="background:var(--color-bg-interactive-accent-hover)"></span><span class="dintel-tokens__name">bg-interactive-accent-hover</span><code>--color-bg-interactive-accent-hover</code></li>
+        <li class="dintel-tokens__swatch"><span class="dintel-tokens__chip dintel-tokens__chip--border" style="background:var(--color-bg-interactive-accent-pressed)"></span><span class="dintel-tokens__name">bg-interactive-accent-pressed</span><code>--color-bg-interactive-accent-pressed</code></li>
+      </ul>
+
+      <h4 class="dintel-tokens__subheading">Backgrounds · feedback</h4>
+      <ul class="dintel-tokens__swatches" role="list">
+        <li class="dintel-tokens__swatch"><span class="dintel-tokens__chip dintel-tokens__chip--border" style="background:var(--color-bg-feedback-success)"></span><span class="dintel-tokens__name">bg-feedback-success</span><code>--color-bg-feedback-success</code></li>
+        <li class="dintel-tokens__swatch"><span class="dintel-tokens__chip dintel-tokens__chip--border" style="background:var(--color-bg-feedback-error)"></span><span class="dintel-tokens__name">bg-feedback-error</span><code>--color-bg-feedback-error</code></li>
+        <li class="dintel-tokens__swatch"><span class="dintel-tokens__chip dintel-tokens__chip--border" style="background:var(--color-bg-feedback-warning)"></span><span class="dintel-tokens__name">bg-feedback-warning</span><code>--color-bg-feedback-warning</code></li>
+        <li class="dintel-tokens__swatch"><span class="dintel-tokens__chip dintel-tokens__chip--border" style="background:var(--color-bg-feedback-info)"></span><span class="dintel-tokens__name">bg-feedback-info</span><code>--color-bg-feedback-info</code></li>
+      </ul>
+
+      <h4 class="dintel-tokens__subheading">Text · estático</h4>
+      <ul class="dintel-tokens__swatches" role="list">
+        <li class="dintel-tokens__swatch"><span class="dintel-tokens__chip dintel-tokens__chip--border" style="background:var(--color-text-primary)"></span><span class="dintel-tokens__name">text-primary</span><code>--color-text-primary</code></li>
+        <li class="dintel-tokens__swatch"><span class="dintel-tokens__chip dintel-tokens__chip--border" style="background:var(--color-text-secondary)"></span><span class="dintel-tokens__name">text-secondary</span><code>--color-text-secondary</code></li>
+        <li class="dintel-tokens__swatch"><span class="dintel-tokens__chip dintel-tokens__chip--border" style="background:var(--color-text-tertiary)"></span><span class="dintel-tokens__name">text-tertiary</span><code>--color-text-tertiary</code></li>
+        <li class="dintel-tokens__swatch"><span class="dintel-tokens__chip dintel-tokens__chip--border" style="background:var(--color-text-disabled)"></span><span class="dintel-tokens__name">text-disabled</span><code>--color-text-disabled</code></li>
+        <li class="dintel-tokens__swatch"><span class="dintel-tokens__chip dintel-tokens__chip--border" style="background:var(--color-text-inverse)"></span><span class="dintel-tokens__name">text-inverse</span><code>--color-text-inverse</code></li>
+        <li class="dintel-tokens__swatch"><span class="dintel-tokens__chip dintel-tokens__chip--border" style="background:var(--color-text-brand)"></span><span class="dintel-tokens__name">text-brand</span><code>--color-text-brand</code></li>
+      </ul>
+
+      <h4 class="dintel-tokens__subheading">Text · interactivo</h4>
+      <ul class="dintel-tokens__swatches" role="list">
+        <li class="dintel-tokens__swatch"><span class="dintel-tokens__chip dintel-tokens__chip--border" style="background:var(--color-text-interactive)"></span><span class="dintel-tokens__name">text-interactive</span><code>--color-text-interactive</code></li>
+        <li class="dintel-tokens__swatch"><span class="dintel-tokens__chip dintel-tokens__chip--border" style="background:var(--color-text-interactive-hover)"></span><span class="dintel-tokens__name">text-interactive-hover</span><code>--color-text-interactive-hover</code></li>
+        <li class="dintel-tokens__swatch"><span class="dintel-tokens__chip dintel-tokens__chip--border" style="background:var(--color-text-interactive-pressed)"></span><span class="dintel-tokens__name">text-interactive-pressed</span><code>--color-text-interactive-pressed</code></li>
+        <li class="dintel-tokens__swatch"><span class="dintel-tokens__chip dintel-tokens__chip--border" style="background:var(--color-text-interactive-visited)"></span><span class="dintel-tokens__name">text-interactive-visited</span><code>--color-text-interactive-visited</code></li>
+      </ul>
+
+      <h4 class="dintel-tokens__subheading">Text · accent</h4>
+      <ul class="dintel-tokens__swatches" role="list">
+        <li class="dintel-tokens__swatch"><span class="dintel-tokens__chip dintel-tokens__chip--border" style="background:var(--color-text-interactive-accent)"></span><span class="dintel-tokens__name">text-interactive-accent</span><code>--color-text-interactive-accent</code></li>
+        <li class="dintel-tokens__swatch"><span class="dintel-tokens__chip dintel-tokens__chip--border" style="background:var(--color-text-interactive-accent-hover)"></span><span class="dintel-tokens__name">text-interactive-accent-hover</span><code>--color-text-interactive-accent-hover</code></li>
+      </ul>
+
+      <h4 class="dintel-tokens__subheading">Text · feedback</h4>
+      <ul class="dintel-tokens__swatches" role="list">
+        <li class="dintel-tokens__swatch"><span class="dintel-tokens__chip dintel-tokens__chip--border" style="background:var(--color-text-feedback-success)"></span><span class="dintel-tokens__name">text-feedback-success</span><code>--color-text-feedback-success</code></li>
+        <li class="dintel-tokens__swatch"><span class="dintel-tokens__chip dintel-tokens__chip--border" style="background:var(--color-text-feedback-error)"></span><span class="dintel-tokens__name">text-feedback-error</span><code>--color-text-feedback-error</code></li>
+        <li class="dintel-tokens__swatch"><span class="dintel-tokens__chip dintel-tokens__chip--border" style="background:var(--color-text-feedback-warning)"></span><span class="dintel-tokens__name">text-feedback-warning</span><code>--color-text-feedback-warning</code></li>
+        <li class="dintel-tokens__swatch"><span class="dintel-tokens__chip dintel-tokens__chip--border" style="background:var(--color-text-feedback-info)"></span><span class="dintel-tokens__name">text-feedback-info</span><code>--color-text-feedback-info</code></li>
+      </ul>
+
+      <h4 class="dintel-tokens__subheading">Borders · estático</h4>
+      <ul class="dintel-tokens__swatches" role="list">
+        <li class="dintel-tokens__swatch"><span class="dintel-tokens__chip dintel-tokens__chip--border" style="background:var(--color-border-soft)"></span><span class="dintel-tokens__name">border-soft</span><code>--color-border-soft</code></li>
+        <li class="dintel-tokens__swatch"><span class="dintel-tokens__chip dintel-tokens__chip--border" style="background:var(--color-border-hard)"></span><span class="dintel-tokens__name">border-hard</span><code>--color-border-hard</code></li>
+        <li class="dintel-tokens__swatch"><span class="dintel-tokens__chip dintel-tokens__chip--border" style="background:var(--color-border-strong)"></span><span class="dintel-tokens__name">border-strong</span><code>--color-border-strong</code></li>
+        <li class="dintel-tokens__swatch"><span class="dintel-tokens__chip dintel-tokens__chip--border" style="background:var(--color-border-brand)"></span><span class="dintel-tokens__name">border-brand</span><code>--color-border-brand</code></li>
+        <li class="dintel-tokens__swatch"><span class="dintel-tokens__chip dintel-tokens__chip--border" style="background:var(--color-border-inverse)"></span><span class="dintel-tokens__name">border-inverse</span><code>--color-border-inverse</code></li>
+      </ul>
+
+      <h4 class="dintel-tokens__subheading">Borders · interactivo</h4>
+      <ul class="dintel-tokens__swatches" role="list">
+        <li class="dintel-tokens__swatch"><span class="dintel-tokens__chip dintel-tokens__chip--border" style="background:var(--color-border-interactive)"></span><span class="dintel-tokens__name">border-interactive</span><code>--color-border-interactive</code></li>
+        <li class="dintel-tokens__swatch"><span class="dintel-tokens__chip dintel-tokens__chip--border" style="background:var(--color-border-interactive-hover)"></span><span class="dintel-tokens__name">border-interactive-hover</span><code>--color-border-interactive-hover</code></li>
+        <li class="dintel-tokens__swatch"><span class="dintel-tokens__chip dintel-tokens__chip--border" style="background:var(--color-border-interactive-focus)"></span><span class="dintel-tokens__name">border-interactive-focus</span><code>--color-border-interactive-focus</code></li>
+        <li class="dintel-tokens__swatch"><span class="dintel-tokens__chip dintel-tokens__chip--border" style="background:var(--color-border-interactive-disabled)"></span><span class="dintel-tokens__name">border-interactive-disabled</span><code>--color-border-interactive-disabled</code></li>
+      </ul>
+
+      <h4 class="dintel-tokens__subheading">Borders · accent</h4>
+      <ul class="dintel-tokens__swatches" role="list">
+        <li class="dintel-tokens__swatch"><span class="dintel-tokens__chip dintel-tokens__chip--border" style="background:var(--color-border-interactive-accent)"></span><span class="dintel-tokens__name">border-interactive-accent</span><code>--color-border-interactive-accent</code></li>
+        <li class="dintel-tokens__swatch"><span class="dintel-tokens__chip dintel-tokens__chip--border" style="background:var(--color-border-interactive-accent-hover)"></span><span class="dintel-tokens__name">border-interactive-accent-hover</span><code>--color-border-interactive-accent-hover</code></li>
+      </ul>
+
+      <h4 class="dintel-tokens__subheading">Borders · feedback</h4>
+      <ul class="dintel-tokens__swatches" role="list">
+        <li class="dintel-tokens__swatch"><span class="dintel-tokens__chip dintel-tokens__chip--border" style="background:var(--color-border-feedback-success)"></span><span class="dintel-tokens__name">border-feedback-success</span><code>--color-border-feedback-success</code></li>
+        <li class="dintel-tokens__swatch"><span class="dintel-tokens__chip dintel-tokens__chip--border" style="background:var(--color-border-feedback-error)"></span><span class="dintel-tokens__name">border-feedback-error</span><code>--color-border-feedback-error</code></li>
+        <li class="dintel-tokens__swatch"><span class="dintel-tokens__chip dintel-tokens__chip--border" style="background:var(--color-border-feedback-warning)"></span><span class="dintel-tokens__name">border-feedback-warning</span><code>--color-border-feedback-warning</code></li>
+        <li class="dintel-tokens__swatch"><span class="dintel-tokens__chip dintel-tokens__chip--border" style="background:var(--color-border-feedback-info)"></span><span class="dintel-tokens__name">border-feedback-info</span><code>--color-border-feedback-info</code></li>
+      </ul>
+
+      <h4 class="dintel-tokens__subheading">Icons · estático</h4>
+      <ul class="dintel-tokens__swatches" role="list">
+        <li class="dintel-tokens__swatch"><span class="dintel-tokens__chip dintel-tokens__chip--border" style="background:var(--color-icon-primary)"></span><span class="dintel-tokens__name">icon-primary</span><code>--color-icon-primary</code></li>
+        <li class="dintel-tokens__swatch"><span class="dintel-tokens__chip dintel-tokens__chip--border" style="background:var(--color-icon-secondary)"></span><span class="dintel-tokens__name">icon-secondary</span><code>--color-icon-secondary</code></li>
+        <li class="dintel-tokens__swatch"><span class="dintel-tokens__chip dintel-tokens__chip--border" style="background:var(--color-icon-disabled)"></span><span class="dintel-tokens__name">icon-disabled</span><code>--color-icon-disabled</code></li>
+        <li class="dintel-tokens__swatch"><span class="dintel-tokens__chip dintel-tokens__chip--border" style="background:var(--color-icon-inverse)"></span><span class="dintel-tokens__name">icon-inverse</span><code>--color-icon-inverse</code></li>
+        <li class="dintel-tokens__swatch"><span class="dintel-tokens__chip dintel-tokens__chip--border" style="background:var(--color-icon-brand)"></span><span class="dintel-tokens__name">icon-brand</span><code>--color-icon-brand</code></li>
+      </ul>
+
+      <h4 class="dintel-tokens__subheading">Icons · interactivo</h4>
+      <ul class="dintel-tokens__swatches" role="list">
+        <li class="dintel-tokens__swatch"><span class="dintel-tokens__chip dintel-tokens__chip--border" style="background:var(--color-icon-interactive)"></span><span class="dintel-tokens__name">icon-interactive</span><code>--color-icon-interactive</code></li>
+        <li class="dintel-tokens__swatch"><span class="dintel-tokens__chip dintel-tokens__chip--border" style="background:var(--color-icon-interactive-hover)"></span><span class="dintel-tokens__name">icon-interactive-hover</span><code>--color-icon-interactive-hover</code></li>
+      </ul>
+
+      <h4 class="dintel-tokens__subheading">Icons · feedback</h4>
+      <ul class="dintel-tokens__swatches" role="list">
+        <li class="dintel-tokens__swatch"><span class="dintel-tokens__chip dintel-tokens__chip--border" style="background:var(--color-icon-feedback-success)"></span><span class="dintel-tokens__name">icon-feedback-success</span><code>--color-icon-feedback-success</code></li>
+        <li class="dintel-tokens__swatch"><span class="dintel-tokens__chip dintel-tokens__chip--border" style="background:var(--color-icon-feedback-error)"></span><span class="dintel-tokens__name">icon-feedback-error</span><code>--color-icon-feedback-error</code></li>
+        <li class="dintel-tokens__swatch"><span class="dintel-tokens__chip dintel-tokens__chip--border" style="background:var(--color-icon-feedback-warning)"></span><span class="dintel-tokens__name">icon-feedback-warning</span><code>--color-icon-feedback-warning</code></li>
+        <li class="dintel-tokens__swatch"><span class="dintel-tokens__chip dintel-tokens__chip--border" style="background:var(--color-icon-feedback-info)"></span><span class="dintel-tokens__name">icon-feedback-info</span><code>--color-icon-feedback-info</code></li>
       </ul>
     </section>
   [/#if]

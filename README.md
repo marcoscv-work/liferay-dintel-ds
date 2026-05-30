@@ -139,3 +139,35 @@ Two layers:
   interactive states. Style books override only these. Fragments **must** use semantic tokens.
 
 See `client-extensions/dintel-theme/src/index.css` for the full mapping.
+
+### Light is the default; dark is the only override
+
+There is no light/dark *pair* and no automatic switching. The **light theme is the baseline**:
+the semantic-token defaults defined in the theme CE (`index.css` `:root`, mirrored as the
+`defaultValue`s in `frontend-token-definition.json`). That baseline has no name and no style book —
+it is simply what renders when the DINTEL theme is applied.
+
+The **only extra is dark**: a single, optional style book `dintel-dark`
+(`defaultStyleBookEntry: false`) that overrides those semantic tokens to dark values. It is **not**
+applied automatically — a site administrator selects it under *Site Builder → Style Books*. That is
+why there is no `dintel-light` style book: light *is* the default.
+
+So when a token differs between "light" and "dark" (e.g. the accent), it is not a contradiction —
+it is the baseline value vs. the optional dark override.
+
+### Deviations from official DINTEL (repo extensions)
+
+The official DINTEL palette (https://dintel.redsara.es/DINTEL/fundamentos/color.html) publishes
+**primary 200–700** and **secondary 500–700** only. This repo adds extra primitive steps that are
+**not part of the official palette** and are marked as such in `index.css` and in the Tokens
+Showcase fragment (`repo` badge):
+
+| Primitive | Value | Why it exists |
+|---|---|---|
+| `primary-000` | `#FBFCFE` | near-white surface for `interactive-secondary` (light) |
+| `primary-100` | `#EAF0FA` | pale blue for `brand-soft` / item-hover (light) |
+| `secondary-000…400` | `#FFD2C2`, `#FFAD8F`, `#FF875C`, `#FF6229`, `#F54100` | lighter orange accent legible on the dark surfaces of the `dintel-dark` style book — official secondary is only the dark burnt-orange `#C33400/#802200/#521600` |
+
+These are deliberate extrapolations to fill gaps the official spec doesn't cover (light surfaces,
+dark-mode accent). Everything else matches the official source 1:1. Revisit these if/when DINTEL
+publishes equivalent steps.

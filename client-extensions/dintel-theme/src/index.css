@@ -15,9 +15,12 @@
     --regular-primitives-grey-600: #363D47;
     --regular-primitives-grey-700: #0A0E14;
 
-    /* Primario */
-    --regular-primitives-primary-000: #FBFCFE;
-    --regular-primitives-primary-100: #EAF0FA;
+    /* Primario
+     * Oficial DINTEL: 200–700 (https://dintel.redsara.es/DINTEL/fundamentos/color.html).
+     * 000–100 son EXTENSIONES de este repo (no oficiales), añadidas para superficies
+     * muy claras (interactive-secondary, brand-soft). Revisar si DINTEL publica equivalentes. */
+    --regular-primitives-primary-000: #FBFCFE; /* repo (no oficial) */
+    --regular-primitives-primary-100: #EAF0FA; /* repo (no oficial) */
     --regular-primitives-primary-200: #E8EFFA;
     --regular-primitives-primary-300: #D7E2F5;
     --regular-primitives-primary-400: #9CB9E5;
@@ -25,12 +28,16 @@
     --regular-primitives-primary-600: #093473;
     --regular-primitives-primary-700: #04214D;
 
-    /* Secundario */
-    --regular-primitives-secondary-000: #FFD2C2;
-    --regular-primitives-secondary-100: #FFAD8F;
-    --regular-primitives-secondary-200: #FF875C;
-    --regular-primitives-secondary-300: #FF6229;
-    --regular-primitives-secondary-400: #F54100;
+    /* Secundario
+     * Oficial DINTEL: SOLO 500–700 (#C33400/#802200/#521600), naranja quemado.
+     * 000–400 son EXTENSIONES de este repo (no oficiales): tintes claros extrapolados
+     * para tener un accent legible sobre fondo oscuro (los usa el style book dintel-dark).
+     * Revisar si DINTEL publica una escala secundaria clara. */
+    --regular-primitives-secondary-000: #FFD2C2; /* repo (no oficial) */
+    --regular-primitives-secondary-100: #FFAD8F; /* repo (no oficial) */
+    --regular-primitives-secondary-200: #FF875C; /* repo (no oficial) */
+    --regular-primitives-secondary-300: #FF6229; /* repo (no oficial) */
+    --regular-primitives-secondary-400: #F54100; /* repo (no oficial) */
     --regular-primitives-secondary-500: #C33400;
     --regular-primitives-secondary-600: #802200;
     --regular-primitives-secondary-700: #521600;
